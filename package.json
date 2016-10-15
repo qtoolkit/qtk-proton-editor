@@ -1,0 +1,47 @@
+{
+  "name": "qtk-proton-editor",
+  "version": "1.0.0",
+  "description": "a proton particles editor with qtk.",
+  "main": "js/index.js",
+  "types": "js/index.d.ts",
+  "scripts": {
+    "start": "node app.js",
+    "clean": "rm -rf doc index.js coverage/ src/*.js",
+    "test": "tsc && webpack && ./node_modules/karma/bin/karma start",
+    "build": "tsc && webpack && cp -fv index.js www",
+    "gendoc": "./node_modules/typedoc/bin/typedoc --mode modules --out doc src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qtoolkit/qtk-proton-editor.git"
+  },
+  "keywords": [
+    "qtk-proton-editor"
+  ],
+  "author": "xianjimli@hotmail.com",
+  "license": "LGPL-2.1",
+  "bugs": {
+    "url": "https://github.com/qtoolkit/qtk-proton-editor/issues"
+  },
+  "homepage": "https://github.com/qtoolkit/qtk-proton-editor#readme",
+  "devDependencies": {
+    "karma": "^1.1.2",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-mocha": "^1.1.1",
+    "mocha": "^3.0.0",
+    "ts-loader": "^0.8.2",
+    "typedoc": "^0.4.4",
+    "typescript": "^2.0.3",
+    "typings": "^1.3.2",
+    "webpack": "^1.13.1"
+  },
+  "dependencies": {
+    "json-pointer": "^0.5.0",
+    "qtk": "git+https://github.com/qtoolkit/qtk.git",
+    "proton": "git+https://github.com/a-jie/Proton.git",
+    "qtk-particles-editor": "https://github.com/qtoolkit/qtk-particles-editor.git",
+    "save-as": "^0.1.7"
+  }
+}

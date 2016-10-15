@@ -1,2 +1,23 @@
-# qtk-proton-editor
-用QTK为Proton实现的粒子编辑器
+# 基于[qtk-particles-editor](https://github.com/qtoolkit/qtk-particles-editor)为[Proton](qtk-particles-editor)开发的粒子编辑器。
+
+编译准备：
+
+```
+npm install 
+```
+
+编译：
+
+```
+npm run build
+
+运行：
+
+```
+node app.js
+http://localhost:8088/www/index.html
+或
+open www/index.html
+```
+
+在线演示：[qtk-proton-editor](https://qtoolkit.github.io/qtk-proton-editor/index.html)
