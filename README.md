@@ -10,6 +10,7 @@ npm install
 
 ```
 npm run build
+```
 
 运行：
 
