@@ -16,7 +16,10 @@ npm run build
 ```
 node app.js
 http://localhost:8088/www/index.html
+```
 或
+
+```
 open www/index.html
 ```
 
