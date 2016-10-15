@@ -16,7 +16,7 @@ npm run build
 
 ```
 node app.js
-http://localhost:8088/www/index.html
+(用浏览器打开：http://localhost:8088/www/index.html)
 ```
 或
 
