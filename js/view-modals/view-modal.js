@@ -14,15 +14,17 @@ var qtk_particles_editor_3 = require("qtk-particles-editor");
 var ProtonViewModal = (function (_super) {
     __extends(ProtonViewModal, _super);
     function ProtonViewModal(storage) {
-        _super.call(this, null);
-        this.canvas = document.createElement('canvas');
-        this.storage = storage;
-        this.registerCommands();
-        this.registerConverters();
-        this.doc = qtk_particles_editor_1.Document.create();
-        this.createDoc("default");
-        this.updateDocList();
+        _super.call(this, null, ProtonViewModal.TYPE, storage);
     }
+    ProtonViewModal.prototype.onDocReplaced = function () {
+        var globalCompositeOperation = this.data.globalCompositeOperation;
+        if (globalCompositeOperation) {
+            var context = this.canvas.getContext('2d');
+            setTimeout(function () {
+                context.globalCompositeOperation = globalCompositeOperation;
+            }, 300);
+        }
+    };
     ProtonViewModal.prototype.registerConverters = function () {
         this.registerValueConverter("radius", qtk_1.RangeFixer.create(0, 1000, 0, 1000, true));
         this.registerValueConverter("life", qtk_1.RangeFixer.create(0, 1000, 0, 1000, true));

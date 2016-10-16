@@ -5,6 +5,7 @@ export declare class ProtonViewModal extends ParticlesViewModal {
     canvas: any;
     protected renderer: any;
     protected protonEmitter: any;
+    protected onDocReplaced(): void;
     constructor(storage: ItemsStorage);
     protected registerConverters(): void;
     protected registerCommands(): void;

@@ -64,7 +64,7 @@ var editor =
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var qtk_particles_editor_1 = __webpack_require__(2);
-	var view_modal_1 = __webpack_require__(209);
+	var view_modal_1 = __webpack_require__(210);
 	var ProtonEditor = (function (_super) {
 	    __extends(ProtonEditor, _super);
 	    function ProtonEditor() {
@@ -86,29 +86,29 @@ var editor =
 	"use strict";
 	var document_1 = __webpack_require__(3);
 	exports.Document = document_1.Document;
-	var draw_info_1 = __webpack_require__(192);
+	var draw_info_1 = __webpack_require__(193);
 	exports.DrawInfo = draw_info_1.DrawInfo;
-	var particles_editor_1 = __webpack_require__(193);
+	var particles_editor_1 = __webpack_require__(194);
 	exports.ParticlesEditor = particles_editor_1.ParticlesEditor;
-	var command_draw_1 = __webpack_require__(199);
+	var command_draw_1 = __webpack_require__(200);
 	exports.CommandDraw = command_draw_1.CommandDraw;
-	var command_new_1 = __webpack_require__(200);
+	var command_new_1 = __webpack_require__(201);
 	exports.CommandNew = command_new_1.CommandNew;
-	var command_open_1 = __webpack_require__(201);
+	var command_open_1 = __webpack_require__(202);
 	exports.CommandOpen = command_open_1.CommandOpen;
-	var command_save_1 = __webpack_require__(202);
+	var command_save_1 = __webpack_require__(203);
 	exports.CommandSave = command_save_1.CommandSave;
-	var command_export_1 = __webpack_require__(203);
+	var command_export_1 = __webpack_require__(204);
 	exports.CommandExport = command_export_1.CommandExport;
-	var command_about_1 = __webpack_require__(205);
+	var command_about_1 = __webpack_require__(206);
 	exports.CommandAbout = command_about_1.CommandAbout;
-	var command_remove_1 = __webpack_require__(206);
+	var command_remove_1 = __webpack_require__(207);
 	exports.CommandRemove = command_remove_1.CommandRemove;
-	var command_content_1 = __webpack_require__(207);
+	var command_content_1 = __webpack_require__(208);
 	exports.CommandContent = command_content_1.CommandContent;
-	var particles_view_modal_1 = __webpack_require__(208);
+	var particles_view_modal_1 = __webpack_require__(209);
 	exports.ParticlesViewModal = particles_view_modal_1.ParticlesViewModal;
-	var iparticles_view_modal_1 = __webpack_require__(198);
+	var iparticles_view_modal_1 = __webpack_require__(199);
 	exports.ParticlesViewModalFactory = iparticles_view_modal_1.ParticlesViewModalFactory;
 	//# sourceMappingURL=index.js.map
 
@@ -135,6 +135,9 @@ var editor =
 	        this.propsDesc = json.propsDesc.map(function (item) {
 	            return qtk_1.PagePropsDesc.create(item.title, item.propsDesc.items);
 	        });
+	        if (!this.data.backGroundColor) {
+	            this.data.backGroundColor = "#f6f6f6";
+	        }
 	        return this;
 	    };
 	    Document.prototype.fromTemplate = function (name) {
@@ -150,6 +153,9 @@ var editor =
 	            return pagePropsDesc;
 	        });
 	        this.data = data;
+	        if (!this.data.backGroundColor) {
+	            this.data.backGroundColor = "#f6f6f6";
+	        }
 	        return this;
 	    };
 	    Document.prototype.getTemplateList = function () {
@@ -245,17 +251,17 @@ var editor =
 	exports.TreeView = tree_view_1.TreeView;
 	var application_1 = __webpack_require__(124);
 	exports.Application = application_1.Application;
-	var movable_1 = __webpack_require__(164);
+	var movable_1 = __webpack_require__(165);
 	exports.Movable = movable_1.Movable;
 	var theme_manager_1 = __webpack_require__(125);
 	exports.ThemeManager = theme_manager_1.ThemeManager;
-	var draggable_1 = __webpack_require__(165);
+	var draggable_1 = __webpack_require__(166);
 	exports.Draggable = draggable_1.Draggable;
-	var droppable_1 = __webpack_require__(166);
+	var droppable_1 = __webpack_require__(167);
 	exports.Droppable = droppable_1.Droppable;
-	var resizable_1 = __webpack_require__(167);
+	var resizable_1 = __webpack_require__(168);
 	exports.Resizable = resizable_1.Resizable;
-	var menu_1 = __webpack_require__(168);
+	var menu_1 = __webpack_require__(169);
 	exports.Menu = menu_1.Menu;
 	exports.MenuItem = menu_1.MenuItem;
 	var radio_button_1 = __webpack_require__(109);
@@ -264,11 +270,11 @@ var editor =
 	exports.TreeItemData = tree_item_data_1.TreeItemData;
 	var check_button_1 = __webpack_require__(110);
 	exports.CheckButton = check_button_1.CheckButton;
-	var window_normal_1 = __webpack_require__(169);
+	var window_normal_1 = __webpack_require__(170);
 	exports.WindowNormal = window_normal_1.WindowNormal;
 	var widget_factory_1 = __webpack_require__(27);
 	exports.WidgetFactory = widget_factory_1.WidgetFactory;
-	var menu_bar_1 = __webpack_require__(170);
+	var menu_bar_1 = __webpack_require__(171);
 	exports.MenuBar = menu_bar_1.MenuBar;
 	exports.MenuBarItem = menu_bar_1.MenuBarItem;
 	var color_tile_1 = __webpack_require__(142);
@@ -280,43 +286,43 @@ var editor =
 	var graphics_1 = __webpack_require__(29);
 	exports.RoundType = graphics_1.RoundType;
 	exports.Graphics = graphics_1.Graphics;
-	var accordion_1 = __webpack_require__(171);
+	var accordion_1 = __webpack_require__(172);
 	exports.Accordion = accordion_1.Accordion;
 	var service_locator_1 = __webpack_require__(127);
 	exports.ServiceLocator = service_locator_1.ServiceLocator;
-	var ruler_1 = __webpack_require__(174);
+	var ruler_1 = __webpack_require__(175);
 	exports.VRuler = ruler_1.VRuler;
 	exports.HRuler = ruler_1.HRuler;
-	var title_content_1 = __webpack_require__(172);
+	var title_content_1 = __webpack_require__(173);
 	exports.TitleContent = title_content_1.TitleContent;
 	var title_label_1 = __webpack_require__(144);
 	exports.TitleLabel = title_label_1.TitleLabel;
-	var title_range_1 = __webpack_require__(145);
+	var title_range_1 = __webpack_require__(146);
 	exports.TitleRange = title_range_1.TitleRange;
-	var title_vector_1 = __webpack_require__(147);
+	var title_vector_1 = __webpack_require__(148);
 	exports.TitleVector = title_vector_1.TitleVector;
 	var title_edit_1 = __webpack_require__(143);
 	exports.TitleEdit = title_edit_1.TitleEdit;
-	var title_slider_1 = __webpack_require__(149);
+	var title_slider_1 = __webpack_require__(150);
 	exports.TitleSlider = title_slider_1.TitleSlider;
 	var property_page_1 = __webpack_require__(138);
 	exports.PropertyPage = property_page_1.PropertyPage;
 	var property_dialog_1 = __webpack_require__(137);
 	exports.PropertyDialog = property_dialog_1.PropertyDialog;
-	var range_edit_1 = __webpack_require__(146);
+	var range_edit_1 = __webpack_require__(147);
 	exports.RangeEdit = range_edit_1.RangeEdit;
-	var vector_edit_1 = __webpack_require__(148);
+	var vector_edit_1 = __webpack_require__(149);
 	exports.VectorEdit = vector_edit_1.VectorEdit;
-	var choosable_edit_1 = __webpack_require__(154);
+	var choosable_edit_1 = __webpack_require__(153);
 	exports.ChoosableEdit = choosable_edit_1.ChoosableEdit;
-	var title_text_area_1 = __webpack_require__(150);
+	var title_text_area_1 = __webpack_require__(151);
 	exports.TitleTextArea = title_text_area_1.TitleTextArea;
-	var property_sheets_1 = __webpack_require__(175);
+	var property_sheets_1 = __webpack_require__(176);
 	exports.PropertySheets = property_sheets_1.PropertySheets;
 	var progress_bar_1 = __webpack_require__(99);
 	exports.ProgressBarType = progress_bar_1.ProgressBarType;
 	exports.ProgressBar = progress_bar_1.ProgressBar;
-	var title_choosable_edit_1 = __webpack_require__(153);
+	var title_choosable_edit_1 = __webpack_require__(152);
 	exports.TitleChoosableEdit = title_choosable_edit_1.TitleChoosableEdit;
 	var dock_layouter_1 = __webpack_require__(133);
 	exports.DockLayouter = dock_layouter_1.DockLayouter;
@@ -345,7 +351,7 @@ var editor =
 	exports.AlignV = consts_1.AlignV;
 	exports.Orientation = consts_1.Orientation;
 	exports.Services = consts_1.Services;
-	var title_combo_box_1 = __webpack_require__(152);
+	var title_combo_box_1 = __webpack_require__(155);
 	exports.TitleComboBox = title_combo_box_1.TitleComboBox;
 	exports.TitleComboBoxEditable = title_combo_box_1.TitleComboBoxEditable;
 	var message_box_1 = __webpack_require__(132);
@@ -359,37 +365,37 @@ var editor =
 	exports.ScrollView = scroll_view_1.ScrollView;
 	var device_info_1 = __webpack_require__(126);
 	exports.DeviceInfo = device_info_1.DeviceInfo;
-	var view_modal_1 = __webpack_require__(155);
+	var view_modal_1 = __webpack_require__(156);
 	exports.ViewModal = view_modal_1.ViewModal;
 	var recyclable_creator_1 = __webpack_require__(86);
 	exports.RecyclableCreator = recyclable_creator_1.RecyclableCreator;
-	var delegate_command_1 = __webpack_require__(176);
+	var delegate_command_1 = __webpack_require__(177);
 	exports.DelegateCommand = delegate_command_1.DelegateCommand;
-	var collection_view_modal_1 = __webpack_require__(177);
+	var collection_view_modal_1 = __webpack_require__(178);
 	exports.CollectionViewModal = collection_view_modal_1.CollectionViewModal;
-	var delegate_value_converter_1 = __webpack_require__(178);
+	var delegate_value_converter_1 = __webpack_require__(179);
 	exports.DelegateValueConverter = delegate_value_converter_1.DelegateValueConverter;
-	var ivalidation_rule_1 = __webpack_require__(159);
+	var ivalidation_rule_1 = __webpack_require__(160);
 	exports.ValidationResult = ivalidation_rule_1.ValidationResult;
-	var delegate_validation_rule_1 = __webpack_require__(179);
+	var delegate_validation_rule_1 = __webpack_require__(180);
 	exports.DelegateValidationRule = delegate_validation_rule_1.DelegateValidationRule;
 	var binding_rule_1 = __webpack_require__(83);
 	exports.BindingRule = binding_rule_1.BindingRule;
 	exports.BindingDataSource = binding_rule_1.BindingDataSource;
 	exports.BindingCommandSource = binding_rule_1.BindingCommandSource;
 	exports.BindingRuleItem = binding_rule_1.BindingRuleItem;
-	var props_desc_1 = __webpack_require__(151);
+	var props_desc_1 = __webpack_require__(154);
 	exports.PagePropsDesc = props_desc_1.PagePropsDesc;
 	exports.PropsDesc = props_desc_1.PropsDesc;
 	exports.PropDesc = props_desc_1.PropDesc;
 	exports.NumberPropDesc = props_desc_1.NumberPropDesc;
 	exports.SliderPropDesc = props_desc_1.SliderPropDesc;
-	var props_desc_2 = __webpack_require__(151);
+	var props_desc_2 = __webpack_require__(154);
 	exports.TextPropDesc = props_desc_2.TextPropDesc;
 	exports.ReadonlyTextPropDesc = props_desc_2.ReadonlyTextPropDesc;
 	exports.OptionsPropDesc = props_desc_2.OptionsPropDesc;
 	exports.RangePropDesc = props_desc_2.RangePropDesc;
-	var props_desc_3 = __webpack_require__(151);
+	var props_desc_3 = __webpack_require__(154);
 	exports.Vector2PropDesc = props_desc_3.Vector2PropDesc;
 	exports.Vector3PropDesc = props_desc_3.Vector3PropDesc;
 	exports.LinePropDesc = props_desc_3.LinePropDesc;
@@ -402,19 +408,19 @@ var editor =
 	exports.Assets = Assets;
 	var inputEventAdapter = __webpack_require__(19);
 	exports.inputEventAdapter = inputEventAdapter;
-	var toast_info_1 = __webpack_require__(180);
+	var toast_info_1 = __webpack_require__(181);
 	exports.ToastInfo = toast_info_1.ToastInfo;
-	var input_info_1 = __webpack_require__(181);
+	var input_info_1 = __webpack_require__(182);
 	exports.InputInfo = input_info_1.InputInfo;
-	var props_info_1 = __webpack_require__(182);
+	var props_info_1 = __webpack_require__(183);
 	exports.PropsInfo = props_info_1.PropsInfo;
-	var choice_info_1 = __webpack_require__(183);
+	var choice_info_1 = __webpack_require__(184);
 	exports.ChoiceInfo = choice_info_1.ChoiceInfo;
-	var progress_info_1 = __webpack_require__(184);
+	var progress_info_1 = __webpack_require__(185);
 	exports.ProgressInfo = progress_info_1.ProgressInfo;
-	var confirmation_info_1 = __webpack_require__(185);
+	var confirmation_info_1 = __webpack_require__(186);
 	exports.ConfirmationInfo = confirmation_info_1.ConfirmationInfo;
-	var notification_info_1 = __webpack_require__(186);
+	var notification_info_1 = __webpack_require__(187);
 	exports.NotificationInfo = notification_info_1.NotificationInfo;
 	var interaction_types_1 = __webpack_require__(129);
 	exports.InteractionTypes = interaction_types_1.InteractionTypes;
@@ -422,15 +428,15 @@ var editor =
 	exports.InteractionRequest = interaction_request_1.InteractionRequest;
 	var interaction_service_1 = __webpack_require__(130);
 	exports.InteractionService = interaction_service_1.InteractionService;
-	var items_storage_1 = __webpack_require__(187);
+	var items_storage_1 = __webpack_require__(188);
 	exports.ItemsStorage = items_storage_1.ItemsStorage;
-	var range_fixer_1 = __webpack_require__(188);
+	var range_fixer_1 = __webpack_require__(189);
 	exports.RangeFixer = range_fixer_1.RangeFixer;
-	var number_fixer_1 = __webpack_require__(189);
+	var number_fixer_1 = __webpack_require__(190);
 	exports.NumberFixer = number_fixer_1.NumberFixer;
-	var vector2_fixer_1 = __webpack_require__(190);
+	var vector2_fixer_1 = __webpack_require__(191);
 	exports.Vector2Fixer = vector2_fixer_1.Vector2Fixer;
-	var vector3_fixer_1 = __webpack_require__(191);
+	var vector3_fixer_1 = __webpack_require__(192);
 	exports.Vector3Fixer = vector3_fixer_1.Vector3Fixer;
 
 
@@ -4727,7 +4733,10 @@ var editor =
 	    Widget.prototype.set = function (props) {
 	        if (props) {
 	            for (var key in props) {
-	                this[key] = props[key];
+	                var value = props[key];
+	                if (value !== undefined) {
+	                    this[key] = value;
+	                }
 	            }
 	        }
 	        return this;
@@ -24393,10 +24402,10 @@ var editor =
 	var toast_dialog_1 = __webpack_require__(131);
 	var input_dialog_1 = __webpack_require__(135);
 	var props_dialog_1 = __webpack_require__(136);
-	var choice_dialog_1 = __webpack_require__(160);
-	var progress_dialog_1 = __webpack_require__(161);
-	var confirmation_dialog_1 = __webpack_require__(162);
-	var notification_dialog_1 = __webpack_require__(163);
+	var choice_dialog_1 = __webpack_require__(161);
+	var progress_dialog_1 = __webpack_require__(162);
+	var confirmation_dialog_1 = __webpack_require__(163);
+	var notification_dialog_1 = __webpack_require__(164);
 	var interaction_types_1 = __webpack_require__(129);
 	var InteractionService = (function () {
 	    function InteractionService() {
@@ -25258,7 +25267,7 @@ var editor =
 	};
 	var application_1 = __webpack_require__(124);
 	var property_page_1 = __webpack_require__(138);
-	var view_modal_1 = __webpack_require__(155);
+	var view_modal_1 = __webpack_require__(156);
 	var recyclable_creator_1 = __webpack_require__(86);
 	var widget_factory_1 = __webpack_require__(27);
 	var message_box_1 = __webpack_require__(132);
@@ -25330,18 +25339,20 @@ var editor =
 	var title_line_1 = __webpack_require__(141);
 	var title_edit_1 = __webpack_require__(143);
 	var title_label_1 = __webpack_require__(144);
-	var title_range_1 = __webpack_require__(145);
-	var title_vector_1 = __webpack_require__(147);
+	var title_check_button_1 = __webpack_require__(145);
+	var title_range_1 = __webpack_require__(146);
+	var title_vector_1 = __webpack_require__(148);
 	var widget_1 = __webpack_require__(23);
-	var title_slider_1 = __webpack_require__(149);
-	var title_text_area_1 = __webpack_require__(150);
-	var props_desc_1 = __webpack_require__(151);
-	var props_desc_2 = __webpack_require__(151);
-	var props_desc_3 = __webpack_require__(151);
-	var title_combo_box_1 = __webpack_require__(152);
-	var title_choosable_edit_1 = __webpack_require__(153);
+	var title_slider_1 = __webpack_require__(150);
+	var title_text_area_1 = __webpack_require__(151);
 	var widget_factory_1 = __webpack_require__(27);
 	var recyclable_creator_1 = __webpack_require__(86);
+	var title_choosable_edit_1 = __webpack_require__(152);
+	var props_desc_1 = __webpack_require__(154);
+	var title_combo_box_1 = __webpack_require__(155);
+	var props_desc_2 = __webpack_require__(154);
+	var props_desc_3 = __webpack_require__(154);
+	var props_desc_4 = __webpack_require__(154);
 	/**
 	 * 属性编辑页，包装了各种TitleValue。
 	 */
@@ -25389,6 +25400,20 @@ var editor =
 	            titleW: this.titleW,
 	            valueW: this.valueW
 	        });
+	        widget.value = value,
+	            this.addChild(widget, true);
+	        return widget;
+	    };
+	    PropertyPage.prototype.addCheckButton = function (title, value) {
+	        var itemH = this.itemH;
+	        var widget = title_check_button_1.TitleCheckButton.create({
+	            h: itemH,
+	            name: title,
+	            titleW: this.titleW,
+	            valueW: this.valueW
+	        });
+	        var valueWidget = widget.valueWidget;
+	        valueWidget.text = title;
 	        widget.value = value,
 	            this.addChild(widget, true);
 	        return widget;
@@ -25441,7 +25466,7 @@ var editor =
 	        this.addChild(widget, true);
 	        return widget;
 	    };
-	    PropertyPage.prototype.addVector2 = function (title, x, y) {
+	    PropertyPage.prototype.addVector2 = function (title, x, y, xTitle, yTitle) {
 	        var itemH = this.itemH * 2;
 	        var widget = title_vector_1.TitleVector.create({
 	            d: 2,
@@ -25451,11 +25476,13 @@ var editor =
 	            titleW: this.titleW,
 	            valueW: this.valueW
 	        });
+	        var valueWidget = widget.valueWidget;
+	        valueWidget.set({ xTitle: xTitle, yTitle: yTitle });
 	        widget.value = { x: x, y: y };
 	        this.addChild(widget, true);
 	        return widget;
 	    };
-	    PropertyPage.prototype.addVector3 = function (title, x, y, z) {
+	    PropertyPage.prototype.addVector3 = function (title, x, y, z, xTitle, yTitle, zTitle) {
 	        var itemH = this.itemH * 2;
 	        var widget = title_vector_1.TitleVector.create({
 	            d: 3,
@@ -25465,7 +25492,25 @@ var editor =
 	            titleW: this.titleW,
 	            valueW: this.valueW
 	        });
+	        var valueWidget = widget.valueWidget;
+	        valueWidget.set({ xTitle: xTitle, yTitle: yTitle, zTitle: zTitle });
 	        widget.value = { x: x, y: y, z: z };
+	        this.addChild(widget, true);
+	        return widget;
+	    };
+	    PropertyPage.prototype.addVector4 = function (title, x, y, z, w, xTitle, yTitle, zTitle, wTitle) {
+	        var itemH = this.itemH * 2;
+	        var widget = title_vector_1.TitleVector.create({
+	            d: 4,
+	            h: itemH,
+	            name: title,
+	            title: title,
+	            titleW: this.titleW,
+	            valueW: this.valueW
+	        });
+	        var valueWidget = widget.valueWidget;
+	        valueWidget.set({ xTitle: xTitle, yTitle: yTitle, zTitle: zTitle, wTitle: wTitle });
+	        widget.value = { x: x, y: y, z: z, w: w };
 	        this.addChild(widget, true);
 	        return widget;
 	    };
@@ -25558,20 +25603,23 @@ var editor =
 	    };
 	    PropertyPage.prototype.addWithPropDesc = function (item) {
 	        var titleValue = null;
-	        if (item.type === props_desc_2.NumberPropDesc.TYPE) {
+	        if (item.type === props_desc_3.NumberPropDesc.TYPE) {
 	            titleValue = this.addEdit(item.name, item.value, item.desc, "number");
 	        }
-	        else if (item.type === props_desc_2.TextPropDesc.TYPE) {
+	        else if (item.type === props_desc_3.TextPropDesc.TYPE) {
 	            titleValue = this.addEdit(item.name, item.value, item.desc, "text");
 	        }
-	        else if (item.type === props_desc_2.ReadonlyTextPropDesc.TYPE) {
+	        else if (item.type === props_desc_3.ReadonlyTextPropDesc.TYPE) {
 	            titleValue = this.addLabel(item.name, item.value);
 	        }
-	        else if (item.type === props_desc_3.SliderPropDesc.TYPE) {
+	        else if (item.type === props_desc_4.SliderPropDesc.TYPE) {
 	            titleValue = this.addSlider(item.name, item.value);
 	        }
 	        else if (item.type === props_desc_1.LinkPropDesc.TYPE) {
 	            titleValue = this.addLink(item.name, item.value);
+	        }
+	        else if (item.type === props_desc_1.BoolPropDesc.TYPE) {
+	            titleValue = this.addCheckButton(item.name, item.value);
 	        }
 	        else if (item.type === props_desc_1.LinePropDesc.TYPE) {
 	            if (item.name) {
@@ -25581,15 +25629,16 @@ var editor =
 	                titleValue = this.addGroupEnd();
 	            }
 	        }
-	        else if (item.type === props_desc_3.RangePropDesc.TYPE) {
+	        else if (item.type === props_desc_4.RangePropDesc.TYPE) {
 	            var value = item.value || { first: 0, second: 0 };
 	            titleValue = this.addRange(item.name, value.first, value.second);
 	        }
-	        else if (item.type === props_desc_3.Vector2PropDesc.TYPE) {
+	        else if (item.type === props_desc_4.Vector2PropDesc.TYPE) {
+	            var p2 = item;
 	            var value = item.value || { x: 0, y: 0 };
-	            titleValue = this.addVector2(item.name, value.x, value.y);
+	            titleValue = this.addVector2(item.name, value.x, value.y, p2.xTitle, p2.yTitle);
 	        }
-	        else if (item.type === props_desc_3.OptionsPropDesc.TYPE) {
+	        else if (item.type === props_desc_4.OptionsPropDesc.TYPE) {
 	            var value = item.value || { x: 0, y: 0 };
 	            var propDesc = item;
 	            titleValue = this.addComboBox(item.name, value);
@@ -25598,9 +25647,15 @@ var editor =
 	                comboBox.optionsJson = propDesc.options;
 	            }
 	        }
-	        else if (item.type === props_desc_3.Vector3PropDesc.TYPE) {
+	        else if (item.type === props_desc_4.Vector3PropDesc.TYPE) {
+	            var p3 = item;
 	            var value = item.value || { x: 0, y: 0, z: 0 };
-	            titleValue = this.addVector3(item.name, value.x, value.y, value.z);
+	            titleValue = this.addVector3(item.name, value.x, value.y, value.z, p3.xTitle, p3.yTitle, p3.zTitle);
+	        }
+	        else if (item.type === props_desc_2.Vector4PropDesc.TYPE) {
+	            var p4 = item;
+	            var value = item.value || { x: 0, y: 0, z: 0, w: 0 };
+	            titleValue = this.addVector4(item.name, value.x, value.y, value.z, value.w, p4.xTitle, p4.yTitle, p4.zTitle, p4.wTitle);
 	        }
 	        if (titleValue && item.path) {
 	            var valueWidget = titleValue.valueWidget;
@@ -25633,7 +25688,7 @@ var editor =
 	        this.relayoutChildren();
 	    };
 	    PropertyPage.prototype.initWithJson = function (json) {
-	        var propsDesc = props_desc_2.PropsDesc.create(json);
+	        var propsDesc = props_desc_3.PropsDesc.create(json);
 	        this.initWithPropsDesc(propsDesc);
 	    };
 	    PropertyPage.prototype.onAddChild = function (child) {
@@ -26281,7 +26336,41 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var range_edit_1 = __webpack_require__(146);
+	var title_value_1 = __webpack_require__(140);
+	var check_button_1 = __webpack_require__(110);
+	var widget_factory_1 = __webpack_require__(27);
+	var recyclable_creator_1 = __webpack_require__(86);
+	var TitleCheckButton = (function (_super) {
+	    __extends(TitleCheckButton, _super);
+	    function TitleCheckButton(type) {
+	        _super.call(this, type || TitleCheckButton.TYPE);
+	    }
+	    TitleCheckButton.prototype.createValueWidget = function (options) {
+	        return check_button_1.CheckButton.create(options);
+	    };
+	    TitleCheckButton.create = function (options) {
+	        return TitleCheckButton.recycleBin.create().reset(TitleCheckButton.TYPE, options);
+	    };
+	    TitleCheckButton.TYPE = "title-check-button";
+	    TitleCheckButton.recycleBin = new recyclable_creator_1.RecyclableCreator(function () { return new TitleCheckButton(); });
+	    return TitleCheckButton;
+	}(title_value_1.TitleValue));
+	exports.TitleCheckButton = TitleCheckButton;
+	;
+	widget_factory_1.WidgetFactory.register(TitleCheckButton.TYPE, TitleCheckButton.create);
+
+
+/***/ },
+/* 146 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var range_edit_1 = __webpack_require__(147);
 	var title_value_1 = __webpack_require__(140);
 	var widget_factory_1 = __webpack_require__(27);
 	var recyclable_creator_1 = __webpack_require__(86);
@@ -26306,7 +26395,7 @@ var editor =
 
 
 /***/ },
-/* 146 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26444,7 +26533,7 @@ var editor =
 
 
 /***/ },
-/* 147 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26453,7 +26542,7 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var vector_edit_1 = __webpack_require__(148);
+	var vector_edit_1 = __webpack_require__(149);
 	var title_value_1 = __webpack_require__(140);
 	var widget_factory_1 = __webpack_require__(27);
 	var recyclable_creator_1 = __webpack_require__(86);
@@ -26495,7 +26584,7 @@ var editor =
 
 
 /***/ },
-/* 148 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26519,6 +26608,58 @@ var editor =
 	    function VectorEdit() {
 	        _super.call(this, VectorEdit.TYPE);
 	    }
+	    Object.defineProperty(VectorEdit.prototype, "xTitle", {
+	        get: function () {
+	            return this._xTitle;
+	        },
+	        set: function (value) {
+	            if (value || value === "") {
+	                this._xTitle;
+	                this._xLabel.text = value;
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(VectorEdit.prototype, "yTitle", {
+	        get: function () {
+	            return this._yTitle;
+	        },
+	        set: function (value) {
+	            if (value || value === "") {
+	                this._yTitle;
+	                this._yLabel.text = value;
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(VectorEdit.prototype, "zTitle", {
+	        get: function () {
+	            return this._zTitle;
+	        },
+	        set: function (value) {
+	            if (value || value === "") {
+	                this._zTitle;
+	                this._zLabel.text = value;
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(VectorEdit.prototype, "wTitle", {
+	        get: function () {
+	            return this._wTitle;
+	        },
+	        set: function (value) {
+	            if (value || value === "") {
+	                this._wTitle;
+	                this._wLabel.text = value;
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    Object.defineProperty(VectorEdit.prototype, "inputable", {
 	        get: function () {
 	            return true;
@@ -26561,19 +26702,29 @@ var editor =
 	        enumerable: true,
 	        configurable: true
 	    });
+	    Object.defineProperty(VectorEdit.prototype, "wEditor", {
+	        get: function () {
+	            return this._wEditor;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
 	    Object.defineProperty(VectorEdit.prototype, "value", {
 	        get: function () {
 	            if (!this._value) {
 	                this._value = {};
 	            }
 	            if (this._xEditor) {
-	                this._value.x = this._xEditor.value;
+	                this._value.x = +(this._xEditor.value);
 	            }
 	            if (this._yEditor) {
-	                this._value.y = this._yEditor.value;
+	                this._value.y = +(this._yEditor.value);
 	            }
 	            if (this._zEditor) {
-	                this._value.z = this._zEditor.value;
+	                this._value.z = +(this._zEditor.value);
+	            }
+	            if (this._wEditor) {
+	                this._value.w = +(this._wEditor.value);
 	            }
 	            return this._value;
 	        },
@@ -26588,6 +26739,9 @@ var editor =
 	            if (this._zEditor) {
 	                this._zEditor.value = +value.z;
 	            }
+	            if (this._wEditor) {
+	                this._wEditor.value = +value.w;
+	            }
 	        },
 	        enumerable: true,
 	        configurable: true
@@ -26599,9 +26753,11 @@ var editor =
 	        this._xEditor = null;
 	        this._yEditor = null;
 	        this._zEditor = null;
+	        this._wEditor = null;
 	        this._xLabel = null;
 	        this._yLabel = null;
 	        this._zLabel = null;
+	        this._wLabel = null;
 	        _super.prototype.dispose.call(this);
 	    };
 	    VectorEdit.prototype.forwardChangeEvent = function (evt) {
@@ -26609,52 +26765,47 @@ var editor =
 	        e.init(evt.type, { value: this.value });
 	        this.dispatchEvent(e);
 	    };
-	    VectorEdit.prototype.onCreated = function () {
+	    VectorEdit.prototype.createEdit = function (value) {
 	        var _this = this;
+	        var edit = edit_1.Edit.create({ multiLineMode: false, value: value, inputType: "number" });
+	        this.addChild(edit, false);
+	        edit.on(Events.CHANGE, function (evt) {
+	            _this.forwardChangeEvent(evt);
+	        });
+	        edit.on(Events.CHANGING, function (evt) {
+	            _this.forwardChangeEvent(evt);
+	        });
+	        return edit;
+	    };
+	    VectorEdit.prototype.createLabel = function (text) {
+	        var label = label_1.Label.create({ text: text });
+	        label.set({ multiLineMode: false, topPadding: 10, bottomPadding: 0, styleType: "label.small" });
+	        this.addChild(label, false);
+	        return label;
+	    };
+	    VectorEdit.prototype.onCreated = function () {
 	        _super.prototype.onCreated.call(this);
 	        this.padding = 0;
-	        var value = this._value || { x: 0, y: 0, z: 0 };
-	        this.d = Math.max(2, Math.min(3, this.d || 2));
+	        var value = this._value || { x: 0, y: 0, z: 0, w: 0 };
+	        this.d = Math.max(2, Math.min(4, this.d || 2));
 	        var cols = this.d;
 	        var rows = 2;
 	        this.childrenLayouter = grid_layouter_1.GridLayouter.create({ rows: rows, cols: cols, rightMargin: 10 });
-	        var labelOptions = { multiLineMode: false, topPadding: 10, bottomPadding: 0 };
-	        this._xLabel = label_1.Label.create({ text: "X" });
-	        this._xLabel.set(labelOptions);
-	        this.addChild(this._xLabel, false);
-	        this._yLabel = label_1.Label.create({ text: "Y" });
-	        this._yLabel.set(labelOptions);
-	        this.addChild(this._yLabel, false);
+	        this._xLabel = this.createLabel(this._xTitle);
+	        this._yLabel = this.createLabel(this._yTitle);
 	        if (this.d > 2) {
-	            this._zLabel = label_1.Label.create({ text: "Z" });
-	            this._zLabel.set(labelOptions);
-	            this.addChild(this._zLabel, false);
+	            this._zLabel = this.createLabel(this._zTitle);
 	        }
-	        this._xEditor = edit_1.Edit.create({ multiLineMode: false, value: value.x, inputType: "number" });
-	        this.addChild(this._xEditor, false);
-	        this._xEditor.on(Events.CHANGE, function (evt) {
-	            _this.forwardChangeEvent(evt);
-	        });
-	        this._xEditor.on(Events.CHANGING, function (evt) {
-	            _this.forwardChangeEvent(evt);
-	        });
-	        this._yEditor = edit_1.Edit.create({ multiLineMode: false, value: value.y, inputType: "number" });
-	        this.addChild(this._yEditor, false);
-	        this._yEditor.on(Events.CHANGE, function (evt) {
-	            _this.forwardChangeEvent(evt);
-	        });
-	        this._yEditor.on(Events.CHANGING, function (evt) {
-	            _this.forwardChangeEvent(evt);
-	        });
+	        if (this.d > 3) {
+	            this._wLabel = this.createLabel(this._wTitle);
+	        }
+	        this._xEditor = this.createEdit(value.x);
+	        this._yEditor = this.createEdit(value.y);
 	        if (this.d > 2) {
-	            this._zEditor = edit_1.Edit.create({ inputType: "number" });
-	            this.addChild(this._zEditor, false);
-	            this._zEditor.on(Events.CHANGE, function (evt) {
-	                _this.forwardChangeEvent(evt);
-	            });
-	            this._zEditor.on(Events.CHANGING, function (evt) {
-	                _this.forwardChangeEvent(evt);
-	            });
+	            this._zEditor = this.createEdit(value.z);
+	        }
+	        if (this.d > 3) {
+	            this._wEditor = this.createEdit(value.w);
 	        }
 	        this.relayoutChildren();
 	    };
@@ -26664,7 +26815,7 @@ var editor =
 	    VectorEdit.create = function (options) {
 	        return VectorEdit.rBin.create().reset(VectorEdit.TYPE, options);
 	    };
-	    VectorEdit.defProps = Object.assign({}, widget_1.Widget.defProps, { _d: 2 });
+	    VectorEdit.defProps = Object.assign({}, widget_1.Widget.defProps, { _d: 2, _xTitle: "X", _yTitle: "Y", _zTitle: "Z", _wTitle: "W" });
 	    VectorEdit.TYPE = "vector.edit";
 	    VectorEdit.rBin = new recyclable_creator_1.RecyclableCreator(function () {
 	        return new VectorEdit();
@@ -26677,7 +26828,7 @@ var editor =
 
 
 /***/ },
-/* 149 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26711,7 +26862,7 @@ var editor =
 
 
 /***/ },
-/* 150 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26763,7 +26914,167 @@ var editor =
 
 
 /***/ },
-/* 151 */
+/* 152 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var title_value_1 = __webpack_require__(140);
+	var choosable_edit_1 = __webpack_require__(153);
+	var widget_factory_1 = __webpack_require__(27);
+	var recyclable_creator_1 = __webpack_require__(86);
+	var TitleChoosableEdit = (function (_super) {
+	    __extends(TitleChoosableEdit, _super);
+	    function TitleChoosableEdit(type) {
+	        _super.call(this, type || TitleChoosableEdit.TYPE);
+	    }
+	    Object.defineProperty(TitleChoosableEdit.prototype, "onChoose", {
+	        get: function () {
+	            var edit = this._valueWidget;
+	            return edit.onChoose;
+	        },
+	        set: function (value) {
+	            var edit = this._valueWidget;
+	            edit.onChoose = value;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(TitleChoosableEdit.prototype, "inputTips", {
+	        get: function () {
+	            return this._inputTips;
+	        },
+	        set: function (value) {
+	            this._inputTips = value;
+	            if (this._valueWidget) {
+	                this._valueWidget.set({ inputTips: value });
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    TitleChoosableEdit.prototype.createValueWidget = function (options) {
+	        return choosable_edit_1.ChoosableEdit.create();
+	    };
+	    TitleChoosableEdit.create = function (options) {
+	        return TitleChoosableEdit.recycleBin.create().reset(TitleChoosableEdit.TYPE, options);
+	    };
+	    TitleChoosableEdit.TYPE = "title-choosable-edit";
+	    TitleChoosableEdit.recycleBin = new recyclable_creator_1.RecyclableCreator(function () { return new TitleChoosableEdit(); });
+	    return TitleChoosableEdit;
+	}(title_value_1.TitleValue));
+	exports.TitleChoosableEdit = TitleChoosableEdit;
+	;
+	widget_factory_1.WidgetFactory.register(TitleChoosableEdit.TYPE, TitleChoosableEdit.create);
+
+
+/***/ },
+/* 153 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || function (d, b) {
+	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+	    function __() { this.constructor = d; }
+	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	};
+	var edit_1 = __webpack_require__(21);
+	var button_1 = __webpack_require__(97);
+	var widget_1 = __webpack_require__(23);
+	var Events = __webpack_require__(10);
+	var widget_factory_1 = __webpack_require__(27);
+	var recyclable_creator_1 = __webpack_require__(86);
+	/**
+	 * 编辑器+选择按钮。
+	 */
+	var ChoosableEdit = (function (_super) {
+	    __extends(ChoosableEdit, _super);
+	    function ChoosableEdit() {
+	        _super.call(this, ChoosableEdit.TYPE);
+	    }
+	    Object.defineProperty(ChoosableEdit.prototype, "inputTips", {
+	        get: function () {
+	            return this._inputTips;
+	        },
+	        set: function (value) {
+	            this._inputTips = value;
+	            if (this._edit) {
+	                this._edit.set({ inputTips: value });
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    Object.defineProperty(ChoosableEdit.prototype, "value", {
+	        get: function () {
+	            return this._edit ? this._edit.text : this._value;
+	        },
+	        set: function (value) {
+	            this._value = value;
+	            if (this._edit) {
+	                this._edit.text = value;
+	            }
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    ChoosableEdit.prototype.relayoutChildren = function () {
+	        this.requestRedraw();
+	        if (this._edit && this._button) {
+	            var x = this.leftPadding;
+	            var y = this.topPadding;
+	            var h = this.clientH;
+	            var w = this.clientW - this.h - 6;
+	            this._edit.moveResizeTo(x, y, w, h, 0);
+	            w = this.h;
+	            x = this.w - w - 4;
+	            this._button.moveResizeTo(x, y, w, h, 0);
+	        }
+	        return this.getLayoutRect();
+	    };
+	    ChoosableEdit.prototype.dispose = function () {
+	        this._edit = null;
+	        this._button = null;
+	        _super.prototype.dispose.call(this);
+	    };
+	    ChoosableEdit.prototype.onReset = function () {
+	        var _this = this;
+	        _super.prototype.onReset.call(this);
+	        this.padding = 0;
+	        this.onChoose = null;
+	        this._edit = edit_1.Edit.create();
+	        this.addChild(this._edit);
+	        this._edit.on(Events.CHANGE, function (evt) {
+	            _this.dispatchEvent(evt);
+	        });
+	        this._button = button_1.Button.create({ text: "..." });
+	        this.addChild(this._button);
+	        this._button.on(Events.CLICK, function (evt) {
+	            if (_this.onChoose) {
+	                _this.onChoose();
+	            }
+	        });
+	    };
+	    ChoosableEdit.create = function (options) {
+	        return ChoosableEdit.rBin.create().reset(ChoosableEdit.TYPE, options);
+	    };
+	    ChoosableEdit.TYPE = "choosable.edit";
+	    ChoosableEdit.rBin = new recyclable_creator_1.RecyclableCreator(function () {
+	        return new ChoosableEdit();
+	    });
+	    return ChoosableEdit;
+	}(widget_1.Widget));
+	exports.ChoosableEdit = ChoosableEdit;
+	;
+	widget_factory_1.WidgetFactory.register(ChoosableEdit.TYPE, ChoosableEdit.create);
+
+
+/***/ },
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26902,11 +27213,24 @@ var editor =
 	exports.RangePropDesc = RangePropDesc;
 	var Vector2PropDesc = (function (_super) {
 	    __extends(Vector2PropDesc, _super);
-	    function Vector2PropDesc() {
+	    function Vector2PropDesc(xTitle, yTitle) {
 	        _super.call(this, Vector2PropDesc.TYPE);
+	        this.xTitle = xTitle;
+	        this.yTitle = yTitle;
 	    }
-	    Vector2PropDesc.create = function () {
-	        return new Vector2PropDesc();
+	    Vector2PropDesc.prototype.toJson = function () {
+	        var json = _super.prototype.toJson.call(this);
+	        json.xTitle = this.xTitle;
+	        json.yTitle = this.yTitle;
+	        return json;
+	    };
+	    Vector2PropDesc.prototype.fromJson = function (json) {
+	        _super.prototype.fromJson.call(this, json);
+	        this.xTitle = json.xTitle;
+	        this.yTitle = json.yTitle;
+	    };
+	    Vector2PropDesc.create = function (xTitle, yTitle) {
+	        return new Vector2PropDesc(xTitle, yTitle);
 	    };
 	    Vector2PropDesc.TYPE = "vector2";
 	    return Vector2PropDesc;
@@ -26914,16 +27238,63 @@ var editor =
 	exports.Vector2PropDesc = Vector2PropDesc;
 	var Vector3PropDesc = (function (_super) {
 	    __extends(Vector3PropDesc, _super);
-	    function Vector3PropDesc() {
+	    function Vector3PropDesc(xTitle, yTitle, zTitle) {
 	        _super.call(this, Vector3PropDesc.TYPE);
+	        this.xTitle = xTitle;
+	        this.yTitle = yTitle;
+	        this.zTitle = zTitle;
 	    }
-	    Vector3PropDesc.create = function () {
-	        return new Vector3PropDesc();
+	    Vector3PropDesc.prototype.toJson = function () {
+	        var json = _super.prototype.toJson.call(this);
+	        json.xTitle = this.xTitle;
+	        json.yTitle = this.yTitle;
+	        json.zTitle = this.zTitle;
+	        return json;
+	    };
+	    Vector3PropDesc.prototype.fromJson = function (json) {
+	        _super.prototype.fromJson.call(this, json);
+	        this.xTitle = json.xTitle;
+	        this.yTitle = json.yTitle;
+	        this.zTitle = json.zTitle;
+	    };
+	    Vector3PropDesc.create = function (xTitle, yTitle, zTitle) {
+	        return new Vector3PropDesc(xTitle, yTitle, zTitle);
 	    };
 	    Vector3PropDesc.TYPE = "vector3";
 	    return Vector3PropDesc;
 	}(PropDesc));
 	exports.Vector3PropDesc = Vector3PropDesc;
+	var Vector4PropDesc = (function (_super) {
+	    __extends(Vector4PropDesc, _super);
+	    function Vector4PropDesc(xTitle, yTitle, zTitle, wTitle) {
+	        _super.call(this, Vector4PropDesc.TYPE);
+	        this.xTitle = xTitle;
+	        this.yTitle = yTitle;
+	        this.zTitle = zTitle;
+	        this.wTitle = wTitle;
+	    }
+	    Vector4PropDesc.prototype.toJson = function () {
+	        var json = _super.prototype.toJson.call(this);
+	        json.xTitle = this.xTitle;
+	        json.yTitle = this.yTitle;
+	        json.zTitle = this.zTitle;
+	        json.wTitle = this.wTitle;
+	        return json;
+	    };
+	    Vector4PropDesc.prototype.fromJson = function (json) {
+	        _super.prototype.fromJson.call(this, json);
+	        this.xTitle = json.xTitle;
+	        this.yTitle = json.yTitle;
+	        this.zTitle = json.zTitle;
+	        this.wTitle = json.wTitle;
+	    };
+	    Vector4PropDesc.create = function (xTitle, yTitle, zTitle, wTitle) {
+	        return new Vector4PropDesc(xTitle, yTitle, zTitle, wTitle);
+	    };
+	    Vector4PropDesc.TYPE = "vector4";
+	    return Vector4PropDesc;
+	}(PropDesc));
+	exports.Vector4PropDesc = Vector4PropDesc;
 	var LinePropDesc = (function (_super) {
 	    __extends(LinePropDesc, _super);
 	    function LinePropDesc() {
@@ -26936,6 +27307,18 @@ var editor =
 	    return LinePropDesc;
 	}(PropDesc));
 	exports.LinePropDesc = LinePropDesc;
+	var BoolPropDesc = (function (_super) {
+	    __extends(BoolPropDesc, _super);
+	    function BoolPropDesc() {
+	        _super.call(this, BoolPropDesc.TYPE);
+	    }
+	    BoolPropDesc.create = function () {
+	        return new BoolPropDesc();
+	    };
+	    BoolPropDesc.TYPE = "bool";
+	    return BoolPropDesc;
+	}(PropDesc));
+	exports.BoolPropDesc = BoolPropDesc;
 	var OptionsPropDesc = (function (_super) {
 	    __extends(OptionsPropDesc, _super);
 	    function OptionsPropDesc(options) {
@@ -27010,16 +27393,22 @@ var editor =
 	                desc = RangePropDesc.create();
 	            }
 	            else if (type === Vector2PropDesc.TYPE) {
-	                desc = Vector2PropDesc.create();
+	                desc = Vector2PropDesc.create(data.xTitle, data.yTitle);
 	            }
 	            else if (type === Vector3PropDesc.TYPE) {
-	                desc = Vector3PropDesc.create();
+	                desc = Vector3PropDesc.create(data.xTitle, data.yTitle, data.zTitle);
+	            }
+	            else if (type === Vector4PropDesc.TYPE) {
+	                desc = Vector4PropDesc.create(data.xTitle, data.yTitle, data.zTitle, data.wTitle);
 	            }
 	            else if (type === OptionsPropDesc.TYPE) {
 	                desc = OptionsPropDesc.create(data.options);
 	            }
 	            else if (type === LinePropDesc.TYPE) {
 	                desc = LinePropDesc.create();
+	            }
+	            else if (type === BoolPropDesc.TYPE) {
+	                desc = BoolPropDesc.create();
 	            }
 	            else {
 	                console.log("not supported:" + type);
@@ -27067,7 +27456,7 @@ var editor =
 
 
 /***/ },
-/* 152 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27149,7 +27538,7 @@ var editor =
 
 
 /***/ },
-/* 153 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27158,167 +27547,7 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var title_value_1 = __webpack_require__(140);
-	var choosable_edit_1 = __webpack_require__(154);
-	var widget_factory_1 = __webpack_require__(27);
-	var recyclable_creator_1 = __webpack_require__(86);
-	var TitleChoosableEdit = (function (_super) {
-	    __extends(TitleChoosableEdit, _super);
-	    function TitleChoosableEdit(type) {
-	        _super.call(this, type || TitleChoosableEdit.TYPE);
-	    }
-	    Object.defineProperty(TitleChoosableEdit.prototype, "onChoose", {
-	        get: function () {
-	            var edit = this._valueWidget;
-	            return edit.onChoose;
-	        },
-	        set: function (value) {
-	            var edit = this._valueWidget;
-	            edit.onChoose = value;
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(TitleChoosableEdit.prototype, "inputTips", {
-	        get: function () {
-	            return this._inputTips;
-	        },
-	        set: function (value) {
-	            this._inputTips = value;
-	            if (this._valueWidget) {
-	                this._valueWidget.set({ inputTips: value });
-	            }
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    TitleChoosableEdit.prototype.createValueWidget = function (options) {
-	        return choosable_edit_1.ChoosableEdit.create();
-	    };
-	    TitleChoosableEdit.create = function (options) {
-	        return TitleChoosableEdit.recycleBin.create().reset(TitleChoosableEdit.TYPE, options);
-	    };
-	    TitleChoosableEdit.TYPE = "title-choosable-edit";
-	    TitleChoosableEdit.recycleBin = new recyclable_creator_1.RecyclableCreator(function () { return new TitleChoosableEdit(); });
-	    return TitleChoosableEdit;
-	}(title_value_1.TitleValue));
-	exports.TitleChoosableEdit = TitleChoosableEdit;
-	;
-	widget_factory_1.WidgetFactory.register(TitleChoosableEdit.TYPE, TitleChoosableEdit.create);
-
-
-/***/ },
-/* 154 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var edit_1 = __webpack_require__(21);
-	var button_1 = __webpack_require__(97);
-	var widget_1 = __webpack_require__(23);
-	var Events = __webpack_require__(10);
-	var widget_factory_1 = __webpack_require__(27);
-	var recyclable_creator_1 = __webpack_require__(86);
-	/**
-	 * 编辑器+选择按钮。
-	 */
-	var ChoosableEdit = (function (_super) {
-	    __extends(ChoosableEdit, _super);
-	    function ChoosableEdit() {
-	        _super.call(this, ChoosableEdit.TYPE);
-	    }
-	    Object.defineProperty(ChoosableEdit.prototype, "inputTips", {
-	        get: function () {
-	            return this._inputTips;
-	        },
-	        set: function (value) {
-	            this._inputTips = value;
-	            if (this._edit) {
-	                this._edit.set({ inputTips: value });
-	            }
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    Object.defineProperty(ChoosableEdit.prototype, "value", {
-	        get: function () {
-	            return this._edit ? this._edit.text : this._value;
-	        },
-	        set: function (value) {
-	            this._value = value;
-	            if (this._edit) {
-	                this._edit.text = value;
-	            }
-	        },
-	        enumerable: true,
-	        configurable: true
-	    });
-	    ChoosableEdit.prototype.relayoutChildren = function () {
-	        this.requestRedraw();
-	        if (this._edit && this._button) {
-	            var x = this.leftPadding;
-	            var y = this.topPadding;
-	            var h = this.clientH;
-	            var w = this.clientW - this.h - 6;
-	            this._edit.moveResizeTo(x, y, w, h, 0);
-	            w = this.h;
-	            x = this.w - w - 4;
-	            this._button.moveResizeTo(x, y, w, h, 0);
-	        }
-	        return this.getLayoutRect();
-	    };
-	    ChoosableEdit.prototype.dispose = function () {
-	        this._edit = null;
-	        this._button = null;
-	        _super.prototype.dispose.call(this);
-	    };
-	    ChoosableEdit.prototype.onReset = function () {
-	        var _this = this;
-	        _super.prototype.onReset.call(this);
-	        this.padding = 0;
-	        this.onChoose = null;
-	        this._edit = edit_1.Edit.create();
-	        this.addChild(this._edit);
-	        this._edit.on(Events.CHANGE, function (evt) {
-	            _this.dispatchEvent(evt);
-	        });
-	        this._button = button_1.Button.create({ text: "..." });
-	        this.addChild(this._button);
-	        this._button.on(Events.CLICK, function (evt) {
-	            if (_this.onChoose) {
-	                _this.onChoose();
-	            }
-	        });
-	    };
-	    ChoosableEdit.create = function (options) {
-	        return ChoosableEdit.rBin.create().reset(ChoosableEdit.TYPE, options);
-	    };
-	    ChoosableEdit.TYPE = "choosable.edit";
-	    ChoosableEdit.rBin = new recyclable_creator_1.RecyclableCreator(function () {
-	        return new ChoosableEdit();
-	    });
-	    return ChoosableEdit;
-	}(widget_1.Widget));
-	exports.ChoosableEdit = ChoosableEdit;
-	;
-	widget_factory_1.WidgetFactory.register(ChoosableEdit.TYPE, ChoosableEdit.create);
-
-
-/***/ },
-/* 155 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	var __extends = (this && this.__extends) || function (d, b) {
-	    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-	    function __() { this.constructor = d; }
-	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-	};
-	var view_modal_default_1 = __webpack_require__(156);
+	var view_modal_default_1 = __webpack_require__(157);
 	/**
 	 * IViewModal的基本实现。如果不能满足要求，可以重载部分函数。
 	 */
@@ -27338,7 +27567,7 @@ var editor =
 
 
 /***/ },
-/* 156 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27347,10 +27576,10 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var pointer = __webpack_require__(157);
+	var pointer = __webpack_require__(158);
 	var emitter_1 = __webpack_require__(8);
 	var Events = __webpack_require__(10);
-	var ivalidation_rule_1 = __webpack_require__(159);
+	var ivalidation_rule_1 = __webpack_require__(160);
 	var iview_modal_1 = __webpack_require__(85);
 	var ViewModalDefault = (function (_super) {
 	    __extends(ViewModalDefault, _super);
@@ -27494,12 +27723,12 @@ var editor =
 
 
 /***/ },
-/* 157 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var each = __webpack_require__(158);
+	var each = __webpack_require__(159);
 	module.exports = api;
 
 
@@ -27711,7 +27940,7 @@ var editor =
 
 
 /***/ },
-/* 158 */
+/* 159 */
 /***/ function(module, exports) {
 
 	
@@ -27739,7 +27968,7 @@ var editor =
 
 
 /***/ },
-/* 159 */
+/* 160 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -27772,7 +28001,7 @@ var editor =
 
 
 /***/ },
-/* 160 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27793,7 +28022,7 @@ var editor =
 
 
 /***/ },
-/* 161 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27813,7 +28042,7 @@ var editor =
 
 
 /***/ },
-/* 162 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27837,7 +28066,7 @@ var editor =
 
 
 /***/ },
-/* 163 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27857,7 +28086,7 @@ var editor =
 
 
 /***/ },
-/* 164 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27980,7 +28209,7 @@ var editor =
 
 
 /***/ },
-/* 165 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28065,7 +28294,7 @@ var editor =
 
 
 /***/ },
-/* 166 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28116,7 +28345,7 @@ var editor =
 
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28292,7 +28521,7 @@ var editor =
 
 
 /***/ },
-/* 168 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28658,7 +28887,7 @@ var editor =
 
 
 /***/ },
-/* 169 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28688,7 +28917,7 @@ var editor =
 
 
 /***/ },
-/* 170 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28697,7 +28926,7 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var menu_1 = __webpack_require__(168);
+	var menu_1 = __webpack_require__(169);
 	var point_1 = __webpack_require__(6);
 	var Events = __webpack_require__(10);
 	var widget_1 = __webpack_require__(23);
@@ -28913,7 +29142,7 @@ var editor =
 
 
 /***/ },
-/* 171 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28925,8 +29154,8 @@ var editor =
 	var widget_1 = __webpack_require__(23);
 	var widget_factory_1 = __webpack_require__(27);
 	var recyclable_creator_1 = __webpack_require__(86);
-	var title_content_1 = __webpack_require__(172);
-	var collapsable_title_1 = __webpack_require__(173);
+	var title_content_1 = __webpack_require__(173);
+	var collapsable_title_1 = __webpack_require__(174);
 	/**
 	 * 手风琴控件。它有多个页面，在每一时刻只展开一个。
 	 */
@@ -29029,7 +29258,7 @@ var editor =
 
 
 /***/ },
-/* 172 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29260,7 +29489,7 @@ var editor =
 
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29346,7 +29575,7 @@ var editor =
 
 
 /***/ },
-/* 174 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29655,7 +29884,7 @@ var editor =
 
 
 /***/ },
-/* 175 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29666,9 +29895,9 @@ var editor =
 	};
 	var scroll_view_1 = __webpack_require__(103);
 	var widget_factory_1 = __webpack_require__(27);
-	var title_content_1 = __webpack_require__(172);
+	var title_content_1 = __webpack_require__(173);
 	var recyclable_creator_1 = __webpack_require__(86);
-	var collapsable_title_1 = __webpack_require__(173);
+	var collapsable_title_1 = __webpack_require__(174);
 	/**
 	 * 管理多个页面，每个页面可以展开或折叠。
 	 */
@@ -29766,7 +29995,7 @@ var editor =
 
 
 /***/ },
-/* 176 */
+/* 177 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -29791,7 +30020,7 @@ var editor =
 
 
 /***/ },
-/* 177 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29801,9 +30030,9 @@ var editor =
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var Events = __webpack_require__(10);
-	var delegate_command_1 = __webpack_require__(176);
-	var ivalidation_rule_1 = __webpack_require__(159);
-	var view_modal_default_1 = __webpack_require__(156);
+	var delegate_command_1 = __webpack_require__(177);
+	var ivalidation_rule_1 = __webpack_require__(160);
+	var view_modal_default_1 = __webpack_require__(157);
 	/**
 	 * 集合ViewModal。delProp/getProp/setProp操作当前的项。
 	 */
@@ -30003,7 +30232,7 @@ var editor =
 
 
 /***/ },
-/* 178 */
+/* 179 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30028,7 +30257,7 @@ var editor =
 
 
 /***/ },
-/* 179 */
+/* 180 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30049,7 +30278,7 @@ var editor =
 
 
 /***/ },
-/* 180 */
+/* 181 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30069,7 +30298,7 @@ var editor =
 
 
 /***/ },
-/* 181 */
+/* 182 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30094,7 +30323,7 @@ var editor =
 
 
 /***/ },
-/* 182 */
+/* 183 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30115,7 +30344,7 @@ var editor =
 
 
 /***/ },
-/* 183 */
+/* 184 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30155,7 +30384,7 @@ var editor =
 
 
 /***/ },
-/* 184 */
+/* 185 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30175,7 +30404,7 @@ var editor =
 
 
 /***/ },
-/* 185 */
+/* 186 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30195,7 +30424,7 @@ var editor =
 
 
 /***/ },
-/* 186 */
+/* 187 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30214,7 +30443,7 @@ var editor =
 
 
 /***/ },
-/* 187 */
+/* 188 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30260,7 +30489,7 @@ var editor =
 
 
 /***/ },
-/* 188 */
+/* 189 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30299,7 +30528,7 @@ var editor =
 
 
 /***/ },
-/* 189 */
+/* 190 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30323,7 +30552,7 @@ var editor =
 
 
 /***/ },
-/* 190 */
+/* 191 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30352,7 +30581,7 @@ var editor =
 
 
 /***/ },
-/* 191 */
+/* 192 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30384,7 +30613,7 @@ var editor =
 
 
 /***/ },
-/* 192 */
+/* 193 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30405,7 +30634,7 @@ var editor =
 	//# sourceMappingURL=draw-info.js.map
 
 /***/ },
-/* 193 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30414,9 +30643,9 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var main_window_1 = __webpack_require__(194);
+	var main_window_1 = __webpack_require__(195);
 	var qtk_1 = __webpack_require__(4);
-	var iparticles_view_modal_1 = __webpack_require__(198);
+	var iparticles_view_modal_1 = __webpack_require__(199);
 	var themeDataURL = "https://qtoolkit.github.io/demos/assets/theme/default/theme.json";
 	var ParticlesEditor = (function (_super) {
 	    __extends(ParticlesEditor, _super);
@@ -30450,7 +30679,7 @@ var editor =
 	//# sourceMappingURL=particles-editor.js.map
 
 /***/ },
-/* 194 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30460,9 +30689,9 @@ var editor =
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
 	var qtk_1 = __webpack_require__(4);
-	var main_menu_bar_1 = __webpack_require__(195);
-	var particles_view_1 = __webpack_require__(196);
-	var particle_properties_1 = __webpack_require__(197);
+	var main_menu_bar_1 = __webpack_require__(196);
+	var particles_view_1 = __webpack_require__(197);
+	var particle_properties_1 = __webpack_require__(198);
 	var qtk_2 = __webpack_require__(4);
 	var MainWindow = (function (_super) {
 	    __extends(MainWindow, _super);
@@ -30496,7 +30725,7 @@ var editor =
 	//# sourceMappingURL=main-window.js.map
 
 /***/ },
-/* 195 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30546,7 +30775,7 @@ var editor =
 	//# sourceMappingURL=main-menu-bar.js.map
 
 /***/ },
-/* 196 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30555,7 +30784,7 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var draw_info_1 = __webpack_require__(192);
+	var draw_info_1 = __webpack_require__(193);
 	var qtk_1 = __webpack_require__(4);
 	var ParticlesView = (function (_super) {
 	    __extends(ParticlesView, _super);
@@ -30565,10 +30794,11 @@ var editor =
 	        this._style = qtk_1.Style.create();
 	    }
 	    ParticlesView.prototype.drawBackground = function (ctx, style) {
-	        ctx.fillStyle = "#F6F6F6";
+	        var viewModal = this.viewModal;
+	        ctx.fillStyle = viewModal.getProp("/backGroundColor") || "#F6F6F6";
 	        ctx.fillRect(0, 0, this.w, this.h);
 	        this._drawInfo.init(ctx, qtk_1.Rect.rect.init(0, 0, this.w, this.h));
-	        this.viewModal.execCommand("draw", this._drawInfo);
+	        viewModal.execCommand("draw", this._drawInfo);
 	        this.requestRedraw();
 	        return this;
 	    };
@@ -30587,7 +30817,7 @@ var editor =
 	//# sourceMappingURL=particles-view.js.map
 
 /***/ },
-/* 197 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30605,18 +30835,30 @@ var editor =
 	    ParticleProperties.prototype.getStyle = function () {
 	        return this._style;
 	    };
-	    ParticleProperties.prototype.onCreated = function () {
+	    ParticleProperties.prototype.createUI = function () {
 	        var _this = this;
 	        var viewModal = this.viewModal;
 	        var propsDesc = viewModal.getPropsDesc();
 	        this._style = qtk_1.Style.create();
+	        var titleW = viewModal.getPropTitleWidth();
+	        this.removeAllChildren();
 	        propsDesc.forEach(function (pageDesc) {
-	            var page = qtk_1.PropertyPage.create({ titleW: "40%" });
+	            var page = qtk_1.PropertyPage.create({ titleW: titleW });
 	            page.initWithPropsDesc(pageDesc.propsDesc);
 	            var titlePage = _this.addPage(pageDesc.title, page);
 	            page.bindData(viewModal);
 	            titlePage.collapsed = false;
 	        });
+	    };
+	    ParticleProperties.prototype.onCreated = function () {
+	        var _this = this;
+	        var viewModal = this.viewModal;
+	        viewModal.onChange(function (evt) {
+	            if (evt.prop === "/") {
+	                _this.createUI();
+	            }
+	        });
+	        this.createUI();
 	    };
 	    ParticleProperties.create = function (options) {
 	        var view = new ParticleProperties();
@@ -30631,7 +30873,7 @@ var editor =
 	//# sourceMappingURL=particle-properties.js.map
 
 /***/ },
-/* 198 */
+/* 199 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30653,7 +30895,7 @@ var editor =
 	//# sourceMappingURL=iparticles-view-modal.js.map
 
 /***/ },
-/* 199 */
+/* 200 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30691,7 +30933,7 @@ var editor =
 	//# sourceMappingURL=command-draw.js.map
 
 /***/ },
-/* 200 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30730,7 +30972,7 @@ var editor =
 	//# sourceMappingURL=command-new.js.map
 
 /***/ },
-/* 201 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30770,7 +31012,7 @@ var editor =
 	//# sourceMappingURL=command-open.js.map
 
 /***/ },
-/* 202 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30810,11 +31052,11 @@ var editor =
 	//# sourceMappingURL=command-save.js.map
 
 /***/ },
-/* 203 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var saveAs = __webpack_require__(204).default;
+	var saveAs = __webpack_require__(205).default;
 	var qtk_1 = __webpack_require__(4);
 	var CommandExport = (function () {
 	    function CommandExport(viewModal, choiceInfo) {
@@ -30854,7 +31096,7 @@ var editor =
 	//# sourceMappingURL=command-export.js.map
 
 /***/ },
-/* 204 */
+/* 205 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -31123,7 +31365,7 @@ var editor =
 	exports.default = saveAs;
 
 /***/ },
-/* 205 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31165,7 +31407,7 @@ var editor =
 	//# sourceMappingURL=command-about.js.map
 
 /***/ },
-/* 206 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31219,7 +31461,7 @@ var editor =
 	//# sourceMappingURL=command-remove.js.map
 
 /***/ },
-/* 207 */
+/* 208 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -31246,7 +31488,7 @@ var editor =
 	//# sourceMappingURL=command-content.js.map
 
 /***/ },
-/* 208 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31255,12 +31497,26 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
+	var document_1 = __webpack_require__(3);
 	var qtk_1 = __webpack_require__(4);
 	var ParticlesViewModal = (function (_super) {
 	    __extends(ParticlesViewModal, _super);
-	    function ParticlesViewModal() {
-	        _super.apply(this, arguments);
+	    function ParticlesViewModal(data, type, storage) {
+	        _super.call(this, data);
+	        this.type = type;
+	        this.storage = storage;
+	        this.canvas = document.createElement('canvas');
+	        this.registerCommands();
+	        this.registerConverters();
+	        this.doc = document_1.Document.create();
+	        this.loadTemp();
+	        var me = this;
+	        window.onunload = function () {
+	            me.saveTemp();
+	        };
 	    }
+	    ParticlesViewModal.prototype.onDocReplaced = function () {
+	    };
 	    ParticlesViewModal.prototype.getDocList = function () {
 	        return this.docList;
 	    };
@@ -31276,25 +31532,26 @@ var editor =
 	        this.storage.set(fileName, data);
 	        this.updateDocList();
 	    };
-	    /*
-	     * subclass should implement it.
-	     */
-	    ParticlesViewModal.prototype.createEmitter = function () {
+	    ParticlesViewModal.prototype.syncData = function (data) {
+	        this.data = data;
+	        this.createEmitter();
+	        this.updateDocList();
+	        this.onDocReplaced();
 	    };
 	    ParticlesViewModal.prototype.createDoc = function (templateName) {
+	        this.fileName = null;
 	        this.doc.fromTemplate(templateName);
-	        this.data = this.doc.data;
-	        this.createEmitter();
-	        this.updateDocList();
+	        this.syncData(this.doc.data);
+	    };
+	    ParticlesViewModal.prototype.loadData = function (json) {
+	        this.doc.fromJson(json);
+	        this.syncData(this.doc.data);
 	    };
 	    ParticlesViewModal.prototype.openDoc = function (fileName) {
+	        this.fileName = fileName;
 	        var data = this.storage.get(fileName);
 	        var json = JSON.parse(data);
-	        this.doc.fromJson(json);
-	        this.data = this.doc.data;
-	        this.createEmitter();
-	        this.fileName = fileName;
-	        this.updateDocList();
+	        this.loadData(json);
 	    };
 	    ParticlesViewModal.prototype.removeDoc = function (fileName) {
 	        this.storage.remove(fileName);
@@ -31320,6 +31577,30 @@ var editor =
 	    ParticlesViewModal.prototype.updateDocList = function () {
 	        this.docList = this.storage.getItems();
 	    };
+	    ParticlesViewModal.prototype.getPropTitleWidth = function () {
+	        return "30%";
+	    };
+	    ParticlesViewModal.prototype.saveTemp = function () {
+	        var docInfo = {
+	            fileName: this.fileName,
+	            doc: this.doc.toJson()
+	        };
+	        var data = JSON.stringify(docInfo, null, "\t");
+	        var key = "temp." + this.type;
+	        localStorage.setItem(key, data);
+	    };
+	    ParticlesViewModal.prototype.loadTemp = function () {
+	        var key = "temp." + this.type;
+	        var str = localStorage.getItem(key);
+	        if (str) {
+	            var data = JSON.parse(str);
+	            this.fileName = data.fileName;
+	            this.loadData(data.doc);
+	        }
+	        else {
+	            this.createDoc("default");
+	        }
+	    };
 	    return ParticlesViewModal;
 	}(qtk_1.ViewModal));
 	exports.ParticlesViewModal = ParticlesViewModal;
@@ -31327,7 +31608,7 @@ var editor =
 	//# sourceMappingURL=particles-view-modal.js.map
 
 /***/ },
-/* 209 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -31336,25 +31617,27 @@ var editor =
 	    function __() { this.constructor = d; }
 	    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 	};
-	var proton = __webpack_require__(210);
-	__webpack_require__(211);
+	var proton = __webpack_require__(211);
+	__webpack_require__(212);
 	var qtk_1 = __webpack_require__(4);
-	var proton_wrapper_1 = __webpack_require__(213);
+	var proton_wrapper_1 = __webpack_require__(215);
 	var qtk_particles_editor_1 = __webpack_require__(2);
 	var qtk_particles_editor_2 = __webpack_require__(2);
 	var qtk_particles_editor_3 = __webpack_require__(2);
 	var ProtonViewModal = (function (_super) {
 	    __extends(ProtonViewModal, _super);
 	    function ProtonViewModal(storage) {
-	        _super.call(this, null);
-	        this.canvas = document.createElement('canvas');
-	        this.storage = storage;
-	        this.registerCommands();
-	        this.registerConverters();
-	        this.doc = qtk_particles_editor_1.Document.create();
-	        this.createDoc("default");
-	        this.updateDocList();
+	        _super.call(this, null, ProtonViewModal.TYPE, storage);
 	    }
+	    ProtonViewModal.prototype.onDocReplaced = function () {
+	        var globalCompositeOperation = this.data.globalCompositeOperation;
+	        if (globalCompositeOperation) {
+	            var context = this.canvas.getContext('2d');
+	            setTimeout(function () {
+	                context.globalCompositeOperation = globalCompositeOperation;
+	            }, 300);
+	        }
+	    };
 	    ProtonViewModal.prototype.registerConverters = function () {
 	        this.registerValueConverter("radius", qtk_1.RangeFixer.create(0, 1000, 0, 1000, true));
 	        this.registerValueConverter("life", qtk_1.RangeFixer.create(0, 1000, 0, 1000, true));
@@ -31415,7 +31698,7 @@ var editor =
 	//# sourceMappingURL=view-modal.js.map
 
 /***/ },
-/* 210 */
+/* 211 */
 /***/ function(module, exports) {
 
 	/*!
@@ -31427,20 +31710,4178 @@ var editor =
 	 * http://www.opensource.org/licenses/mit-license
 	 *
 	 */
-	(function(a,b){function bf(a,b,c,d){bf._super_.call(this),this.reset(a,b,c,d)}function be(a,b,c,d){be._super_.call(this),this.x=a,this.y=b,this.width=c,this.height=d}function bd(a,b){bd._super_.call(this),this.x=a,this.y=b}function bc(a,b,c){bc._super_.call(this),this.x=a,this.y=b,this.radius=c,this.angle=0,this.center={x:this.x,y:this.y}}function bb(a,b,d,e,f){bb._super_.call(this),d-a>=0?(this.x1=a,this.y1=b,this.x2=d,this.y2=e):(this.x1=d,this.y1=e,this.x2=a,this.y2=b),this.dx=this.x2-this.x1,this.dy=this.y2-this.y1,this.minx=Math.min(this.x1,this.x2),this.miny=Math.min(this.y1,this.y2),this.maxx=Math.max(this.x1,this.x2),this.maxy=Math.max(this.y1,this.y2),this.dot=this.x2*this.y1-this.x1*this.y2,this.xxyy=this.dx*this.dx+this.dy*this.dy,this.gradient=this.getGradient(),this.length=this.getLength(),this.direction=c.Util.initValue(f,">")}function ba(){this.vector=new c.Vector2D(0,0),this.random=0,this.crossType="dead",this.alert=!0}function _(a,b){_._super_.call(this,a,b),this.gl=this.element.getContext("experimental-webgl",{antialias:!0,stencil:!1,depth:!1}),this.gl||alert("Sorry your browser do not suppest WebGL!"),this.initVar(),this.setMaxRadius(),this.initShaders(),this.initBuffers(),this.gl.blendEquation(this.gl.FUNC_ADD),this.gl.blendFunc(this.gl.SRC_ALPHA,this.gl.ONE_MINUS_SRC_ALPHA),this.gl.enable(this.gl.BLEND)}function $(a,b,c){$._super_.call(this,a,b),this.context=this.element.getContext("2d"),this.imageData=null,this.rectangle=null,this.rectangle=c,this.createImageData(c)}function Z(a,b){Z._super_.call(this,a,b),this.stroke=null,this.context=this.element.getContext("2d"),this.bufferCache={}}function Y(a,b,c){Y._super_.call(this,a,b),this.stroke=c}function X(a,b){X._super_.call(this,a,b),this.stroke=null}function W(a,b,d){this.proton=a,this.element=b,this.stroke=d,this.pool=new c.Pool}function V(a,b,d){this.element=d,this.type=c.Util.initValue(a,"canvas"),this.proton=b,this.renderer=this.getRenderer()}function T(b,d,e){this.mouseTarget=c.Util.initValue(b,a),this.ease=c.Util.initValue(d,.7),this._allowEmitting=!1,this.initEventHandler(),T._super_.call(this,e)}function S(a){this.selfBehaviours=[],S._super_.call(this,a)}function R(a){this.initializes=[],this.particles=[],this.behaviours=[],this.emitTime=0,this.emitTotalTimes=-1,this.damping=.006,this.bindEmitter=!0,this.rate=new c.Rate(1,.1),R._super_.call(this,a),this.id="emitter_"+R.ID++}function Q(a,b,d,e){Q._super_.call(this,d,e),this.distanceVec=new c.Vector2D,this.centerPoint=c.Util.initValue(a,new c.Vector2D),this.force=c.Util.initValue(this.normalizeValue(b),100),this.name="GravityWell"}function P(a,b,c,d){P._super_.call(this,c,d),this.reset(a,b),this.name="Color"}function O(a,b,c,d,e){O._super_.call(this,d,e),this.reset(a,b,c),this.name="Rotate"}function N(a,b,c,d){N._super_.call(this,c,d),this.reset(a,b),this.name="Scale"}function M(a,b,c,d){M._super_.call(this,c,d),this.reset(a,b),this.name="Alpha"}function L(a,b,c,d){L._super_.call(this,c,d),this.reset(a,b),this.name="CrossZone"}function K(a,b,c,d,e){K._super_.call(this,d,e),this.reset(a,b,c),this.name="Collision"}function J(a,b,c){J._super_.call(this,0,a,b,c),this.name="Gravity"}function I(a,b,c,d,e){I._super_.call(this,a,b,c,d,e),this.force*=-1,this.name="Repulsion"}function H(a,b,c,d,e){H._super_.call(this,d,e),this.reset(a,b,c),this.time=0,this.name="RandomDrift"}function G(a,b,d,e,f){G._super_.call(this,e,f),this.targetPosition=c.Util.initValue(a,new c.Vector2D),this.radius=c.Util.initValue(d,1e3),this.force=c.Util.initValue(this.normalizeValue(b),100),this.radiusSq=this.radius*this.radius,this.attractionForce=new c.Vector2D,this.lengthSq=0,this.name="Attraction"}function F(a,b,d,e){F._super_.call(this,d,e),this.force=this.normalizeForce(new c.Vector2D(a,b)),this.name="Force"}function E(a,b,d){E._super_.call(this),this.image=this.setSpanValue(a),this.w=c.Util.initValue(b,20),this.h=c.Util.initValue(d,this.w)}function D(a,b,d){D._super_.call(this),this.radius=c.Util.setSpanValue(a,b,d)}function C(a,b,d){C._super_.call(this),this.massPan=c.Util.setSpanValue(a,b,d)}function B(a,b,d){B._super_.call(this),this.rPan=c.Util.setSpanValue(a),this.thaPan=c.Util.setSpanValue(b),this.type=c.Util.initValue(d,"vector")}function A(a){A._super_.call(this),this.zone=c.Util.initValue(a,new c.PointZone)}function z(a,b,d){z._super_.call(this),this.lifePan=c.Util.setSpanValue(a,b,d)}function x(){}function w(a,b){this.numPan=c.Util.initValue(a,1),this.timePan=c.Util.initValue(b,1),this.numPan=c.Util.setSpanValue(this.numPan),this.timePan=c.Util.setSpanValue(this.timePan),this.startTime=0,this.nextTime=0,this.init()}function v(a,b){this.id="Behaviour_"+v.id++,this.life=c.Util.initValue(a,Infinity),this.easing=c.ease.setEasingByName(b),this.age=0,this.energy=1,this.dead=!1,this.parents=[],this.name="Behaviour"}function t(a,b,c,d){this.x=a,this.y=b,this.width=c,this.height=d,this.bottom=this.y+this.height,this.right=this.x+this.width}function s(a){c.Util.isArray(a)?this.colorArr=a:this.colorArr=[a]}function r(a,b,d){this.isArray=!1,c.Util.isArray(a)?(this.isArray=!0,this.a=a):(this.a=c.Util.initValue(a,1),this.b=c.Util.initValue(b,this.a),this.center=c.Util.initValue(d,!1))}function k(){this.cID=0,this.list={}}function j(a){this.id="particle_"+j.ID++,this.reset(!0),c.Util.setPrototypeByObject(this,a)}function i(){this.mats=[],this.size=0;for(var a=0;a<20;a++)this.mats.push(c.Mat3.create([0,0,0,0,0,0,0,0,0]))}function d(){this.initialize()}function c(a,b){this.integrationType=c.Util.initValue(b,c.EULER),this.emitters=[],this.renderers=[],this.time=0,this.oldTime=0,c.pool=new c.Pool(100),c.integrator=new c.NumericalIntegration(this.integrationType)}c.POOL_MAX=1e3,c.TIME_STEP=60,c.USE_CLOCK=!1,c.MEASURE=100,c.EULER="euler",c.RK2="runge-kutta2",c.RK4="runge-kutta4",c.VERLET="verlet",c.PARTICLE_CREATED="partilcleCreated",c.PARTICLE_UPDATE="partilcleUpdate",c.PARTICLE_SLEEP="particleSleep",c.PARTICLE_DEAD="partilcleDead",c.PROTON_UPDATE="protonUpdate",c.PROTON_UPDATE_AFTER="protonUpdateAfter",c.EMITTER_ADDED="emitterAdded",c.EMITTER_REMOVED="emitterRemoved",c.amendChangeTabsBug=!0,c.TextureBuffer={},c.TextureCanvasBuffer={},c.prototype={addRender:function(a){a.proton=this,this.renderers.push(a.proton)},addEmitter:function(a){this.emitters.push(a),a.parent=this,this.dispatchEvent(c.EMITTER_ADDED,a)},removeEmitter:function(a){var b=this.emitters.indexOf(a);this.emitters.splice(b,1),a.parent=null,this.dispatchEvent(c.EMITTER_REMOVED,a)},update:function(){this.dispatchEvent(c.PROTON_UPDATE);if(c.USE_CLOCK){this.oldTime||(this.oldTime=(new Date).getTime());var a=(new Date).getTime();this.elapsed=(a-this.oldTime)/1e3,c.amendChangeTabsBug&&this.amendChangeTabsBug(),this.oldTime=a}else this.elapsed=.0167;if(this.elapsed>0)for(var b=0;b<this.emitters.length;b++)this.emitters[b].update(this.elapsed);this.dispatchEvent(c.PROTON_UPDATE_AFTER)},amendChangeTabsBug:function(){this.elapsed>.5&&(this.oldTime=(new Date).getTime(),this.elapsed=0)},getCount:function(){var a=0,b=this.emitters.length;for(var c=0;c<b;c++)a+=this.emitters[c].particles.length;return a},destroy:function(){var a=this.emitters.length;for(var b=0;b<a;b++)this.emitters[b].destroy(),delete this.emitters[b];this.emitters=[],this.time=0,this.oldTime=0,c.pool.release()}},a.Proton=c,d.initialize=function(a){a.addEventListener=e.addEventListener,a.removeEventListener=e.removeEventListener,a.removeAllEventListeners=e.removeAllEventListeners,a.hasEventListener=e.hasEventListener,a.dispatchEvent=e.dispatchEvent};var e=d.prototype;e._listeners=null,e.initialize=function(){},e.addEventListener=function(a,b){this._listeners?this.removeEventListener(a,b):this._listeners={},this._listeners[a]||(this._listeners[a]=[]),this._listeners[a].push(b);return b},e.removeEventListener=function(a,b){if(!!this._listeners){if(!this._listeners[a])return;var c=this._listeners[a];for(var d=0,e=c.length;d<e;d++)if(c[d]==b){e==1?delete this._listeners[a]:c.splice(d,1);break}}},e.removeAllEventListeners=function(a){a?this._listeners&&delete this._listeners[a]:this._listeners=null},e.dispatchEvent=function(a,b){var c=!1,d=this._listeners;if(a&&d){var e=d[a];if(!e)return c;e=e.slice();var f,g=e.length;while(g--){var f=e[g];c=c||f(b)}}return!!c},e.hasEventListener=function(a){var b=this._listeners;return!!b&&!!b[a]},d.initialize(c.prototype),c.EventDispatcher=d;var f=f||{initValue:function(a,c){var a=a!=null&&a!=b?a:c;return a},isArray:function(a){return typeof a=="object"&&a.hasOwnProperty("length")},destroyArray:function(a){a.length=0},destroyObject:function(a){for(var b in a)delete a[b]},getVector2D:function(a,b){if(typeof a=="object")return a;var d=new c.Vector2D(a,b);return d},classApply:function(a,b){if(!b)return new a;var c=[null].concat(b),d=a.bind.apply(a,c);return new d},judgeVector2D:function(a){var b="";if(a.hasOwnProperty("x")||a.hasOwnProperty("y")||a.hasOwnProperty("p")||a.hasOwnProperty("position"))b+="p";if(a.hasOwnProperty("vx")||a.hasOwnProperty("vx")||a.hasOwnProperty("v")||a.hasOwnProperty("velocity"))b+="v";if(a.hasOwnProperty("ax")||a.hasOwnProperty("ax")||a.hasOwnProperty("a")||a.hasOwnProperty("accelerate"))b+="a";return b},setVector2DByObject:function(a,b){b.hasOwnProperty("x")&&(a.p.x=b.x),b.hasOwnProperty("y")&&(a.p.y=b.y),b.hasOwnProperty("vx")&&(a.v.x=b.vx),b.hasOwnProperty("vy")&&(a.v.y=b.vy),b.hasOwnProperty("ax")&&(a.a.x=b.ax),b.hasOwnProperty("ay")&&(a.a.y=b.ay),b.hasOwnProperty("p")&&particle.p.copy(b.p),b.hasOwnProperty("v")&&particle.v.copy(b.v),b.hasOwnProperty("a")&&particle.a.copy(b.a),b.hasOwnProperty("position")&&particle.p.copy(b.position),b.hasOwnProperty("velocity")&&particle.v.copy(b.velocity),b.hasOwnProperty("accelerate")&&particle.a.copy(b.accelerate)},addPrototypeByObject:function(a,b,d){for(var e in b)d?d.indexOf(e)<0&&(a[e]=c.Util.getSpanValue(b[e])):a[e]=c.Util.getSpanValue(b[e]);return a},setPrototypeByObject:function(a,b,d){for(var e in b)a.hasOwnProperty(e)&&(d?d.indexOf(e)<0&&(a[e]=c.Util.getSpanValue(b[e])):a[e]=c.Util.getSpanValue(b[e]));return a},setSpanValue:function(a,b,d){return a instanceof c.Span?a:b?d?new c.Span(a,b,d):new c.Span(a,b):new c.Span(a)},getSpanValue:function(a){return a instanceof c.Span?a.getValue():a},inherits:function(a,b){a._super_=b;if(Object.create)a.prototype=Object.create(b.prototype,{constructor:{value:a}});else{var c=function(){};c.prototype=b.prototype,a.prototype=new c,a.prototype.constructor=a}},getImageData:function(a,b,c){a.drawImage(b,c.x,c.y);var d=a.getImageData(c.x,c.y,c.width,c.height);a.clearRect(c.x,c.y,c.width,c.height);return d},getImage:function(a,b,c,d){typeof a=="string"?this.loadAndSetImage(a,b,c,d):typeof a=="object"?this.loadAndSetImage(a.src,b,c,d):a instanceof Image&&this.loadedImage(a.src,b,c,d,a)},loadedImage:function(a,b,d,e,f){b.target=f,b.transform.src=a,c.TextureBuffer[a]||(c.TextureBuffer[a]=b.target);if(d)if(c.TextureCanvasBuffer[a])b.transform.canvas=c.TextureCanvasBuffer[a];else{var g=c.WebGLUtil.nhpot(b.target.width),h=c.WebGLUtil.nhpot(b.target.height);b.transform.canvas=c.DomUtil.createCanvas("canvas"+a,g,h);var i=b.transform.canvas.getContext("2d");i.drawImage(b.target,0,0,b.target.width,b.target.height),c.TextureCanvasBuffer[a]=b.transform.canvas}e&&e(b)},loadAndSetImage:function(a,b,d,e){if(c.TextureBuffer[a])this.loadedImage(a,b,d,e,c.TextureBuffer[a]);else{var f=this,g=new Image;g.onload=function(c){f.loadedImage(a,b,d,e,c.target)},g.src=a}},hexToRGB:function(a){var b=a.charAt(0)=="#"?a.substring(1,7):a,c=parseInt(b.substring(0,2),16),d=parseInt(b.substring(2,4),16),e=parseInt(b.substring(4,6),16);return{r:c,g:d,b:e}},rgbToHex:function(a){return"rgb("+a.r+", "+a.g+", "+a.b+")"}};c.Util=f,Function.prototype.bind||(Function.prototype.bind=function(a){if(typeof this!="function")throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");var b=Array.prototype.slice.call(arguments,1),c=this,d=function(){},e=function(){return c.apply(this instanceof d?this:a||this,b.concat(Array.prototype.slice.call(arguments)))};d.prototype=this.prototype,e.prototype=new d;return e});var g=g||{ipot:function(a){return(a&a-1)==0},nhpot:function(a){--a;for(var b=1;b<32;b<<=1)a=a|a>>b;return a+1},makeTranslation:function(a,b){return[1,0,0,0,1,0,a,b,1]},makeRotation:function(a){var b=Math.cos(a),c=Math.sin(a);return[b,-c,0,c,b,0,0,0,1]},makeScale:function(a,b){return[a,0,0,0,b,0,0,0,1]},matrixMultiply:function(a,b){var c=a[0],d=a[1],e=a[2],f=a[3],g=a[4],h=a[5],i=a[6],j=a[7],k=a[8],l=b[0],m=b[1],n=b[2],o=b[3],p=b[4],q=b[5],r=b[6],s=b[7],t=b[8];return[c*l+d*o+e*r,c*m+d*p+e*s,c*n+d*q+e*t,f*l+g*o+h*r,f*m+g*p+h*s,f*n+g*q+h*t,i*l+j*o+k*r,i*m+j*p+k*s,i*n+j*q+k*t]}};c.WebGLUtil=g;var h=h||{createCanvas:function(a,b,c,d){var e=document.createElement("canvas"),f=d?d:"absolute";e.id=a,e.width=b,e.height=c,e.style.position=f,e.style.opacity=0,this.transformDom(e,-500,-500,0,0);return e},transformDom:function(a,b,c,d,e){a.style.WebkitTransform="translate("+b+"px, "+c+"px) "+"scale("+d+") "+"rotate("+e+"deg)",a.style.MozTransform="translate("+b+"px, "+c+"px) "+"scale("+d+") "+"rotate("+e+"deg)",a.style.OTransform="translate("+b+"px, "+c+"px) "+"scale("+d+") "+"rotate("+e+"deg)",a.style.msTransform="translate("+b+"px, "+c+"px) "+"scale("+d+") "+"rotate("+e+"deg)",a.style.transform="translate("+b+"px, "+c+"px) "+"scale("+d+") "+"rotate("+e+"deg)"}};c.DomUtil=h,i.prototype.set=function(a,b){b==0?c.Mat3.set(a,this.mats[0]):c.Mat3.multiply(this.mats[b-1],a,this.mats[b]),this.size=Math.max(this.size,b+1)},i.prototype.push=function(a){this.size==0?c.Mat3.set(a,this.mats[0]):c.Mat3.multiply(this.mats[this.size-1],a,this.mats[this.size]),this.size++},i.prototype.pop=function(){this.size>0&&this.size--},i.prototype.top=function(){return this.mats[this.size-1]},c.MStack=i,j.ID=0,j.prototype={getDirection:function(){return Math.atan2(this.v.x,-this.v.y)*(180/Math.PI)},reset:function(a){this.life=Infinity,this.age=0,this.energy=1,this.dead=!1,this.sleep=!1,this.target=null,this.sprite=null,this.parent=null,this.mass=1,this.radius=10,this.alpha=1,this.scale=1,this.rotation=0,this.color=null,this.easing=c.ease.setEasingByName(c.easeLinear),a?(this.transform={},this.p=new c.Vector2D,this.v=new c.Vector2D,this.a=new c.Vector2D,this.old={p:new c.Vector2D,v:new c.Vector2D,a:new c.Vector2D},this.behaviours=[]):(c.Util.destroyObject(this.transform),this.p.set(0,0),this.v.set(0,0),this.a.set(0,0),this.old.p.set(0,0),this.old.v.set(0,0),this.old.a.set(0,0),this.removeAllBehaviours()),this.transform.rgb={r:255,g:255,b:255};return this},update:function(a,b){if(!this.sleep){this.age+=a;var c=this.behaviours.length,d;for(d=0;d<c;d++)this.behaviours[d]&&this.behaviours[d].applyBehaviour(this,a,b)}if(this.age>=this.life)this.destroy();else{var e=this.easing(this.age/this.life);this.energy=Math.max(1-e,0)}},addBehaviour:function(a){this.behaviours.push(a),a.hasOwnProperty("parents")&&a.parents.push(this),a.initialize(this)},addBehaviours:function(a){var b=a.length,c;for(c=0;c<b;c++)this.addBehaviour(a[c])},removeBehaviour:function(a){var b=this.behaviours.indexOf(a);if(b>-1){var a=this.behaviours.splice(b,1);a.parents=null}},removeAllBehaviours:function(){c.Util.destroyArray(this.behaviours)},destroy:function(){this.removeAllBehaviours(),this.energy=0,this.dead=!0,this.parent=null}},c.Particle=j,k.prototype={create:function(a,b){this.cID++;return typeof a=="function"?c.Util.classApply(a,b):a.clone()},getCount:function(){var a=0;for(var b in this.list)a+=this.list[b].length;return a++},get:function(a,b){var c,d=a.__puid||l.id(a);this.list[d]&&this.list[d].length>0?c=this.list[d].pop():c=this.create(a,b),c.__puid=a.__puid||d;return c},set:function(a){return this._getList(a.__puid).push(a)},destroy:function(){for(var a in this.list)this.list[a].length=0,delete this.list[a]},_getList:function(a){a=a||"default",this.list[a]||(this.list[a]=[]);return this.list[a]}},c.Pool=k;var l={_id:0,_uids:{},id:function(a){for(var b in this._uids)if(this._uids[b]==a)return b;var c="PUID_"+this._id++;this._uids[c]=a;return c},hash:function(a){return}},m={randomAToB:function(a,b,c){return c?Math.floor(Math.random()*(b-a))+a:a+Math.random()*(b-a)},randomFloating:function(a,b,c){return m.randomAToB(a-b,a+b,c)},randomZone:function(a){},degreeTransform:function(a){return a*Math.PI/180},toColor16:function(a){return"#"+a.toString(16)},randomColor:function(){return"#"+("00000"+(Math.random()*16777216<<0).toString(16)).slice(-6)}};c.MathUtils=m;var o=function(a){this.type=c.Util.initValue(a,c.EULER)};o.prototype={integrate:function(a,b,c){this.eulerIntegrate(a,b,c)},eulerIntegrate:function(a,b,c){a.sleep||(a.old.p.copy(a.p),a.old.v.copy(a.v),a.a.multiplyScalar(1/a.mass),a.v.add(a.a.multiplyScalar(b)),a.p.add(a.old.v.multiplyScalar(b)),c&&a.v.multiplyScalar(c),a.a.clear())}},c.NumericalIntegration=o;var p=function(a,b){this.x=a||0,this.y=b||0};p.prototype={set:function(a,b){this.x=a,this.y=b;return this},setX:function(a){this.x=a;return this},setY:function(a){this.y=a;return this},setComponent:function(a,b){switch(a){case 0:this.x=b;break;case 1:this.y=b;break;default:throw new Error("index is out of range: "+a)}},getGradient:function(){if(this.x!=0)return Math.atan2(this.y,this.x);if(this.y>0)return Math.PI/2;if(this.y<0)return-Math.PI/2},getComponent:function(a){switch(a){case 0:return this.x;case 1:return this.y;default:throw new Error("index is out of range: "+a)}},copy:function(a){this.x=a.x,this.y=a.y;return this},add:function(a,c){if(c!==b)return this.addVectors(a,c);this.x+=a.x,this.y+=a.y;return this},addXY:function(a,b){this.x+=a,this.y+=b;return this},addVectors:function(a,b){this.x=a.x+b.x,this.y=a.y+b.y;return this},addScalar:function(a){this.x+=a,this.y+=a;return this},sub:function(a,c){if(c!==b)return this.subVectors(a,c);this.x-=a.x,this.y-=a.y;return this},subVectors:function(a,b){this.x=a.x-b.x,this.y=a.y-b.y;return this},multiplyScalar:function(a){this.x*=a,this.y*=a;return this},divideScalar:function(a){a!==0?(this.x/=a,this.y/=a):this.set(0,0);return this},min:function(a){this.x>a.x&&(this.x=a.x),this.y>a.y&&(this.y=a.y);return this},max:function(a){this.x<a.x&&(this.x=a.x),this.y<a.y&&(this.y=a.y);return this},clamp:function(a,b){this.x<a.x?this.x=a.x:this.x>b.x&&(this.x=b.x),this.y<a.y?this.y=a.y:this.y>b.y&&(this.y=b.y);return this},negate:function(){return this.multiplyScalar(-1)},dot:function(a){return this.x*a.x+this.y*a.y},lengthSq:function(){return this.x*this.x+this.y*this.y},length:function(){return Math.sqrt(this.x*this.x+this.y*this.y)},normalize:function(){return this.divideScalar(this.length())},distanceTo:function(a){return Math.sqrt(this.distanceToSquared(a))},rotate:function(a){var b=this.x,c=this.y;this.x=b*Math.cos(a)+c*Math.sin(a),this.y=-b*Math.sin(a)+c*Math.cos(a);return this},distanceToSquared:function(a){var b=this.x-a.x,c=this.y-a.y;return b*b+c*c},setLength:function(a){var b=this.length();b!==0&&a!==b&&this.multiplyScalar(a/b);return this},lerp:function(a,b){this.x+=(a.x-this.x)*b,this.y+=(a.y-this.y)*b;return this},equals:function(a){return a.x===this.x&&a.y===this.y},toArray:function(){return[this.x,this.y]},clear:function(){this.x=0,this.y=0;return this},clone:function(){return new c.Vector2D(this.x,this.y)}},c.Vector2D=p;var q=function(a,b){this.r=Math.abs(a)||0,this.tha=b||0};q.prototype={set:function(a,b){this.r=a,this.tha=b;return this},setR:function(a){this.r=a;return this},setTha:function(a){this.tha=a;return this},copy:function(a){this.r=a.r,this.tha=a.tha;return this},toVector:function(){return new c.Vector2D(this.getX(),this.getY())},getX:function(){return this.r*Math.sin(this.tha)},getY:function(){return-this.r*Math.cos(this.tha)},normalize:function(){this.r=1;return this},equals:function(a){return a.r===this.r&&a.tha===this.tha},toArray:function(){return[this.r,this.tha]},clear:function(){this.r=0,this.tha=0;return this},clone:function(){return new c.Polar2D(this.r,this.tha)}},c.Polar2D=q,r.prototype={getValue:function(a){return this.isArray?this.a[Math.floor(this.a.length*Math.random())]:this.center?c.MathUtils.randomFloating(this.a,this.b,a):c.MathUtils.randomAToB(this.a,this.b,a)}},c.Span=r,c.getSpan=function(a,b,d){return new c.Span(a,b,d)},c.Util.inherits(s,c.Span),s.prototype.getValue=function(){var a=this.colorArr[Math.floor(this.colorArr.length*Math.random())];return a=="random"||a=="Random"?c.MathUtils.randomColor():a},c.ColorSpan=s,t.prototype={contains:function(a,b){return a<=this.right&&a>=this.x&&b<=this.bottom&&b>=this.y?!0:!1}},c.Rectangle=t;var u=u||{create:function(a){var b=new Float32Array(9);a&&this.set(a,b);return b},set:function(a,b){for(var c=0;c<9;c++)b[c]=a[c];return b},multiply:function(a,b,c){var d=a[0],e=a[1],f=a[2],g=a[3],h=a[4],i=a[6],j=a[7],k=b[0],l=b[1],m=b[2],n=b[3],o=b[4],p=b[6],q=b[7];c[0]=k*d+l*g,c[1]=k*e+l*h,c[2]=f*m,c[3]=n*d+o*g,c[4]=n*e+o*h,c[6]=p*d+q*g+i,c[7]=p*e+q*h+j;return c},inverse:function(a,b){var c=a[0],d=a[1],e=a[3],f=a[4],g=a[6],h=a[7],i=f,j=-e,k=h*e-f*g,l=c*i+d*j,m;m=1/l,b[0]=i*m,b[1]=-d*m,b[3]=j*m,b[4]=c*m,b[6]=k*m,b[7]=(-h*c+d*g)*m;return b},multiplyVec2:function(a,b,c){var d=b[0],e=b[1];c[0]=d*a[0]+e*a[3]+a[6],c[1]=d*a[1]+e*a[4]+a[7];return c}};c.Mat3=u,v.id=0,v.prototype={reset:function(a,b){this.life=c.Util.initValue(a,Infinity),this.easing=c.Util.initValue(b,c.ease.setEasingByName(c.easeLinear))},normalizeForce:function(a){return a.multiplyScalar(c.MEASURE)},normalizeValue:function(a){return a*c.MEASURE},initialize:function(a){},applyBehaviour:function(a,b,c){this.age+=b;if(this.age>=this.life||this.dead)this.energy=0,this.dead=!0,this.destroy();else{var d=this.easing(a.age/a.life);this.energy=Math.max(1-d,0)}},destroy:function(){var a,b=this.parents.length,c;for(c=0;c<b;c++)this.parents[c].removeBehaviour(this);this.parents=[]}},c.Behaviour=v,w.prototype={init:function(){this.startTime=0,this.nextTime=this.timePan.getValue()},getValue:function(a){this.startTime+=a;if(this.startTime>=this.nextTime){this.startTime=0,this.nextTime=this.timePan.getValue();return this.numPan.b==1?this.numPan.getValue(!1)>.5?1:0:this.numPan.getValue(!0)}return 0}},c.Rate=w,x.prototype.reset=function(){},x.prototype.init=function(a,b){b?this.initialize(b):this.initialize(a)},x.prototype.initialize=function(a){},c.Initialize=x;var y={initialize:function(a,b,d){var e=d.length,f;for(f=0;f<e;f++)d[f]instanceof c.Initialize?d[f].init(a,b):c.InitializeUtil.init(a,b,d[f]);c.InitializeUtil.bindEmitter(a,b)},init:function(a,b,d){c.Util.setPrototypeByObject(b,d),c.Util.setVector2DByObject(b,d)},bindEmitter:function(a,b){a.bindEmitter&&(b.p.add(a.p),b.v.add(a.v),b.a.add(a.a),b.v.rotate(c.MathUtils.degreeTransform(a.rotation)))}};c.InitializeUtil=y,c.Util.inherits(z,c.Initialize),z.prototype.initialize=function(a){this.lifePan.a==Infinity?a.life=Infinity:a.life=this.lifePan.getValue()},c.Life=z,c.Util.inherits(A,c.Initialize),A.prototype.reset=function(a){this.zone=c.Util.initValue(a,new c.PointZone)},A.prototype.initialize=function(a){this.zone.getPosition(),a.p.x=this.zone.vector.x,a.p.y=this.zone.vector.y},c.Position=A,c.P=A,c.Util.inherits(B,c.Initialize),B.prototype.reset=function(a,b,d){this.rPan=c.Util.setSpanValue(a),this.thaPan=c.Util.setSpanValue(b),this.type=c.Util.initValue(d,"vector")},B.prototype.normalizeVelocity=function(a){return a*c.MEASURE},B.prototype.initialize=function(a){if(this.type=="p"||this.type=="P"||this.type=="polar"){var b=new c.Polar2D(this.normalizeVelocity(this.rPan.getValue()),this.thaPan.getValue()*Math.PI/180);a.v.x=b.getX(),a.v.y=b.getY()}else a.v.x=this.normalizeVelocity(this.rPan.getValue()),a.v.y=this.normalizeVelocity(this.thaPan.getValue())},c.Velocity=B,c.V=B,c.Util.inherits(C,c.Initialize),C.prototype.initialize=function(a){a.mass=this.massPan.getValue()},c.Mass=C,c.Util.inherits(D,c.Initialize),D.prototype.reset=function(a,b,d){this.radius=c.Util.setSpanValue(a,b,d)},D.prototype.initialize=function(a){a.radius=this.radius.getValue(),a.transform.oldRadius=a.radius},c.Radius=D,c.Util.inherits(E,c.Initialize),E.prototype.initialize=function(a){var b=this.image.getValue();typeof b=="string"?a.target={width:this.w,height:this.h,src:b}:a.target=b},E.prototype.setSpanValue=function(a){return a instanceof c.ColorSpan?a:new c.ColorSpan(a)},c.ImageTarget=E,c.Util.inherits(F,c.Behaviour),F.prototype.reset=function(a,b,d,e){this.force=this.normalizeForce(new c.Vector2D(a,b)),d&&F._super_.prototype.reset.call(this,d,e)},F.prototype.applyBehaviour=function(a,b,c){F._super_.prototype.applyBehaviour.call(this,a,b,c),a.a.add(this.force)},c.Force=F,c.F=F,c.Util.inherits(G,c.Behaviour),G.prototype.reset=function(a,b,d,e,f){this.targetPosition=c.Util.initValue(a,new c.Vector2D),this.radius=c.Util.initValue(d,1e3),this.force=c.Util.initValue(this.normalizeValue(b),100),this.radiusSq=this.radius*this.radius,this.attractionForce=new c.Vector2D,this.lengthSq=0,e&&G._super_.prototype.reset.call(this,e,f)},G.prototype.applyBehaviour=function(a,b,c){G._super_.prototype.applyBehaviour.call(this,a,b,c),this.attractionForce.copy(this.targetPosition),this.attractionForce.sub(a.p),this.lengthSq=this.attractionForce.lengthSq(),this.lengthSq>4e-6&&this.lengthSq<this.radiusSq&&(this.attractionForce.normalize(),this.attractionForce.multiplyScalar(1-this.lengthSq/this.radiusSq),this.attractionForce.multiplyScalar(this.force),a.a.add(this.attractionForce))},c.Attraction=G,c.Util.inherits(H,c.Behaviour),H.prototype.reset=function(a,b,d,e,f){this.panFoce=new c.Vector2D(a,b),this.panFoce=this.normalizeForce(this.panFoce),this.delay=d,e&&H._super_.prototype.reset.call(this,e,f)},H.prototype.applyBehaviour=function(a,b,d){H._super_.prototype.applyBehaviour.call(this,a,b,d),this.time+=b,this.time>=this.delay&&(a.a.addXY(c.MathUtils.randomAToB(-this.panFoce.x,this.panFoce.x),c.MathUtils.randomAToB(-this.panFoce.y,this.panFoce.y)),this.time=0)},c.RandomDrift=H,c.Util.inherits(I,c.Attraction),I.prototype.reset=function(a,b,c,d,e){I._super_.prototype.reset.call(this,a,b,c,d,e),this.force*=-1},c.Repulsion=I,c.Util.inherits(J,c.Force),J.prototype.reset=function(a,b,c){J._super_.prototype.reset.call(this,0,a,b,c)},c.Gravity=J,c.G=J,c.Util.inherits(K,c.Behaviour),K.prototype.reset=function(a,b,d,e,f){this.emitter=c.Util.initValue(a,null),this.mass=c.Util.initValue(b,!0),this.callback=c.Util.initValue(d,null),this.collisionPool=[],this.delta=new c.Vector2D,e&&K._super_.prototype.reset.call(this,e,f)},K.prototype.applyBehaviour=function(a,b,c){var d=this.emitter?this.emitter.particles.slice(c):this.pool.slice(c),e,f,g,h,i,j=d.length;for(var k=0;k<j;k++)e=d[k],e!==a&&(this.delta.copy(e.p),this.delta.sub(a.p),f=this.delta.lengthSq(),distance=a.radius+e.radius,f<=distance*distance&&(g=distance-Math.sqrt(f),g+=.5,totalMass=a.mass+e.mass,h=this.mass?e.mass/totalMass:.5,i=this.mass?a.mass/totalMass:.5,a.p.add(this.delta.clone().normalize().multiplyScalar(g*-h)),e.p.add(this.delta.normalize().multiplyScalar(g*i)),this.callback&&this.callback(a,e)))},c.Collision=K,c.Util.inherits(L,c.Behaviour),L.prototype.reset=function(a,b,d,e){this.zone=a,this.zone.crossType=c.Util.initValue(b,"dead"),d&&L._super_.prototype.reset.call(this,d,e)},L.prototype.applyBehaviour=function(a,b,c){L._super_.prototype.applyBehaviour.call(this,a,b,c),this.zone.crossing(a)},c.CrossZone=L,c.Util.inherits(M,c.Behaviour),M.prototype.reset=function(a,d,e,f){d==null||d==b?this.same=!0:this.same=!1,this.a=c.Util.setSpanValue(c.Util.initValue(a,1)),this.b=c.Util.setSpanValue(d),e&&M._super_.prototype.reset.call(this,e,f)},M.prototype.initialize=function(a){a.transform.alphaA=this.a.getValue(),this.same?a.transform.alphaB=a.transform.alphaA:a.transform.alphaB=this.b.getValue()},M.prototype.applyBehaviour=function(a,b,c){M._super_.prototype.applyBehaviour.call(this,a,b,c),a.alpha=a.transform.alphaB+(a.transform.alphaA-a.transform.alphaB)*this.energy,a.alpha<.001&&(a.alpha=0)},c.Alpha=M,c.Util.inherits(N,c.Behaviour),N.prototype.reset=function(a,d,e,f){d==null||d==b?this.same=!0:this.same=!1,this.a=c.Util.setSpanValue(c.Util.initValue(a,1)),this.b=c.Util.setSpanValue(d),e&&N._super_.prototype.reset.call(this,e,f)},N.prototype.initialize=function(a){a.transform.scaleA=this.a.getValue(),a.transform.oldRadius=a.radius,this.same?a.transform.scaleB=a.transform.scaleA:a.transform.scaleB=this.b.getValue()},N.prototype.applyBehaviour=function(a,b,c){N._super_.prototype.applyBehaviour.call(this,a,b,c),a.scale=a.transform.scaleB+(a.transform.scaleA-a.transform.scaleB)*this.energy,a.scale<1e-4&&(a.scale=0),a.radius=a.transform.oldRadius*a.scale},c.Scale=N,c.Util.inherits(O,c.Behaviour),O.prototype.reset=function(a,d,e,f,g){d==null||d==b?this.same=!0:this.same=!1,this.a=c.Util.setSpanValue(c.Util.initValue(a,"Velocity")),this.b=c.Util.setSpanValue(c.Util.initValue(d,0)),this.style=c.Util.initValue(e,"to"),f&&O._super_.prototype.reset.call(this,f,g)},O.prototype.initialize=function(a){a.rotation=this.a.getValue(),a.transform.rotationA=this.a.getValue(),this.same||(a.transform.rotationB=this.b.getValue())},O.prototype.applyBehaviour=function(a,b,c){O._super_.prototype.applyBehaviour.call(this,a,b,c);if(!this.same)this.style=="to"||this.style=="TO"||this.style=="_"?a.rotation+=a.transform.rotationB+(a.transform.rotationA-a.transform.rotationB)*this.energy:a.rotation+=a.transform.rotationB;else if(this.a.a=="V"||this.a.a=="Velocity"||this.a.a=="v")a.rotation=a.getDirection()},c.Rotate=O,c.Util.inherits(P,c.Behaviour),P.prototype.reset=function(a,b,c,d){this.color1=this.setSpanValue(a),this.color2=this.setSpanValue(b),c&&P._super_.prototype.reset.call(this,c,d)},P.prototype.initialize=function(a){a.color=this.color1.getValue(),a.transform.beginRGB=c.Util.hexToRGB(a.color),this.color2&&(a.transform.endRGB=c.Util.hexToRGB(this.color2.getValue()))},P.prototype.applyBehaviour=function(a,b,c){this.color2?(P._super_.prototype.applyBehaviour.call(this,a,b,c),a.transform.rgb.r=a.transform.endRGB.r+(a.transform.beginRGB.r-a.transform.endRGB.r)*this.energy,a.transform.rgb.g=a.transform.endRGB.g+(a.transform.beginRGB.g-a.transform.endRGB.g)*this.energy,a.transform.rgb.b=a.transform.endRGB.b+(a.transform.beginRGB.b-a.transform.endRGB.b)*this.energy,a.transform.rgb.r=parseInt(a.transform.rgb.r,10),a.transform.rgb.g=parseInt(a.transform.rgb.g,10),a.transform.rgb.b=parseInt(a.transform.rgb.b,10)):(a.transform.rgb.r=a.transform.beginRGB.r,a.transform.rgb.g=a.transform.beginRGB.g,a.transform.rgb.b=a.transform.beginRGB.b)},P.prototype.setSpanValue=function(a){return a?a instanceof c.ColorSpan?a:new c.ColorSpan(a):null},c.Color=P,c.Util.inherits(Q,c.Behaviour),Q.prototype.reset=function(a,b,d,e){this.distanceVec=new c.Vector2D,this.centerPoint=c.Util.initValue(a,new c.Vector2D),this.force=c.Util.initValue(this.normalizeValue(b),100),d&&Q._super_.prototype.reset.call(this,d,e)},Q.prototype.initialize=function(a){},Q.prototype.applyBehaviour=function(a,b,c){this.distanceVec.set(this.centerPoint.x-a.p.x,this.centerPoint.y-a.p.y);var d=this.distanceVec.lengthSq();if(d!=0){var e=this.distanceVec.length(),f=this.force*b/(d*e);a.v.x+=f*this.distanceVec.x,a.v.y+=f*this.distanceVec.y}},c.GravityWell=Q,R.ID=0,c.Util.inherits(R,c.Particle),c.EventDispatcher.initialize(R.prototype),R.prototype.emit=function(a,b){this.emitTime=0,this.emitTotalTimes=c.Util.initValue(a,Infinity),b==!0||b=="life"||b=="destroy"?a=="once"?this.life=1:this.life=this.emitTotalTimes:isNaN(b)||(this.life=b),this.rate.init()},R.prototype.stopEmit=function(){this.emitTotalTimes=-1,this.emitTime=0},R.prototype.removeAllParticles=function(){for(var a=0;a<this.particles.length;a++)this.particles[a].dead=!0},R.prototype.createParticle=function(a,b){var d=c.pool.get(c.Particle);this.setupParticle(d,a,b),this.dispatchEvent(c.PARTICLE_CREATED,d);return d},R.prototype.addSelfInitialize=function(a){a.init?a.init(this):this.initAll()},R.prototype.addInitialize=function(){var a=arguments.length,b;for(b=0;b<a;b++)this.initializes.push(arguments[b])},R.prototype.removeInitialize=function(a){var b=this.initializes.indexOf(a);b>-1&&this.initializes.splice(b,1)},R.prototype.removeInitializers=function(){c.Util.destroyArray(this.initializes)},R.prototype.addBehaviour=function(){var a=arguments.length,b;for(b=0;b<a;b++)this.behaviours.push(arguments[b]),arguments[b].hasOwnProperty("parents")&&arguments[b].parents.push(this)},R.prototype.removeBehaviour=function(a){var b=this.behaviours.indexOf(a);b>-1&&this.behaviours.splice(b,1)},R.prototype.removeAllBehaviours=function(){c.Util.destroyArray(this.behaviours)},R.prototype.integrate=function(a){var b=1-this.damping;c.integrator.integrate(this,a,b);var d=this.particles.length,e;for(e=0;e<d;e++){var f=this.particles[e];f.update(a,e),c.integrator.integrate(f,a,b),this.dispatchEvent(c.PARTICLE_UPDATE,f)}},R.prototype.emitting=function(a){if(this.emitTotalTimes=="once"){var b=this.rate.getValue(99999),c;for(c=0;c<b;c++)this.createParticle();this.emitTotalTimes="none"}else if(!isNaN(this.emitTotalTimes)){this.emitTime+=a;if(this.emitTime<this.emitTotalTimes){var b=this.rate.getValue(a),c;for(c=0;c<b;c++)this.createParticle()}}},R.prototype.update=function(a){this.age+=a,(this.age>=this.life||this.dead)&&this.destroy(),this.emitting(a),this.integrate(a);var b,d=this.particles.length,e;for(e=d-1;e>=0;e--)b=this.particles[e],b.dead&&(this.dispatchEvent(c.PARTICLE_DEAD,b),c.pool.set(b),this.particles.splice(e,1))},R.prototype.setupParticle=function(a,b,d){var e=this.initializes,f=this.behaviours;b&&(b instanceof Array?e=b:e=[b]),d&&(d instanceof Array?f=d:f=[d]),a.reset(),c.InitializeUtil.initialize(this,a,e),a.addBehaviours(f),a.parent=this,this.particles.push(a)},R.prototype.destroy=function(){this.dead=!0,this.emitTotalTimes=-1,this.particles.length==0&&(this.removeInitializers(),this.removeAllBehaviours(),this.parent&&this.parent.removeEmitter(this))},c.Emitter=R,c.Util.inherits(S,c.Emitter),S.prototype.addSelfBehaviour=function(){var a=arguments.length,b;for(b=0;b<a;b++)this.selfBehaviours.push(arguments[b])},S.prototype.removeSelfBehaviour=function(a){var b=this.selfBehaviours.indexOf(a);b>-1&&this.selfBehaviours.splice(b,1)},S.prototype.update=function(a){S._super_.prototype.update.call(this,a);if(!this.sleep){var b=this.selfBehaviours.length,c;for(c=0;c<b;c++)this.selfBehaviours[c].applyBehaviour(this,a,c)}},c.BehaviourEmitter=S,c.Util.inherits(T,c.Emitter),T.prototype.initEventHandler=function(){var a=this;this.mousemoveHandler=function(b){a.mousemove.call(a,b)},this.mousedownHandler=function(b){a.mousedown.call(a,b)},this.mouseupHandler=function(b){a.mouseup.call(a,b)},this.mouseTarget.addEventListener("mousemove",this.mousemoveHandler,!1)},T.prototype.emit=function(){this._allowEmitting=!0},T.prototype.stopEmit=function(){this._allowEmitting=!1},T.prototype.mousemove=function(a){if(a.layerX||a.layerX==0)this.p.x+=(a.layerX-this.p.x)*this.ease,this.p.y+=(a.layerY-this.p.y)*this.ease;else if(a.offsetX||a.offsetX==0)this.p.x+=(a.offsetX-this.p.x)*this.ease,this.p.y+=(a.offsetY-this.p.y)*this.ease;this._allowEmitting&&T._super_.prototype.emit.call(this,"once")},T.prototype.destroy=function(){T._super_.prototype.destroy.call(this),this.mouseTarget.removeEventListener("mousemove",this.mousemoveHandler,!1)},c.FollowEmitter=T;var U=U||{easeLinear:function(a){return a},easeInQuad:function(a){return Math.pow(a,2)},easeOutQuad:function(a){return-(Math.pow(a-1,2)-1)},easeInOutQuad:function(a){if((a/=.5)<1)return.5*Math.pow(a,2);return-0.5*((a-=2)*a-2)},easeInCubic:function(a){return Math.pow(a,3)},easeOutCubic:function(a){return Math.pow(a-1,3)+1},easeInOutCubic:function(a){if((a/=.5)<1)return.5*Math.pow(a,3);return.5*(Math.pow(a-2,3)+2)},easeInQuart:function(a){return Math.pow(a,4)},easeOutQuart:function(a){return-(Math.pow(a-1,4)-1)},easeInOutQuart:function(a){if((a/=.5)<1)return.5*Math.pow(a,4);return-0.5*((a-=2)*Math.pow(a,3)-2)},easeInSine:function(a){return-Math.cos(a*(Math.PI/2))+1},easeOutSine:function(a){return Math.sin(a*(Math.PI/2))},easeInOutSine:function(a){return-0.5*(Math.cos(Math.PI*a)-1)},easeInExpo:function(a){return a===0?0:Math.pow(2,10*(a-1))},easeOutExpo:function(a){return a===1?1:-Math.pow(2,-10*a)+1},easeInOutExpo:function(a){if(a===0)return 0;if(a===1)return 1;if((a/=.5)<1)return.5*Math.pow(2,10*(a-1));return.5*(-Math.pow(2,-10*--a)+2)},easeInCirc:function(a){return-(Math.sqrt(1-a*a)-1)},easeOutCirc:function(a){return Math.sqrt(1-Math.pow(a-1,2))},easeInOutCirc:function(a){if((a/=.5)<1)return-0.5*(Math.sqrt(1-a*a)-1);return.5*(Math.sqrt(1-(a-=2)*a)+1)},easeInBack:function(a){var b=1.70158;return a*a*((b+1)*a-b)},easeOutBack:function(a){var b=1.70158;return(a=a-1)*a*((b+1)*a+b)+1},easeInOutBack:function(a){var b=1.70158;if((a/=.5)<1)return.5*a*a*(((b*=1.525)+1)*a-b);return.5*((a-=2)*a*(((b*=1.525)+1)*a+b)+2)},setEasingByName:function(a){switch(a){case"easeLinear":return c.ease.easeLinear;case"easeInQuad":return c.ease.easeInQuad;case"easeOutQuad":return c.ease.easeOutQuad;case"easeInOutQuad":return c.ease.easeInOutQuad;case"easeInCubic":return c.ease.easeInCubic;case"easeOutCubic":return c.ease.easeOutCubic;case"easeInOutCubic":return c.ease.easeInOutCubic;case"easeInQuart":return c.ease.easeInQuart;case"easeOutQuart":return c.ease.easeOutQuart;case"easeInOutQuart":return c.ease.easeInOutQuart;case"easeInSine":return c.ease.easeInSine;case"easeOutSine":return c.ease.easeOutSine;case"easeInOutSine":return c.ease.easeInOutSine;case"easeInExpo":return c.ease.easeInExpo;case"easeOutExpo":return c.ease.easeOutExpo;case"easeInOutExpo":return c.ease.easeInOutExpo;case"easeInCirc":return c.ease.easeInCirc;case"easeOutCirc":return c.ease.easeOutCirc;case"easeInOutCirc":return c.ease.easeInOutCirc;case"easeInBack":return c.ease.easeInBack;case"easeOutBack":return c.ease.easeOutBack;case"easeInOutBack":return c.ease.easeInOutBack;default:return c.ease.easeLinear}}};c.ease=U,c.easeLinear="easeLinear",c.easeInQuad="easeInQuad",c.easeOutQuad="easeOutQuad",c.easeInOutQuad="easeInOutQuad",c.easeInCubic="easeInCubic",c.easeOutCubic="easeOutCubic",c.easeInOutCubic="easeInOutCubic",c.easeInQuart="easeInQuart",c.easeOutQuart="easeOutQuart",c.easeInOutQuart="easeInOutQuart",c.easeInSine="easeInSine",c.easeOutSine="easeOutSine",c.easeInOutSine="easeInOutSine",c.easeInExpo="easeInExpo",c.easeOutExpo="easeOutExpo",c.easeInOutExpo="easeInOutExpo",c.easeInCirc="easeInCirc",c.easeOutCirc="easeOutCirc",c.easeInOutCirc="easeInOutCirc",c.easeInBack="easeInBack",c.easeOutBack="easeOutBack",c.easeInOutBack="easeInOutBack",V.prototype={start:function(){this.addEventHandler(),this.renderer.start()},stop:function(){this.renderer.stop()},resize:function(a,b){this.renderer.resize(a,b)},setStroke:function(a,b){this.renderer.hasOwnProperty("stroke")?this.renderer.setStroke(a,b):alert("Sorry this renderer do not suppest stroke method!")},createImageData:function(a){this.renderer instanceof c.PixelRender&&this.renderer.createImageData(a)},setMaxRadius:function(a){this.renderer instanceof c.WebGLRender&&this.renderer.setMaxRadius(a)},blendEquation:function(a){this.renderer instanceof c.WebGLRender&&this.renderer.blendEquation(a)},blendFunc:function(a,b){this.renderer instanceof c.WebGLRender&&this.renderer.blendFunc(a,b)},setType:function(a){this.type=a,this.renderer=this.getRenderer()},getRenderer:function(){switch(this.type){case"pixi":return new c.PixiRender(this.proton,this.element);case"dom":return new c.DomRender(this.proton,this.element);case"canvas":return new c.CanvasRender(this.proton,this.element);case"webgl":return new c.WebGLRender(this.proton,this.element);case"easel":return new c.EaselRender(this.proton,this.element);case"easeljs":return new c.EaselRender(this.proton,this.element);case"pixel":return new c.PixelRender(this.proton,this.element);default:return new c.BaseRender(this.proton,this.element)}},render:function(a){this.renderer.render(a)},addEventHandler:function(){this.onProtonUpdate&&(this.renderer.onProtonUpdate=this.onProtonUpdate),this.onParticleCreated&&(this.renderer.onParticleCreated=this.onParticleCreated),this.onParticleUpdate&&(this.renderer.onParticleUpdate=this.onParticleUpdate),this.onParticleDead&&(this.renderer.onParticleDead=this.onParticleDead)}},c.Renderer=V,W.prototype={start:function(){var a=this;this.proton.addEventListener(c.PROTON_UPDATE,function(){a.onProtonUpdate.call(a)}),this.proton.addEventListener(c.PROTON_UPDATE_AFTER,function(){a.onProtonUpdateAfter.call(a)}),this.proton.addEventListener(c.EMITTER_ADDED,function(b){a.onEmitterAdded.call(a,b)}),this.proton.addEventListener(c.EMITTER_REMOVED,function(b){a.onEmitterRemoved.call(a,b)});var b=this.proton.emitters.length,d;for(d=0;d<b;d++){var e=this.proton.emitters[d];this.addEmitterListener(e)}},resize:function(a,b){},addEmitterListener:function(a){var b=this;a.addEventListener(c.PARTICLE_CREATED,function(a){b.onParticleCreated.call(b,a)}),a.addEventListener(c.PARTICLE_UPDATE,function(a){b.onParticleUpdate.call(b,a)}),a.addEventListener(c.PARTICLE_DEAD,function(a){b.onParticleDead.call(b,a)})},stop:function(){var a=this.proton.emitters.length,b;this.proton.removeAllEventListeners();for(b=0;b<a;b++){var c=this.proton.emitters[b];c.removeAllEventListeners()}},onEmitterAdded:function(a){this.addEmitterListener(a)},onEmitterRemoved:function(a){a.removeAllEventListeners()},onProtonUpdate:function(){},onProtonUpdateAfter:function(){},onParticleCreated:function(a){},onParticleUpdate:function(a){},onParticleDead:function(a){}},c.BaseRender=W,c.Util.inherits(X,c.BaseRender),X.prototype.start=function(){X._super_.prototype.start.call(this)},X.prototype.setStroke=function(a,b){a=c.Util.initValue(a,"#000000"),b=c.Util.initValue(b,1),this.stroke={color:a,thinkness:b}},X.prototype.onProtonUpdate=function(){},X.prototype.onParticleCreated=function(a){if(a.target){var b=this;c.Util.getImage(a.target,a,!1,function(a){b.setImgInDIV.call(b,a)})}else a.transform.canvas=c.DomUtil.createCanvas(a.id+"_canvas",a.radius+1,a.radius+1,"absolute"),a.transform.bakOldRadius=a.radius,this.stroke?(a.transform.canvas.width=2*a.radius+this.stroke.thinkness*2,a.transform.canvas.height=2*a.radius+this.stroke.thinkness*2):(a.transform.canvas.width=2*a.radius+1,a.transform.canvas.height=2*a.radius+1),a.transform.context=a.transform.canvas.getContext("2d"),a.transform.context.fillStyle=a.color,a.transform.context.beginPath(),a.transform.context.arc(a.radius,a.radius,a.radius,0,Math.PI*2,!0),this.stroke&&(a.transform.context.strokeStyle=this.stroke.color,a.transform.context.lineWidth=this.stroke.thinkness,a.transform.context.stroke()),a.transform.context.closePath(),a.transform.context.fill(),this.element.appendChild(a.transform.canvas)},X.prototype.onParticleUpdate=function(a){a.target?a.target instanceof Image&&(a.transform.canvas.style.opacity=a.alpha,c.DomUtil.transformDom(a.transform.canvas,a.p.x-a.target.width/2,a.p.y-a.target.height/2,a.scale,a.rotation)):(a.transform.canvas.style.opacity=a.alpha,a.transform.oldRadius?c.DomUtil.transformDom(a.transform.canvas,a.p.x-a.transform.oldRadius,a.p.y-a.transform.oldRadius,a.scale,a.rotation):c.DomUtil.transformDom(a.transform.canvas,a.p.x-a.transform.bakOldRadius,a.p.y-a.transform.bakOldRadius,a.scale,a.rotation))},X.prototype.onParticleDead=function(a){a.transform.canvas&&this.element.removeChild(a.transform.canvas)},X.prototype.setImgInDIV=function(a){a.transform.canvas=c.DomUtil.createCanvas(a.id+"_canvas",a.target.width+1,a.target.height+1,"absolute",a.p.x-a.radius,a.p.y-a.radius),a.transform.context=a.transform.canvas.getContext("2d"),a.transform.context.drawImage(a.target,0,0,a.target.width,a.target.height),this.element.appendChild(a.transform.canvas)},c.DomRender=X,c.Util.inherits(Y,c.BaseRender),Y.prototype.resize=function(a,b){},Y.prototype.start=function(){Y._super_.prototype.start.call(this)},Y.prototype.onProtonUpdate=function(){},Y.prototype.onParticleCreated=function(a){if(a.target)a.target=this.pool.get(a.target),a.target.parent||(!a.target.image||(a.target.regX=a.target.image.width/2,a.target.regY=a.target.image.height/2),this.element.addChild(a.target));else{var b=this.pool.get(createjs.Graphics);this.stroke&&(this.stroke==!0?b.beginStroke("#000000"):this.stroke instanceof String&&b.beginStroke(this.stroke)),b.beginFill(a.color).drawCircle(0,0,a.radius);var c=new createjs.Shape(b);a.target=c,this.element.addChild(a.target)}},Y.prototype.onParticleUpdate=function(a){a.target&&(a.target.x=a.p.x,a.target.y=a.p.y,a.target.alpha=a.alpha,a.target.scaleX=a.target.scaleY=a.scale,a.target.rotation=a.rotation)},Y.prototype.onParticleDead=function(a){a.target&&(a.target.parent&&a.target.parent.removeChild(a.target),this.pool.set(a.target),a.target=null)},c.EaselRender=Y,c.Util.inherits(Z,c.BaseRender),Z.prototype.resize=function(a,b){this.element.width=a,this.element.height=b},Z.prototype.start=function(){Z._super_.prototype.start.call(this)},Z.prototype.setStroke=function(a,b){a=c.Util.initValue(a,"#000000"),b=c.Util.initValue(b,1),this.stroke={color:a,thinkness:b}},Z.prototype.onProtonUpdate=function(){this.context.clearRect(0,0,this.element.width,this.element.height)},Z.prototype.onParticleCreated=function(a){a.target?c.Util.getImage(a.target,a,!1):a.color=a.color?a.color:"#ff0000"},Z.prototype.onParticleUpdate=function(a){if(a.target){if(a.target instanceof Image){var b=a.target.width*a.scale|0,d=a.target.height*a.scale|0,e=a.p.x-b/2,f=a.p.y-d/2;if(!a.color)this.context.save(),this.context.globalAlpha=a.alpha,this.context.translate(a.p.x,a.p.y),this.context.rotate(c.MathUtils.degreeTransform(a.rotation)),this.context.translate(-a.p.x,-a.p.y),this.context.drawImage(a.target,0,0,a.target.width,a.target.height,e,f,b,d),this.context.globalAlpha=1,this.context.restore();else{a.transform.buffer||(a.transform.buffer=this.getBuffer(a.target));var g=a.transform.buffer.getContext("2d");g.clearRect(0,0,a.transform.buffer.width,a.transform.buffer.height),g.globalAlpha=a.alpha,g.drawImage(a.target,0,0),g.globalCompositeOperation="source-atop",g.fillStyle=c.Util.rgbToHex(a.transform.rgb),g.fillRect(0,0,a.transform.buffer.width,a.transform.buffer.height),g.globalCompositeOperation="source-over",g.globalAlpha=1,this.context.drawImage(a.transform.buffer,0,0,a.transform.buffer.width,a.transform.buffer.height,e,f,b,d)}}}else a.transform.rgb?this.context.fillStyle="rgba("+a.transform.rgb.r+","+a.transform.rgb.g+","+a.transform.rgb.b+","+a.alpha+")":this.context.fillStyle=a.color,this.context.beginPath(),this.context.arc(a.p.x,a.p.y,a.radius,0,Math.PI*2,!0),this.stroke&&(this.context.strokeStyle=this.stroke.color,this.context.lineWidth=this.stroke.thinkness,this.context.stroke()),this.context.closePath(),this.context.fill()},Z.prototype.onParticleDead=function(a){},Z.prototype.getBuffer=function(a){if(a instanceof Image){var b=a.width+"_"+a.height,c=this.bufferCache[b];c||(c=document.createElement("canvas"),c.width=a.width,c.height=a.height,this.bufferCache[b]=c);return c}},c.CanvasRender=Z,c.Util.inherits($,c.BaseRender),$.prototype.resize=function(a,b){this.element.width=a,this.element.height=b},$.prototype.createImageData=function(a){a?this.rectangle=a:this.rectangle=new c.Rectangle(0,0,this.element.width,this.element.height),this.imageData=this.context.createImageData(this.rectangle.width,this.rectangle.height),this.context.putImageData(this.imageData,this.rectangle.x,this.rectangle.y)},$.prototype.start=function(){$._super_.prototype.start.call(this)},$.prototype.onProtonUpdate=function(){this.context.clearRect(this.rectangle.x,this.rectangle.y,this.rectangle.width,this.rectangle.height),this.imageData=this.context.getImageData(this.rectangle.x,this.rectangle.y,this.rectangle.width,this.rectangle.height)},$.prototype.onProtonUpdateAfter=function(){this.context.putImageData(this.imageData,this.rectangle.x,this.rectangle.y)},$.prototype.onParticleCreated=function(a){},$.prototype.onParticleUpdate=function(a){this.imageData&&this.setPixel(this.imageData,Math.floor(a.p.x-this.rectangle.x),Math.floor(a.p.y-this.rectangle.y),a)},$.prototype.setPixel=function(a,b,c,d){var e=d.transform.rgb;if(!(b<0||b>this.element.width||c<0||c>this.elementwidth)){var f=((c>>0)*a.width+(b>>0))*4;a.data[f]=e.r,a.data[f+1]=e.g,a.data[f+2]=e.b,a.data[f+3]=d.alpha*255}},$.prototype.onParticleDead=function(a){},c.PixelRender=$,c.Util.inherits(_,c.BaseRender),_.prototype.resize=function(a,b){this.umat[4]=-2,this.umat[7]=1,this.smat[0]=1/a,this.smat[4]=1/b,this.mstack.set(this.umat,0),this.mstack.set(this.smat,1),this.gl.viewport(0,0,a,b),this.element.width=a,this.element.height=b},_.prototype.setMaxRadius=function(a){this.circleCanvasURL=this.createCircle(a)},_.prototype.getVertexShader=function(){var a=["uniform vec2 viewport;","attribute vec2 aVertexPosition;","attribute vec2 aTextureCoord;","uniform mat3 tMat;","varying vec2 vTextureCoord;","varying float alpha;","void main() {","vec3 v = tMat * vec3(aVertexPosition, 1.0);","gl_Position = vec4(v.x, v.y, 0, 1);","vTextureCoord = aTextureCoord;","alpha = tMat[0][2];","}"].join("\n");return a},_.prototype.getFragmentShader=function(){var a=["precision mediump float;","varying vec2 vTextureCoord;","varying float alpha;","uniform sampler2D uSampler;","uniform vec4 color;","uniform bool useTexture;","uniform vec3 uColor;","void main() {","vec4 textureColor = texture2D(uSampler, vTextureCoord);","gl_FragColor = textureColor * vec4(uColor, 1.0);","gl_FragColor.w *= alpha;","}"].join("\n");return a},_.prototype.initVar=function(){this.mstack=new c.MStack,this.umat=c.Mat3.create([2,0,1,0,-2,0,-1,1,1]),this.smat=c.Mat3.create([.01,0,1,0,.01,0,0,0,1]),this.texturebuffers={}},_.prototype.start=function(){_._super_.prototype.start.call(this),this.resize(this.element.width,this.element.height)},_.prototype.blendEquation=function(a){this.gl.blendEquation(this.gl[a])},_.prototype.blendFunc=function(a,b){this.gl.blendFunc(this.gl[a],this.gl[b])},_.prototype.getShader=function(a,b,c){var d;c?d=a.createShader(a.FRAGMENT_SHADER):d=a.createShader(a.VERTEX_SHADER),a.shaderSource(d,b),a.compileShader(d);if(!a.getShaderParameter(d,a.COMPILE_STATUS)){alert(a.getShaderInfoLog(d));return null}return d},_.prototype.initShaders=function(){var a=this.getShader(this.gl,this.getFragmentShader(),!0),b=this.getShader(this.gl,this.getVertexShader(),!1);this.sprogram=this.gl.createProgram(),this.gl.attachShader(this.sprogram,b),this.gl.attachShader(this.sprogram,a),this.gl.linkProgram(this.sprogram),this.gl.getProgramParameter(this.sprogram,this.gl.LINK_STATUS)||alert("Could not initialise shaders"),this.gl.useProgram(this.sprogram),this.sprogram.vpa=this.gl.getAttribLocation(this.sprogram,"aVertexPosition"),this.sprogram.tca=this.gl.getAttribLocation(this.sprogram,"aTextureCoord"),this.gl.enableVertexAttribArray(this.sprogram.tca),this.gl.enableVertexAttribArray(this.sprogram.vpa),this.sprogram.tMatUniform=this.gl.getUniformLocation(this.sprogram,"tMat"),this.sprogram.samplerUniform=this.gl.getUniformLocation(this.sprogram,"uSampler"),this.sprogram.useTex=this.gl.getUniformLocation(this.sprogram,"useTexture"),this.sprogram.color=this.gl.getUniformLocation(this.sprogram,"uColor"),this.gl.uniform1i(this.sprogram.useTex,1)},_.prototype.initBuffers=function(){this.unitIBuffer=this.gl.createBuffer(),this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER,this.unitIBuffer);var a=[0,3,1,0,2,3];this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(a),this.gl.STATIC_DRAW);var b=[];for(var c=0;c<100;c++)b.push(c);idx=new Uint16Array(b),this.unitI33=this.gl.createBuffer(),this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER,this.unitI33),this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER,idx,this.gl.STATIC_DRAW),b=[];for(c=0;c<100;c++)b.push(c,c+1,c+2);idx=new Uint16Array(b),this.stripBuffer=this.gl.createBuffer(),this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER,this.stripBuffer),this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER,idx,this.gl.STATIC_DRAW)},_.prototype.createCircle=function(a){this.circleCanvasRadius=c.WebGLUtil.nhpot(c.Util.initValue(a,32));var b=c.DomUtil.createCanvas("circle_canvas",this.circleCanvasRadius*2,this.circleCanvasRadius*2),d=b.getContext("2d");d.beginPath(),d.arc(this.circleCanvasRadius,this.circleCanvasRadius,this.circleCanvasRadius,0,Math.PI*2,!0),d.closePath(),d.fillStyle="#FFF",d.fill();return b.toDataURL()},_.prototype.setImgInCanvas=function(a){var b=a.target.width,d=a.target.height,e=c.WebGLUtil.nhpot(a.target.width),f=c.WebGLUtil.nhpot(a.target.height),g=a.target.width/e,h=a.target.height/f;this.texturebuffers[a.transform.src]||(this.texturebuffers[a.transform.src]=[this.gl.createTexture(),this.gl.createBuffer(),this.gl.createBuffer()]),a.transform.texture=this.texturebuffers[a.transform.src][0],a.transform.vcBuffer=this.texturebuffers[a.transform.src][1],a.transform.tcBuffer=this.texturebuffers[a.transform.src][2],this.gl.bindBuffer(this.gl.ARRAY_BUFFER,a.transform.tcBuffer),this.gl.bufferData(this.gl.ARRAY_BUFFER,new Float32Array([0,0,g,0,0,h,h,h]),this.gl.STATIC_DRAW),this.gl.bindBuffer(this.gl.ARRAY_BUFFER,a.transform.vcBuffer),this.gl.bufferData(this.gl.ARRAY_BUFFER,new Float32Array([0,0,b,0,0,d,b,d]),this.gl.STATIC_DRAW);var i=a.transform.canvas.getContext("2d"),j=i.getImageData(0,0,e,f);this.gl.bindTexture(this.gl.TEXTURE_2D,a.transform.texture),this.gl.texImage2D(this.gl.TEXTURE_2D,0,this.gl.RGBA,this.gl.RGBA,this.gl.UNSIGNED_BYTE,j),this.gl.texParameteri(this.gl.TEXTURE_2D,this.gl.TEXTURE_MAG_FILTER,this.gl.LINEAR),this.gl.texParameteri(this.gl.TEXTURE_2D,this.gl.TEXTURE_MIN_FILTER,this.gl.LINEAR_MIPMAP_NEAREST),this.gl.generateMipmap(this.gl.TEXTURE_2D),a.transform.textureLoaded=!0,a.transform.textureWidth=b,a.transform.textureHeight=d},_.prototype.setStroke=function(a,b){},_.prototype.onProtonUpdate=function(){},_.prototype.onParticleCreated=function(a){var b=this;a.transform.textureLoaded=!1,a.transform.tmat=c.Mat3.create(),a.transform.tmat[8]=1,a.transform.imat=c.Mat3.create(),a.transform.imat[8]=1,a.target?c.Util.getImage(a.target,a,!0,function(a){b.setImgInCanvas.call(b,a),a.transform.oldScale=1}):c.Util.getImage(this.circleCanvasURL,a,!0,function(a){b.setImgInCanvas.call(b,a),a.transform.oldScale=a.radius/b.circleCanvasRadius})},_.prototype.onParticleUpdate=function(a){a.transform.textureLoaded&&(this.updateMatrix(a),this.gl.uniform3f(this.sprogram.color,a.transform.rgb.r/255,a.transform.rgb.g/255,a.transform.rgb.b/255),this.gl.uniformMatrix3fv(this.sprogram.tMatUniform,!1,this.mstack.top()),this.gl.bindBuffer(this.gl.ARRAY_BUFFER,a.transform.vcBuffer),this.gl.vertexAttribPointer(this.sprogram.vpa,2,this.gl.FLOAT,!1,0,0),this.gl.bindBuffer(this.gl.ARRAY_BUFFER,a.transform.tcBuffer),this.gl.vertexAttribPointer(this.sprogram.tca,2,this.gl.FLOAT,!1,0,0),this.gl.bindTexture(this.gl.TEXTURE_2D,a.transform.texture),this.gl.uniform1i(this.sprogram.samplerUniform,0),this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER,this.unitIBuffer),this.gl.drawElements(this.gl.TRIANGLES,6,this.gl.UNSIGNED_SHORT,0),this.mstack.pop())},_.prototype.onParticleDead=function(a){},_.prototype.updateMatrix=function(a){var b=c.WebGLUtil.makeTranslation(-a.transform.textureWidth/2,-a.transform.textureHeight/2),d=c.WebGLUtil.makeTranslation(a.p.x,a.p.y),e=a.rotation*(Math.PI/180),f=c.WebGLUtil.makeRotation(e),g=a.scale*a.transform.oldScale,h=c.WebGLUtil.makeScale(g,g),i=c.WebGLUtil.matrixMultiply(b,h);i=c.WebGLUtil.matrixMultiply(i,f),i=c.WebGLUtil.matrixMultiply(i,d),c.Mat3.inverse(i,a.transform.imat),i[2]=a.alpha,this.mstack.push(i)},c.WebGLRender=_,ba.prototype={getPosition:function(){},crossing:function(a){}},c.Zone=ba,c.Util.inherits(bb,c.Zone),bb.prototype.getPosition=function(){this.random=Math.random(),this.vector.x=this.x1+this.random*this.length*Math.cos(this.gradient),this.vector.y=this.y1+this.random*this.length*Math.sin(this.gradient);return this.vector},bb.prototype.getDirection=function(a,b){var c=this.dy,d=-this.dx,e=this.dot,f=d==0?1:d;return(c*a+d*b+e)*f>0?!0:!1},bb.prototype.getDistance=function(a,b){var c=this.dy,d=-this.dx,e=this.dot,f=c*a+d*b+e;return f/Math.sqrt(this.xxyy)},bb.prototype.getSymmetric=function(a){var b=a.getGradient(),c=this.getGradient(),d=2*(c-b),e=a.x,f=a.y;a.x=e*Math.cos(d)-f*Math.sin(d),a.y=e*Math.sin(d)+f*Math.cos(d);return a},bb.prototype.getGradient=function(){return Math.atan2(this.dy,this.dx)},bb.prototype.getRange=function(a,b){var c=Math.abs(this.getGradient());c<=Math.PI/4?a.p.x<this.maxx&&a.p.x>this.minx&&b():a.p.y<this.maxy&&a.p.y>this.miny&&b()},bb.prototype.getLength=function(){return Math.sqrt(this.dx*this.dx+this.dy*this.dy)},bb.prototype.crossing=function(a){var b=this;this.crossType=="dead"?this.direction==">"||this.direction=="R"||this.direction=="right"||this.direction=="down"?this.getRange(a,function(){b.getDirection(a.p.x,a.p.y)&&(a.dead=!0)}):this.getRange(a,function(){b.getDirection(a.p.x,a.p.y)||(a.dead=!0)}):this.crossType=="bound"?this.getRange(a,function(){b.getDistance(a.p.x,a.p.y)<=a.radius&&(b.dx==0?a.v.x*=-1:b.dy==0?a.v.y*=-1:b.getSymmetric(a.v))}):this.crossType=="cross"&&this.alert&&(alert("Sorry lineZone does not support cross method"),this.alert=!1)},c.LineZone=bb,c.Util.inherits(bc,c.Zone),bc.prototype.getPosition=function(){this.random=Math.random(),this.angle=Math.PI*2*Math.random(),this.vector.x=this.x+this.random*this.radius*Math.cos(this.angle),this.vector.y=this.y+this.random*this.radius*Math.sin(this.angle);return this.vector},bc.prototype.setCenter=function(a,b){this.center.x=a,this.center.y=b},bc.prototype.crossing=function(a){var b=a.p.distanceTo(this.center);this.crossType=="dead"?b-a.radius>this.radius&&(a.dead=!0):this.crossType=="bound"?b+a.radius>=this.radius&&this.getSymmetric(a):this.crossType=="cross"&&this.alert&&(alert("Sorry CircleZone does not support cross method"),this.alert=!1)},bc.prototype.getSymmetric=function(a){var b=a.v.getGradient(),c=this.getGradient(a),d=2*(c-b),e=a.v.x,f=a.v.y;a.v.x=e*Math.cos(d)-f*Math.sin(d),a.v.y=e*Math.sin(d)+f*Math.cos(d)},bc.prototype.getGradient=function(a){return-Math.PI/2+Math.atan2(a.p.y-this.center.y,a.p.x-this.center.x)},c.CircleZone=bc,c.Util.inherits(bd,c.Zone),bd.prototype.getPosition=function(){this.vector.x=this.x,this.vector.y=this.y;return this.vector},bd.prototype.crossing=function(a){this.alert&&(alert("Sorry PointZone does not support crossing method"),this.alert=!1)},c.PointZone=bd,c.Util.inherits(be,c.Zone),be.prototype.getPosition=function(){this.vector.x=this.x+Math.random()*this.width,this.vector.y=this.y+Math.random()*this.height;return this.vector},be.prototype.crossing=function(a){this.crossType=="dead"?(a.p.x+a.radius<this.x?a.dead=!0:a.p.x-a.radius>this.x+this.width&&(a.dead=!0),a.p.y+a.radius<this.y?a.dead=!0:a.p.y-a.radius>this.y+this.height&&(a.dead=!0)):this.crossType=="bound"?(a.p.x-a.radius<this.x?(a.p.x=this.x+a.radius,a.v.x*=-1):a.p.x+a.radius>this.x+this.width&&(a.p.x=this.x+this.width-a.radius,a.v.x*=-1),a.p.y-a.radius<this.y?(a.p.y=this.y+a.radius,a.v.y*=-1):a.p.y+a.radius>this.y+this.height&&(a.p.y=this.y+this.height-a.radius,a.v.y*=-1)):this.crossType=="cross"&&(a.p.x+a.radius<this.x&&a.v.x<=0?a.p.x=this.x+this.width+a.radius:a.p.x-a.radius>this.x+this.width&&a.v.x>=0&&(a.p.x=this.x-a.radius),a.p.y+a.radius<this.y&&a.v.y<=0?a.p.y=this.y+this.height+a.radius:a.p.y-a.radius>this.y+this.height&&a.v.y>=0&&(a.p.y=this.y-a.radius))},c.RectZone=be,c.Util.inherits(bf,c.Zone),bf.prototype.reset=function(a,b,d,e){this.imageData=a,this.x=c.Util.initValue(b,0),this.y=c.Util.initValue(d,0),this.d=c.Util.initValue(e,2),this.vectors=[],this.setVectors()},bf.prototype.setVectors=function(){var a,b,c=this.imageData.width,d=this.imageData.height;for(a=0;a<c;a+=this.d)for(b=0;b<d;b+=this.d){var e=((b>>0)*c+(a>>0))*4;this.imageData.data[e+3]>0&&this.vectors.push({x:a+this.x,y:b+this.y})}return this.vector},bf.prototype.getBound=function(a,b){var c=((b>>0)*this.imageData.width+(a>>0))*4;return this.imageData.data[c+3]>0?!0:!1},bf.prototype.getPosition=function(){return this.vector.copy(this.vectors[Math.floor(Math.random()*this.vectors.length)])},bf.prototype.getColor=function(a,b){a-=this.x,b-=this.y;var c=((b>>0)*this.imageData.width+(a>>0))*4;return{r:this.imageData.data[c],g:this.imageData.data[c+1],b:this.imageData.data[c+2],a:this.imageData.data[c+3]}},bf.prototype.crossing=function(a){this.crossType=="dead"?this.getBound(a.p.x-this.x,a.p.y-this.y)?a.dead=!0:a.dead=!1:this.crossType=="bound"&&(this.getBound(a.p.x-this.x,a.p.y-this.y)||a.v.negate())},c.ImageZone=bf;var bg=function(){if(a.console&&a.console.log){var b=arguments;if(typeof arguments[0]=="string")if(arguments[0].indexOf("+")==0){var c=parseInt(arguments[0]);bg.once<c&&(delete b[0],console.log(b),bg.once++)}else console.log(b);else console.log(b)}};bg.once=0,c.log=bg;var bh=bh||{addEventListener:function(a,b){a.addEventListener(c.PROTON_UPDATE,function(){b()})},setStyle:function(a){var b=a||"#ff0000",d=c.Util.hexToRGB(b),e="rgba("+d.r+","+d.g+","+d.b+","+.5+")";return e},drawZone:function(a,b,d,e){var f=b.getContext("2d"),g=this.setStyle();this.addEventListener(a,function(){e&&f.clearRect(0,0,b.width,b.height),d instanceof c.PointZone?(f.beginPath(),f.fillStyle=g,f.arc(d.x,d.y,10,0,Math.PI*2,!0),f.fill(),f.closePath()):d instanceof c.LineZone?(f.beginPath(),f.strokeStyle=g,f.moveTo(d.x1,d.y1),f.lineTo(d.x2,d.y2),f.stroke(),f.closePath()):d instanceof c.RectZone?(f.beginPath(),f.strokeStyle=g,f.drawRect(d.x,d.y,d.width,d.height),f.stroke(),f.closePath()):d instanceof c.CircleZone&&(f.beginPath(),f.strokeStyle=g,f.arc(d.x,d.y,d.radius,0,Math.PI*2,!0),f.stroke(),f.closePath())})},drawEmitter:function(a,b,c,d){var e=b.getContext("2d"),f=this.setStyle();this.addEventListener(a,function(){d&&e.clearRect(0,0,b.width,b.height),e.beginPath(),e.fillStyle=f,e.arc(c.p.x,c.p.y,10,0,Math.PI*2,!0),e.fill(),e.closePath()})},test:{},setTest:function(a,b){this.test[a]=b},getTest:function(a){return this.test.hasOwnProperty(a)?this.test[a]:!1}};c.Debug=bh})(window),function(){var a=0,b=["ms","moz","webkit","o"];for(var c=0;c<b.length&&!window.requestAnimationFrame;++c)window.requestAnimationFrame=window[b[c]+"RequestAnimationFrame"],window.cancelAnimationFrame=window[b[c]+"CancelAnimationFrame"]||window[b[c]+"CancelRequestAnimationFrame"];window.requestAnimationFrame||(window.requestAnimationFrame=function(b,c){var d=(new Date).getTime(),e=Math.max(0,16-(d-a)),f=window.setTimeout(function(){b(d+e)},e);a=d+e;return f}),window.cancelAnimationFrame||(window.cancelAnimationFrame=function(a){clearTimeout(a)})}()
 
-/***/ },
-/* 211 */
-/***/ function(module, exports, __webpack_require__) {
+	(function(window, undefined) {
+	    //the max particle number in pool
+	    Proton.POOL_MAX = 1000;
+	    Proton.TIME_STEP = 60;
+	    Proton.USE_CLOCK = false;
+	    //1:100
+	    Proton.MEASURE = 100;
+	    Proton.EULER = 'euler';
+	    Proton.RK2 = 'runge-kutta2';
+	    Proton.RK4 = 'runge-kutta4';
+	    Proton.VERLET = 'verlet';
 
-	"use strict";
-	var default_1 = __webpack_require__(212);
-	var qtk_particles_editor_1 = __webpack_require__(2);
-	qtk_particles_editor_1.Document.registerTemplate("default", default_1.defaultTemplate);
-	//# sourceMappingURL=templates.js.map
+	    Proton.PARTICLE_CREATED = 'partilcleCreated';
+	    Proton.PARTICLE_UPDATE = 'partilcleUpdate';
+	    Proton.PARTICLE_SLEEP = 'particleSleep';
+	    Proton.PARTICLE_DEAD = 'partilcleDead';
+	    Proton.PROTON_UPDATE = 'protonUpdate';
+	    Proton.PROTON_UPDATE_AFTER = 'protonUpdateAfter';
+	    Proton.EMITTER_ADDED = 'emitterAdded';
+	    Proton.EMITTER_REMOVED = 'emitterRemoved';
+
+	    Proton.amendChangeTabsBug = true;
+	    Proton.TextureBuffer = {};
+	    Proton.TextureCanvasBuffer = {};
+
+	    /**
+	     * Proton is a html5 particle engine
+	     *
+	     * @class Proton
+	     * @constructor
+	     */
+	    function Proton(proParticleCount, integrationType) {
+	        this.integrationType = Proton.Util.initValue(integrationType, Proton.EULER);
+	        this.emitters = [];
+	        this.renderers = [];
+	        this.time = 0;
+	        this.oldTime = 0;
+
+	        Proton.pool = new Proton.Pool(100);
+	        Proton.integrator = new Proton.NumericalIntegration(this.integrationType);
+	    }
+
+
+	    Proton.prototype = {
+	        /**
+	         * add a type of Renderer
+	         *
+	         * @method addRender
+	         * @param {Renderer} render
+	         */
+	        addRender: function(render) {
+	            render.proton = this;
+	            this.renderers.push(render.proton);
+	        },
+	        /**
+	         * add the Emitter
+	         *
+	         * @method addEmitter
+	         * @param {Emitter} emitter
+	         */
+	        addEmitter: function(emitter) {
+	            this.emitters.push(emitter);
+	            emitter.parent = this;
+
+	            this.dispatchEvent(Proton.EMITTER_ADDED, emitter);
+	        },
+
+	        removeEmitter: function(emitter) {
+	            var index = this.emitters.indexOf(emitter);
+	            this.emitters.splice(index, 1);
+	            emitter.parent = null;
+
+	            this.dispatchEvent(Proton.EMITTER_REMOVED, emitter);
+	        },
+
+	        update: function() {
+	            this.dispatchEvent(Proton.PROTON_UPDATE);
+
+	            if (Proton.USE_CLOCK) {
+	                if (!this.oldTime)
+	                    this.oldTime = new Date().getTime();
+
+	                var time = new Date().getTime();
+	                this.elapsed = (time - this.oldTime) / 1000;
+	                if (Proton.amendChangeTabsBug)
+	                    this.amendChangeTabsBug();
+	                this.oldTime = time;
+	            } else {
+	                this.elapsed = 0.0167;
+	            }
+
+	            if (this.elapsed > 0) {
+	                for (var i = 0; i < this.emitters.length; i++) {
+	                    this.emitters[i].update(this.elapsed);
+	                }
+	            }
+
+	            this.dispatchEvent(Proton.PROTON_UPDATE_AFTER);
+	        },
+
+	        amendChangeTabsBug: function() {
+	            if (this.elapsed > .5) {
+	                this.oldTime = new Date().getTime();
+	                this.elapsed = 0;
+	            }
+	        },
+
+	        getCount: function() {
+	            var total = 0;
+	            var length = this.emitters.length;
+	            for (var i = 0; i < length; i++) {
+	                total += this.emitters[i].particles.length;
+	            }
+	            return total;
+	        },
+
+	        destroy: function() {
+	            var length = this.emitters.length;
+	            for (var i = 0; i < length; i++) {
+	                this.emitters[i].destroy();
+	                delete this.emitters[i];
+	            }
+
+	            this.emitters = [];
+	            this.time = 0;
+	            this.oldTime = 0;
+	            Proton.pool.release();
+	        }
+	    };
+
+	    window.Proton = Proton;
+
+
+	/*
+	 * EventDispatcher
+	 * Visit http://createjs.com/ for documentation, updates and examples.
+	 *
+	 **/
+
+
+	    function EventDispatcher() {
+	        this.initialize();
+	    };
+
+	    EventDispatcher.initialize = function(target) {
+	        target.addEventListener = p.addEventListener;
+	        target.removeEventListener = p.removeEventListener;
+	        target.removeAllEventListeners = p.removeAllEventListeners;
+	        target.hasEventListener = p.hasEventListener;
+	        target.dispatchEvent = p.dispatchEvent;
+	    };
+
+	    var p = EventDispatcher.prototype;
+
+	    p._listeners = null;
+
+	    p.initialize = function() {};
+	    p.addEventListener = function(type, listener) {
+	        if (!this._listeners) {
+	            this._listeners = {};
+	        } else {
+	            this.removeEventListener(type, listener);
+	        }
+
+	        if (!this._listeners[type]) this._listeners[type] = []
+	        this._listeners[type].push(listener);
+
+	        return listener;
+	    };
+
+	    p.removeEventListener = function(type, listener) {
+	        if (!this._listeners) return;
+	        if (!this._listeners[type]) return;
+
+	        var arr = this._listeners[type];
+	        for (var i = 0, l = arr.length; i < l; i++) {
+	            if (arr[i] == listener) {
+	                if (l == 1) {
+	                    delete(this._listeners[type]);
+	                }
+	                // allows for faster checks.
+	                else {
+	                    arr.splice(i, 1);
+	                }
+	                break;
+	            }
+	        }
+	    };
+
+	    p.removeAllEventListeners = function(type) {
+	        if (!type)
+	            this._listeners = null;
+	        else if (this._listeners)
+	            delete(this._listeners[type]);
+	    };
+
+	    p.dispatchEvent = function(eventName, eventTarget) {
+	        var ret = false,
+	            listeners = this._listeners;
+
+	        if (eventName && listeners) {
+	            var arr = listeners[eventName];
+	            if (!arr) return ret;
+
+	            arr = arr.slice();
+	            // to avoid issues with items being removed or added during the dispatch
+
+	            var handler, i = arr.length;
+	            while (i--) {
+	                var handler = arr[i];
+	                ret = ret || handler(eventTarget);
+	            }
+	            
+	        }
+
+	        return !!ret;
+	    };
+
+	    p.hasEventListener = function(type) {
+	        var listeners = this._listeners;
+	        return !!(listeners && listeners[type]);
+	    };
+
+	    EventDispatcher.initialize(Proton.prototype);
+	    Proton.EventDispatcher = EventDispatcher;
+
+
+
+	    var Util = Util || {
+	        initValue: function(value, defaults) {
+	            var value = (value != null && value != undefined) ? value : defaults;
+	            return value;
+	        },
+
+	        isArray: function(value) {
+	            return typeof value === 'object' && value.hasOwnProperty('length');
+	        },
+
+	        destroyArray: function(array) {
+	            array.length = 0;
+	        },
+
+	        destroyObject: function(obj) {
+	            for (var o in obj)
+	                delete obj[o];
+	        },
+
+	        getVector2D: function(postionOrX, y) {
+	            if (typeof(postionOrX) == 'object') {
+	                return postionOrX;
+	            } else {
+	                var vector2d = new Proton.Vector2D(postionOrX, y);
+	                return vector2d;
+	            }
+	        },
+
+	        classApply: function(constructor, argArray) {
+	            if (!argArray) return new constructor;
+
+	            var args = [null].concat(argArray);
+	            var factoryFunction = constructor.bind.apply(constructor, args);
+	            return new factoryFunction();
+	        },
+
+	        judgeVector2D: function(pOBJ) {
+	            var result = '';
+	            if (pOBJ.hasOwnProperty('x') || pOBJ.hasOwnProperty('y') || pOBJ.hasOwnProperty('p') || pOBJ.hasOwnProperty('position'))
+	                result += 'p';
+	            if (pOBJ.hasOwnProperty('vx') || pOBJ.hasOwnProperty('vx') || pOBJ.hasOwnProperty('v') || pOBJ.hasOwnProperty('velocity'))
+	                result += 'v';
+	            if (pOBJ.hasOwnProperty('ax') || pOBJ.hasOwnProperty('ax') || pOBJ.hasOwnProperty('a') || pOBJ.hasOwnProperty('accelerate'))
+	                result += 'a';
+
+	            return result;
+	        },
+
+	        setVector2DByObject: function(target, pOBJ) {
+	            if (pOBJ.hasOwnProperty('x'))
+	                target.p.x = pOBJ['x'];
+
+	            if (pOBJ.hasOwnProperty('y'))
+	                target.p.y = pOBJ['y'];
+
+	            if (pOBJ.hasOwnProperty('vx'))
+	                target.v.x = pOBJ['vx'];
+
+	            if (pOBJ.hasOwnProperty('vy'))
+	                target.v.y = pOBJ['vy'];
+
+	            if (pOBJ.hasOwnProperty('ax'))
+	                target.a.x = pOBJ['ax'];
+
+	            if (pOBJ.hasOwnProperty('ay'))
+	                target.a.y = pOBJ['ay'];
+
+	            if (pOBJ.hasOwnProperty('p'))
+	                particle.p.copy(pOBJ['p']);
+
+	            if (pOBJ.hasOwnProperty('v'))
+	                particle.v.copy(pOBJ['v']);
+
+	            if (pOBJ.hasOwnProperty('a'))
+	                particle.a.copy(pOBJ['a']);
+
+	            if (pOBJ.hasOwnProperty('position'))
+	                particle.p.copy(pOBJ['position']);
+
+	            if (pOBJ.hasOwnProperty('velocity'))
+	                particle.v.copy(pOBJ['velocity']);
+
+	            if (pOBJ.hasOwnProperty('accelerate'))
+	                particle.a.copy(pOBJ['accelerate']);
+	        },
+	        //强行添加属性
+	        addPrototypeByObject: function(target, prototypeObject, filters) {
+	            for (var singlePrototype in prototypeObject) {
+	                if (filters) {
+	                    if (filters.indexOf(singlePrototype) < 0)
+	                        target[singlePrototype] = Proton.Util.getSpanValue(prototypeObject[singlePrototype]);
+	                } else {
+	                    target[singlePrototype] = Proton.Util.getSpanValue(prototypeObject[singlePrototype]);
+	                }
+	            }
+
+	            return target;
+	        },
+	        //set prototype
+	        setPrototypeByObject: function(target, prototypeObject, filters) {
+	            for (var singlePrototype in prototypeObject) {
+	                if (target.hasOwnProperty(singlePrototype)) {
+	                    if (filters) {
+	                        if (filters.indexOf(singlePrototype) < 0)
+	                            target[singlePrototype] = Proton.Util.getSpanValue(prototypeObject[singlePrototype]);
+	                    } else {
+	                        target[singlePrototype] = Proton.Util.getSpanValue(prototypeObject[singlePrototype]);
+	                    }
+	                }
+	            }
+
+	            return target;
+	        },
+
+	        setSpanValue: function(a, b, c) {
+	            if (a instanceof Proton.Span) {
+	                return a;
+	            } else {
+	                if (!b) {
+	                    return new Proton.Span(a);
+	                } else {
+	                    if (!c)
+	                        return new Proton.Span(a, b);
+	                    else
+	                        return new Proton.Span(a, b, c);
+	                }
+	            }
+	        },
+
+	        getSpanValue: function(pan) {
+	            if (pan instanceof Proton.Span)
+	                return pan.getValue();
+	            else
+	                return pan;
+	        },
+
+	        inherits: function(subClass, superClass) {
+	            subClass._super_ = superClass;
+	            if (Object['create']) {
+	                //console.log(subClass,superClass);
+	                subClass.prototype = Object.create(superClass.prototype, {
+	                    constructor: {
+	                        value: subClass
+	                    }
+	                });
+	            } else {
+	                var F = function() {};
+	                F.prototype = superClass.prototype;
+	                subClass.prototype = new F();
+	                subClass.prototype.constructor = subClass;
+	            }
+	        },
+
+	        getImageData: function(context, image, rect) {
+	            context.drawImage(image, rect.x, rect.y);
+	            var imagedata = context.getImageData(rect.x, rect.y, rect.width, rect.height);
+	            context.clearRect(rect.x, rect.y, rect.width, rect.height);
+	            return imagedata;
+	        },
+
+	        getImage: function(img, particle, drawCanvas, fun) {
+	            if (typeof(img) == 'string') {
+	                this.loadAndSetImage(img, particle, drawCanvas, fun);
+	            } else if (typeof(img) == 'object') {
+	                this.loadAndSetImage(img.src, particle, drawCanvas, fun);
+	            } else if (img instanceof Image) {
+	                this.loadedImage(img.src, particle, drawCanvas, fun, img);
+	            }
+	        },
+
+	        loadedImage: function(src, particle, drawCanvas, fun, target) {
+	            particle.target = target;
+	            particle.transform.src = src;
+	            if (!Proton.TextureBuffer[src])
+	                Proton.TextureBuffer[src] = particle.target;
+	            if (drawCanvas) {
+	                if (Proton.TextureCanvasBuffer[src]) {
+	                    particle.transform.canvas = Proton.TextureCanvasBuffer[src];
+	                } else {
+	                    var _width = Proton.WebGLUtil.nhpot(particle.target.width);
+	                    var _height = Proton.WebGLUtil.nhpot(particle.target.height);
+	                    particle.transform.canvas = Proton.DomUtil.createCanvas('canvas' + src, _width, _height);
+	                    var context = particle.transform.canvas.getContext('2d');
+	                    context.drawImage(particle.target, 0, 0, particle.target.width, particle.target.height);
+	                    Proton.TextureCanvasBuffer[src] = particle.transform.canvas;
+	                }
+	            }
+	            if (fun)
+	                fun(particle);
+	        },
+
+	        loadAndSetImage: function(src, particle, drawCanvas, fun) {
+	            if (Proton.TextureBuffer[src]) {
+	                this.loadedImage(src, particle, drawCanvas, fun, Proton.TextureBuffer[src]);
+	            } else {
+	                var self = this;
+	                var myImage = new Image();
+	                myImage.onload = function(e) {
+	                    self.loadedImage(src, particle, drawCanvas, fun, e.target);
+	                }
+	                myImage.src = src;
+	            }
+	        },
+
+	        hexToRGB: function(h) {
+	            var hex16 = (h.charAt(0) == "#") ? h.substring(1, 7) : h;
+	            var r = parseInt(hex16.substring(0, 2), 16);
+	            var g = parseInt(hex16.substring(2, 4), 16);
+	            var b = parseInt(hex16.substring(4, 6), 16);
+
+	            return {
+	                r: r,
+	                g: g,
+	                b: b
+	            }
+	        },
+
+	        rgbToHex: function(rbg) {
+	            return 'rgb(' + rbg.r + ', ' + rbg.g + ', ' + rbg.b + ')';
+	        }
+	    };
+
+	    Proton.Util = Util;
+
+
+
+	///bind
+	if (!Function.prototype.bind) {
+	    Function.prototype.bind = function(oThis) {
+	        if (typeof this !== "function") {
+	            // closest thing possible to the ECMAScript 5
+	            // internal IsCallable function
+	            throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+	        }
+
+	        var aArgs = Array.prototype.slice.call(arguments, 1),
+	            fToBind = this,
+	            fNOP = function() {},
+	            fBound = function() {
+	                return fToBind.apply(this instanceof fNOP ? this : oThis || this,
+	                    aArgs.concat(Array.prototype.slice.call(arguments)));
+	            };
+
+	        fNOP.prototype = this.prototype;
+	        fBound.prototype = new fNOP();
+
+	        return fBound;
+	    };
+	}
+
+
+		var WebGLUtil = WebGLUtil || {
+			ipot : function(length) {
+				return (length & (length - 1)) == 0;
+			},
+
+			nhpot : function(length) {--length;
+				for (var i = 1; i < 32; i <<= 1) {
+					length = length | length >> i;
+				}
+				return length + 1;
+			},
+
+			makeTranslation : function(tx, ty) {
+				return [1, 0, 0, 0, 1, 0, tx, ty, 1];
+			},
+
+			makeRotation : function(angleInRadians) {
+				var c = Math.cos(angleInRadians);
+				var s = Math.sin(angleInRadians);
+				return [c, -s, 0, s, c, 0, 0, 0, 1];
+			},
+
+			makeScale : function(sx, sy) {
+				return [sx, 0, 0, 0, sy, 0, 0, 0, 1];
+			},
+
+			matrixMultiply : function(a, b) {
+				var a00 = a[0 * 3 + 0];
+				var a01 = a[0 * 3 + 1];
+				var a02 = a[0 * 3 + 2];
+				var a10 = a[1 * 3 + 0];
+				var a11 = a[1 * 3 + 1];
+				var a12 = a[1 * 3 + 2];
+				var a20 = a[2 * 3 + 0];
+				var a21 = a[2 * 3 + 1];
+				var a22 = a[2 * 3 + 2];
+				var b00 = b[0 * 3 + 0];
+				var b01 = b[0 * 3 + 1];
+				var b02 = b[0 * 3 + 2];
+				var b10 = b[1 * 3 + 0];
+				var b11 = b[1 * 3 + 1];
+				var b12 = b[1 * 3 + 2];
+				var b20 = b[2 * 3 + 0];
+				var b21 = b[2 * 3 + 1];
+				var b22 = b[2 * 3 + 2];
+				return [a00 * b00 + a01 * b10 + a02 * b20, a00 * b01 + a01 * b11 + a02 * b21, a00 * b02 + a01 * b12 + a02 * b22, a10 * b00 + a11 * b10 + a12 * b20, a10 * b01 + a11 * b11 + a12 * b21, a10 * b02 + a11 * b12 + a12 * b22, a20 * b00 + a21 * b10 + a22 * b20, a20 * b01 + a21 * b11 + a22 * b21, a20 * b02 + a21 * b12 + a22 * b22];
+			}
+		}
+
+		Proton.WebGLUtil = WebGLUtil;
+
+
+
+		var DomUtil = DomUtil || {
+			createCanvas : function($id, $width, $height, $position) {
+				var element = document.createElement("canvas");
+				var position = $position ? $position : 'absolute';
+				element.id = $id;
+				element.width = $width;
+				element.height = $height;
+				element.style.position = position;
+				element.style.opacity = 0;
+				this.transformDom(element, -500, -500, 0, 0);
+				return element;
+			},
+
+			transformDom : function($div, $x, $y, $scale, $rotate) {
+				$div.style.WebkitTransform = 'translate(' + $x + 'px, ' + $y + 'px) ' + 'scale(' + $scale + ') ' + 'rotate(' + $rotate + 'deg)';
+				$div.style.MozTransform = 'translate(' + $x + 'px, ' + $y + 'px) ' + 'scale(' + $scale + ') ' + 'rotate(' + $rotate + 'deg)';
+				$div.style.OTransform = 'translate(' + $x + 'px, ' + $y + 'px) ' + 'scale(' + $scale + ') ' + 'rotate(' + $rotate + 'deg)';
+				$div.style.msTransform = 'translate(' + $x + 'px, ' + $y + 'px) ' + 'scale(' + $scale + ') ' + 'rotate(' + $rotate + 'deg)';
+				$div.style.transform = 'translate(' + $x + 'px, ' + $y + 'px) ' + 'scale(' + $scale + ') ' + 'rotate(' + $rotate + 'deg)';
+			}
+		}
+
+		Proton.DomUtil = DomUtil;
+
+
+
+		function MStack() {
+			this.mats = [];
+			this.size = 0;
+			for (var i = 0; i < 20; i++)
+				this.mats.push(Proton.Mat3.create([0, 0, 0, 0, 0, 0, 0, 0, 0]));
+		}
+
+
+		MStack.prototype.set = function(m, i) {
+			if (i == 0)
+				Proton.Mat3.set(m, this.mats[0]);
+			else
+				Proton.Mat3.multiply(this.mats[i - 1], m, this.mats[i]);
+			this.size = Math.max(this.size, i + 1);
+		}
+
+		MStack.prototype.push = function(m) {
+			if (this.size == 0)
+				Proton.Mat3.set(m, this.mats[0]);
+			else
+				Proton.Mat3.multiply(this.mats[this.size - 1], m, this.mats[this.size]);
+			this.size++;
+		}
+
+		MStack.prototype.pop = function() {
+			if (this.size > 0)
+				this.size--;
+		}
+
+		MStack.prototype.top = function() {
+			return (this.mats[this.size - 1]);
+		}
+
+		Proton.MStack = MStack;
+
+
+
+
+		Particle.ID = 0;
+		/**
+		 * the Particle class
+		 *
+		 * @class Proton.Particle
+		 * @constructor
+		 * @param {Object} pObj the parameters object;
+		 * for example {life:3,dead:false}
+		 */
+		function Particle(pOBJ) {
+			/**
+			 * The particle's id;
+			 * @property id
+			 * @type {String} id
+			 */
+			this.id = 'particle_' + Particle.ID++;
+			this.reset(true);
+			Proton.Util.setPrototypeByObject(this, pOBJ);
+		}
+
+
+		Particle.prototype = {
+			getDirection : function() {
+				return Math.atan2(this.v.x, -this.v.y) * (180 / Math.PI);
+			},
+
+			reset : function(init) {
+				this.life = Infinity;
+				this.age = 0;
+				//能量损失
+				this.energy = 1;
+				this.dead = false;
+				this.sleep = false;
+				this.target = null;
+				this.sprite = null;
+				this.parent = null;
+				this.mass = 1;
+				this.radius = 10;
+				this.alpha = 1;
+				this.scale = 1;
+				this.rotation = 0;
+				this.color = null;
+				this.easing = Proton.ease.setEasingByName(Proton.easeLinear);
+				if (init) {
+					this.transform = {}
+					this.p = new Proton.Vector2D();
+					this.v = new Proton.Vector2D();
+					this.a = new Proton.Vector2D();
+					this.old = {
+						p : new Proton.Vector2D(),
+						v : new Proton.Vector2D(),
+						a : new Proton.Vector2D()
+					};
+					this.behaviours = [];
+				} else {
+					Proton.Util.destroyObject(this.transform);
+					this.p.set(0, 0);
+					this.v.set(0, 0);
+					this.a.set(0, 0);
+					this.old.p.set(0, 0);
+					this.old.v.set(0, 0);
+					this.old.a.set(0, 0);
+					this.removeAllBehaviours();
+				}
+
+				this.transform.rgb = {
+					r : 255,
+					g : 255,
+					b : 255
+				}
+				return this;
+			},
+
+			update : function(time, index) {
+				if (!this.sleep) {
+					this.age += time;
+					var length = this.behaviours.length, i;
+					for ( i = 0; i < length; i++) {
+						if (this.behaviours[i])
+							this.behaviours[i].applyBehaviour(this, time, index)
+					}
+				} else {
+
+				}
+
+				if (this.age >= this.life) {
+					this.destroy();
+				} else {
+					var scale = this.easing(this.age / this.life);
+					this.energy = Math.max(1 - scale, 0);
+				}
+
+			},
+
+			addBehaviour : function(behaviour) {
+				this.behaviours.push(behaviour);
+				if (behaviour.hasOwnProperty('parents'))
+					behaviour.parents.push(this);
+				behaviour.initialize(this);
+			},
+
+			addBehaviours : function(behaviours) {
+				var length = behaviours.length, i;
+				for ( i = 0; i < length; i++) {
+					this.addBehaviour(behaviours[i]);
+				}
+			},
+
+			removeBehaviour : function(behaviour) {
+				var index = this.behaviours.indexOf(behaviour);
+				if (index > -1) {
+					var behaviour = this.behaviours.splice(index, 1);
+					behaviour.parents = null;
+				}
+			},
+
+			removeAllBehaviours : function() {
+				Proton.Util.destroyArray(this.behaviours);
+			},
+			/**
+			 * Destory this particle
+			 * @method destroy
+			 */
+			destroy : function() {
+				this.removeAllBehaviours();
+				this.energy = 0;
+				this.dead = true;
+				this.parent = null;
+			}
+		};
+
+		Proton.Particle = Particle;
+
+
+
+
+	    function Pool() {
+	        this.cID = 0;
+	        this.list = {};
+	    }
+	    
+	    Pool.prototype = {
+	        create: function(obj, params) {
+	            this.cID++;
+	   
+	            if (typeof obj == "function")
+	                return Proton.Util.classApply(obj, params);
+	            else
+	                return obj.clone();
+	        },
+
+	        getCount: function() {
+	            var count = 0;
+	            for (var id in this.list)
+	                count += this.list[id].length;
+
+	            return count++;;
+	        },
+
+	        get: function(obj, params) {
+	            var p, puid = obj.__puid || PUID.id(obj);
+	            if (this.list[puid] && this.list[puid].length > 0)
+	                p = this.list[puid].pop();
+	            else
+	                p = this.create(obj, params);
+
+	            p.__puid = obj.__puid || puid;
+	            return p;
+	        },
+
+	        set: function(obj) {
+	            return this._getList(obj.__puid).push(obj);
+	        },
+
+	        destroy: function() {
+	            for (var id in this.list) {
+	                this.list[id].length = 0;
+	                delete this.list[id];
+	            }
+	        },
+
+	        _getList: function(uid) {
+	            uid = uid || "default";
+	            if (!this.list[uid]) this.list[uid] = [];
+	            return this.list[uid];
+	        }
+	    }
+
+	    Proton.Pool = Pool;
+
+	    var PUID = {
+	        _id: 0,
+	        _uids: {},
+	        id: function(obj) {
+	            for (var id in this._uids) {
+	                if (this._uids[id] == obj) return id;
+	            }
+
+	            var nid = "PUID_" + (this._id++);
+	            this._uids[nid] = obj;
+	            return nid;
+	        },
+
+	        hash: function(str) {
+	            return;
+	        }
+	    }
+
+
+
+
+		var MathUtils = {
+			randomAToB : function(a, b, INT) {
+				if (!INT)
+					return a + Math.random() * (b - a );
+				else
+					return Math.floor(Math.random() * (b - a)) + a;
+			},
+			randomFloating : function(center, f, INT) {
+				return MathUtils.randomAToB(center - f, center + f, INT);
+			},
+			randomZone : function(display) {
+
+			},
+
+			degreeTransform : function(a) {
+				return a * Math.PI / 180;
+			},
+
+			toColor16 : function getRGB(num) {
+				return "#" + num.toString(16);
+			},
+			
+			randomColor : function() {
+				return '#' + ('00000' + (Math.random() * 0x1000000 << 0).toString(16)).slice(-6);
+			}
+		}
+
+		Proton.MathUtils = MathUtils;
+
+
+	//数值积分
+
+		var NumericalIntegration = function(type) {
+			this.type = Proton.Util.initValue(type, Proton.EULER);
+		}
+
+		NumericalIntegration.prototype = {
+			integrate : function(particles, time, damping) {
+				this.eulerIntegrate(particles, time, damping);
+			},
+
+			eulerIntegrate : function(particle, time, damping) {
+				if (!particle.sleep) {
+					particle.old.p.copy(particle.p);
+					particle.old.v.copy(particle.v);
+					particle.a.multiplyScalar(1 / particle.mass);
+					particle.v.add(particle.a.multiplyScalar(time));
+					particle.p.add(particle.old.v.multiplyScalar(time));
+					if (damping)
+						particle.v.multiplyScalar(damping);
+					particle.a.clear();
+				}
+			}
+		}
+
+		Proton.NumericalIntegration = NumericalIntegration;
+
+
+	//@author mrdoob / http://mrdoob.com/
+
+		var Vector2D = function(x, y) {
+			this.x = x || 0;
+			this.y = y || 0;
+		}
+
+		Vector2D.prototype = {
+			set : function(x, y) {
+
+				this.x = x;
+				this.y = y;
+				return this;
+
+			},
+
+			setX : function(x) {
+
+				this.x = x;
+				return this;
+
+			},
+
+			setY : function(y) {
+
+				this.y = y;
+
+				return this;
+
+			},
+
+			setComponent : function(index, value) {
+
+				switch ( index ) {
+
+					case 0:
+						this.x = value;
+						break;
+					case 1:
+						this.y = value;
+						break;
+					default:
+						throw new Error("index is out of range: " + index);
+
+				}
+
+			},
+
+			getGradient : function() {
+				if (this.x != 0)
+					return Math.atan2(this.y, this.x);
+				else if (this.y > 0)
+					return Math.PI / 2;
+				else if (this.y < 0)
+					return -Math.PI / 2;
+			},
+
+			getComponent : function(index) {
+
+				switch ( index ) {
+
+					case 0:
+						return this.x;
+					case 1:
+						return this.y;
+					default:
+						throw new Error("index is out of range: " + index);
+
+				}
+
+			},
+
+			copy : function(v) {
+
+				this.x = v.x;
+				this.y = v.y;
+
+				return this;
+
+			},
+
+			add : function(v, w) {
+
+				if (w !== undefined) {
+					return this.addVectors(v, w);
+
+				}
+
+				this.x += v.x;
+				this.y += v.y;
+
+				return this;
+
+			},
+
+			addXY : function(a, b) {
+
+				this.x += a;
+				this.y += b;
+
+				return this;
+
+			},
+
+			addVectors : function(a, b) {
+
+				this.x = a.x + b.x;
+				this.y = a.y + b.y;
+
+				return this;
+
+			},
+
+			addScalar : function(s) {
+
+				this.x += s;
+				this.y += s;
+
+				return this;
+
+			},
+
+			sub : function(v, w) {
+
+				if (w !== undefined) {
+					return this.subVectors(v, w);
+
+				}
+
+				this.x -= v.x;
+				this.y -= v.y;
+
+				return this;
+
+			},
+
+			subVectors : function(a, b) {
+
+				this.x = a.x - b.x;
+				this.y = a.y - b.y;
+
+				return this;
+
+			},
+
+			multiplyScalar : function(s) {
+
+				this.x *= s;
+				this.y *= s;
+
+				return this;
+
+			},
+
+			divideScalar : function(s) {
+
+				if (s !== 0) {
+
+					this.x /= s;
+					this.y /= s;
+
+				} else {
+
+					this.set(0, 0);
+
+				}
+
+				return this;
+
+			},
+
+			min : function(v) {
+
+				if (this.x > v.x) {
+
+					this.x = v.x;
+
+				}
+
+				if (this.y > v.y) {
+
+					this.y = v.y;
+
+				}
+
+				return this;
+
+			},
+
+			max : function(v) {
+
+				if (this.x < v.x) {
+
+					this.x = v.x;
+
+				}
+
+				if (this.y < v.y) {
+
+					this.y = v.y;
+
+				}
+
+				return this;
+
+			},
+
+			clamp : function(min, max) {
+
+				// This function assumes min < max, if this assumption isn't true it will not operate correctly
+
+				if (this.x < min.x) {
+
+					this.x = min.x;
+
+				} else if (this.x > max.x) {
+
+					this.x = max.x;
+
+				}
+
+				if (this.y < min.y) {
+
+					this.y = min.y;
+
+				} else if (this.y > max.y) {
+
+					this.y = max.y;
+
+				}
+
+				return this;
+
+			},
+
+			negate : function() {
+
+				return this.multiplyScalar(-1);
+
+			},
+
+			dot : function(v) {
+
+				return this.x * v.x + this.y * v.y;
+
+			},
+
+			lengthSq : function() {
+
+				return this.x * this.x + this.y * this.y;
+
+			},
+
+			length : function() {
+
+				return Math.sqrt(this.x * this.x + this.y * this.y);
+
+			},
+
+			normalize : function() {
+
+				return this.divideScalar(this.length());
+
+			},
+
+			distanceTo : function(v) {
+
+				return Math.sqrt(this.distanceToSquared(v));
+
+			},
+
+			rotate : function(tha) {
+				var x = this.x;
+				var y = this.y;
+				this.x = x * Math.cos(tha) + y * Math.sin(tha);
+				this.y = -x * Math.sin(tha) + y * Math.cos(tha);
+				return this;
+			},
+
+			distanceToSquared : function(v) {
+
+				var dx = this.x - v.x, dy = this.y - v.y;
+				return dx * dx + dy * dy;
+
+			},
+
+			setLength : function(l) {
+
+				var oldLength = this.length();
+
+				if (oldLength !== 0 && l !== oldLength) {
+
+					this.multiplyScalar(l / oldLength);
+				}
+
+				return this;
+
+			},
+
+			lerp : function(v, alpha) {
+
+				this.x += (v.x - this.x ) * alpha;
+				this.y += (v.y - this.y ) * alpha;
+
+				return this;
+
+			},
+
+			equals : function(v) {
+
+				return ((v.x === this.x ) && (v.y === this.y ) );
+
+			},
+
+			toArray : function() {
+
+				return [this.x, this.y];
+
+			},
+
+			clear : function() {
+				this.x = 0.0;
+				this.y = 0.0;
+				return this;
+			},
+
+			clone : function() {
+
+				return new Proton.Vector2D(this.x, this.y);
+
+			}
+		};
+
+		Proton.Vector2D = Vector2D;
+
+
+
+		var Polar2D = function(r, tha) {
+			this.r = Math.abs(r) || 0;
+			this.tha = tha || 0;
+		}
+
+		Polar2D.prototype = {
+			set : function(r, tha) {
+
+				this.r = r;
+				this.tha = tha;
+				return this;
+
+			},
+
+			setR : function(r) {
+
+				this.r = r;
+				return this;
+
+			},
+
+			setTha : function(tha) {
+
+				this.tha = tha;
+
+				return this;
+
+			},
+
+			copy : function(p) {
+
+				this.r = p.r;
+				this.tha = p.tha;
+
+				return this;
+
+			},
+
+			toVector : function() {
+				return new Proton.Vector2D(this.getX(), this.getY());
+			},
+
+			getX : function() {
+				return this.r * Math.sin(this.tha);
+			},
+
+			getY : function() {
+				return -this.r * Math.cos(this.tha);
+			},
+
+			normalize : function() {
+
+				this.r = 1;
+				return this;
+			},
+
+			equals : function(v) {
+
+				return ((v.r === this.r ) && (v.tha === this.tha ) );
+
+			},
+
+			toArray : function() {
+
+				return [this.r, this.tha];
+
+			},
+
+			clear : function() {
+				this.r = 0.0;
+				this.tha = 0.0;
+				return this;
+			},
+
+			clone : function() {
+
+				return new Proton.Polar2D(this.r, this.tha);
+
+			}
+		};
+
+		Proton.Polar2D = Polar2D;
+
+
+
+		function Span(a, b, center) {
+			this.isArray = false;
+
+			if (Proton.Util.isArray(a)) {
+				this.isArray = true;
+				this.a = a;
+			} else {
+				this.a = Proton.Util.initValue(a, 1);
+				this.b = Proton.Util.initValue(b, this.a);
+				this.center = Proton.Util.initValue(center, false);
+			}
+		}
+
+
+		Span.prototype = {
+			getValue : function(INT) {
+				if (this.isArray) {
+					return this.a[Math.floor(this.a.length * Math.random())];
+				} else {
+					if (!this.center)
+						return Proton.MathUtils.randomAToB(this.a, this.b, INT);
+					else
+						return Proton.MathUtils.randomFloating(this.a, this.b, INT);
+				}
+			}
+		}
+
+		Proton.Span = Span;
+		Proton.getSpan = function(a, b, center) {
+			return new Proton.Span(a, b, center);
+		}
+
+
+
+		function ColorSpan(color) {
+			if (Proton.Util.isArray(color)) {
+				this.colorArr = color;
+			} else {
+				this.colorArr = [color];
+			}
+		}
+
+
+		Proton.Util.inherits(ColorSpan, Proton.Span);
+		ColorSpan.prototype.getValue = function() {
+			var color = this.colorArr[Math.floor(this.colorArr.length * Math.random())];
+			if (color == 'random' || color == 'Random')
+				return Proton.MathUtils.randomColor();
+			else
+				return color;
+		}
+
+		Proton.ColorSpan = ColorSpan;
+
+
+
+		function Rectangle(x, y, w, h) {
+			this.x = x;
+			this.y = y;
+			this.width = w;
+			this.height = h;
+			this.bottom = this.y + this.height;
+			this.right = this.x + this.width;
+		}
+
+
+		Rectangle.prototype = {
+			contains : function(x, y) {
+				if (x <= this.right && x >= this.x && y <= this.bottom && y >= this.y)
+					return true
+				else
+					return false
+			}
+		}
+
+		Proton.Rectangle = Rectangle;
+
+
+
+		var Mat3 = Mat3 || {
+			create : function(mat3) {
+				var mat = new Float32Array(9);
+				if (mat3)
+					this.set(mat3, mat);
+				return mat;
+			},
+			set : function(mat1, mat2) {
+				for (var i = 0; i < 9; i++)
+					mat2[i] = mat1[i];
+				return mat2;
+			},
+			multiply : function(mat, mat2, mat3) {
+				var a00 = mat[0], a01 = mat[1], a02 = mat[2], a10 = mat[3], a11 = mat[4], a20 = mat[6], a21 = mat[7], b00 = mat2[0], b01 = mat2[1], b02 = mat2[2], b10 = mat2[3], b11 = mat2[4], b20 = mat2[6], b21 = mat2[7];
+
+				mat3[0] = b00 * a00 + b01 * a10;
+				mat3[1] = b00 * a01 + b01 * a11;
+				mat3[2] = a02 * b02;
+				mat3[3] = b10 * a00 + b11 * a10;
+				mat3[4] = b10 * a01 + b11 * a11;
+				mat3[6] = b20 * a00 + b21 * a10 + a20;
+				mat3[7] = b20 * a01 + b21 * a11 + a21;
+				return mat3;
+			},
+			inverse : function(mat, mat3) {
+				var a00 = mat[0], a01 = mat[1], a10 = mat[3], a11 = mat[4], a20 = mat[6], a21 = mat[7], b01 = a11, b11 = -a10, b21 = a21 * a10 - a11 * a20, d = a00 * b01 + a01 * b11, id;
+				id = 1 / d;
+				mat3[0] = b01 * id;
+				mat3[1] = (-a01 ) * id;
+				mat3[3] = b11 * id;
+				mat3[4] = a00 * id;
+				mat3[6] = b21 * id;
+				mat3[7] = (-a21 * a00 + a01 * a20) * id;
+				return mat3;
+			},
+			multiplyVec2 : function(m, vec, mat3) {
+				var x = vec[0], y = vec[1];
+				mat3[0] = x * m[0] + y * m[3] + m[6];
+				mat3[1] = x * m[1] + y * m[4] + m[7];
+				return mat3;
+			}
+		}
+
+		Proton.Mat3 = Mat3;
+
+
+
+		Behaviour.id = 0;
+		/**
+		 * The Behaviour class is the base for the other Behaviour
+		 *
+		 * @class Behaviour
+		 * @constructor
+		 */
+		function Behaviour(life, easing) {
+			/**
+			 * The behaviour's id;
+			 * @property id
+			 * @type {String} id
+			 */
+			this.id = 'Behaviour_' + Behaviour.id++;
+			this.life = Proton.Util.initValue(life, Infinity);
+			/**
+			 * The behaviour's decaying trend, for example Proton.easeOutQuart;
+			 * @property easing
+			 * @type {String}
+			 * @default Proton.easeLinear
+			 */
+			this.easing = Proton.ease.setEasingByName(easing);
+			this.age = 0;
+			this.energy = 1;
+			/**
+			 * The behaviour is Dead;
+			 * @property dead
+			 * @type {Boolean}
+			 */
+			this.dead = false;
+			/**
+			 * The behaviour's parents array;
+			 * @property parents
+			 * @type {Array}
+			 */
+			this.parents = [];
+			/**
+			 * The behaviour name;
+			 * @property name
+			 * @type {string}
+			 */
+			this.name = 'Behaviour';
+		}
+
+
+		Behaviour.prototype = {
+			/**
+			 * Reset this behaviour's parameters
+			 *
+			 * @method reset
+			 * @param {Number} this behaviour's life
+			 * @param {String} this behaviour's easing
+			 */
+			reset : function(life, easing) {
+				this.life = Proton.Util.initValue(life, Infinity);
+				this.easing = Proton.Util.initValue(easing, Proton.ease.setEasingByName(Proton.easeLinear));
+			},
+			/**
+			 * Normalize a force by 1:100;
+			 *
+			 * @method normalizeForce
+			 * @param {Proton.Vector2D} force 
+			 */
+			normalizeForce : function(force) {
+				return force.multiplyScalar(Proton.MEASURE);
+			},
+
+			/**
+			 * Normalize a value by 1:100;
+			 *
+			 * @method normalizeValue
+			 * @param {Number} value
+			 */
+			normalizeValue : function(value) {
+				return value * Proton.MEASURE;
+			},
+
+			/**
+			 * Initialize the behaviour's parameters for all particles
+			 *
+			 * @method initialize
+			 * @param {Proton.Particle} particle
+			 */
+			initialize : function(particle) {
+			},
+			
+			/**
+			 * Apply this behaviour for all particles every time
+			 *
+			 * @method applyBehaviour
+			 * @param {Proton.Particle} particle
+			 * @param {Number} the integrate time 1/ms
+			 * @param {Int} the particle index
+			 */
+			applyBehaviour : function(particle, time, index) {
+				this.age += time;
+				if (this.age >= this.life || this.dead) {
+					this.energy = 0;
+					this.dead = true;
+					this.destroy();
+				} else {
+					var scale = this.easing(particle.age / particle.life);
+					this.energy = Math.max(1 - scale, 0);
+				}
+			},
+			
+			/**
+			 * Destory this behaviour
+			 * @method destroy
+			 */
+			destroy : function() {
+				var index;
+				var length = this.parents.length, i;
+				for ( i = 0; i < length; i++) {
+					this.parents[i].removeBehaviour(this);
+				}
+
+				this.parents = [];
+			}
+		};
+
+		Proton.Behaviour = Behaviour;
+
+
+
+		/**
+		 * The number of particles per second emission (a [particle]/b [s]);
+		 * @class Proton.Rate
+		 * @constructor
+		 * @param {Array or Number or Proton.Span} numpan the number of each emission;
+		 * @param {Array or Number or Proton.Span} timepan the time of each emission;
+		 * for example: new Proton.Rate(new Proton.Span(10, 20), new Proton.Span(.1, .25));
+		 */
+		function Rate(numpan, timepan) {
+			this.numPan = Proton.Util.initValue(numpan, 1);
+			this.timePan = Proton.Util.initValue(timepan, 1);
+			this.numPan = Proton.Util.setSpanValue(this.numPan);
+			this.timePan = Proton.Util.setSpanValue(this.timePan);
+			this.startTime = 0;
+			this.nextTime = 0;
+			this.init();
+		}
+
+
+		Rate.prototype = {
+			init : function() {
+				this.startTime = 0;
+				this.nextTime = this.timePan.getValue();
+			},
+
+			getValue : function(time) {
+				this.startTime += time;
+				if (this.startTime >= this.nextTime) {
+					this.startTime = 0;
+					this.nextTime = this.timePan.getValue();
+					if (this.numPan.b == 1) {
+						if (this.numPan.getValue(false) > 0.5)
+							return 1;
+						else
+							return 0;
+					} else {
+						return this.numPan.getValue(true);
+					}
+				}
+				return 0;
+			}
+		}
+
+		Proton.Rate = Rate;
+
+
+
+		function Initialize() {
+
+		}
+
+
+		Initialize.prototype.reset = function() {
+
+		}
+
+		Initialize.prototype.init = function(emitter, particle) {
+			if (particle) {
+				this.initialize(particle);
+			} else {
+				this.initialize(emitter);
+			}
+		};
+
+		///sub class init
+		Initialize.prototype.initialize = function(target) {
+		};
+
+		Proton.Initialize = Initialize;
+
+
+
+		var InitializeUtil = {
+
+			initialize : function(emitter, particle, initializes) {
+				var length = initializes.length, i;
+				for ( i = 0; i < length; i++) {
+					if (initializes[i] instanceof Proton.Initialize)
+						initializes[i].init(emitter, particle);
+					else
+						Proton.InitializeUtil.init(emitter, particle, initializes[i]);
+				}
+
+				Proton.InitializeUtil.bindEmitter(emitter, particle);
+			},
+			
+			//////////////////////init//////////////////////
+			init : function(emitter, particle, initialize) {
+				Proton.Util.setPrototypeByObject(particle, initialize);
+				Proton.Util.setVector2DByObject(particle, initialize);
+			},
+
+			bindEmitter : function(emitter, particle) {
+				if (emitter.bindEmitter) {
+					particle.p.add(emitter.p);
+					particle.v.add(emitter.v);
+					particle.a.add(emitter.a);
+					particle.v.rotate(Proton.MathUtils.degreeTransform(emitter.rotation));
+				}
+			}
+			//////////////////////init//////////////////////
+		}
+
+		Proton.InitializeUtil = InitializeUtil;
+
+
+
+		function Life(a, b, c) {
+			Life._super_.call(this);
+			this.lifePan = Proton.Util.setSpanValue(a, b, c);
+		}
+
+
+		Proton.Util.inherits(Life, Proton.Initialize);
+		Life.prototype.initialize = function(target) {
+			if (this.lifePan.a == Infinity)
+				target.life = Infinity;
+			else
+				target.life = this.lifePan.getValue();
+		};
+
+		Proton.Life = Life;
+
+
+
+		function Position(zone) {
+			Position._super_.call(this);
+			this.zone = Proton.Util.initValue(zone, new Proton.PointZone());
+		}
+
+
+		Proton.Util.inherits(Position, Proton.Initialize);
+		Position.prototype.reset = function(zone) {
+			this.zone = Proton.Util.initValue(zone, new Proton.PointZone());
+		};
+
+		Position.prototype.initialize = function(target) {
+			this.zone.getPosition();
+			target.p.x = this.zone.vector.x;
+			target.p.y = this.zone.vector.y;
+		};
+
+		Proton.Position = Position;
+		Proton.P = Position;
+
+
+
+		//radius and tha
+		function Velocity(rpan, thapan, type) {
+			Velocity._super_.call(this);
+			this.rPan = Proton.Util.setSpanValue(rpan);
+			this.thaPan = Proton.Util.setSpanValue(thapan);
+			this.type = Proton.Util.initValue(type, 'vector');
+		}
+
+
+		Proton.Util.inherits(Velocity, Proton.Initialize);
+
+		Velocity.prototype.reset = function(rpan, thapan, type) {
+			this.rPan = Proton.Util.setSpanValue(rpan);
+			this.thaPan = Proton.Util.setSpanValue(thapan);
+			this.type = Proton.Util.initValue(type, 'vector');
+		};
+
+		Velocity.prototype.normalizeVelocity = function(vr) {
+			return vr * Proton.MEASURE;
+		}
+
+		Velocity.prototype.initialize = function(target) {
+			if (this.type == 'p' || this.type == 'P' || this.type == 'polar') {
+				var polar2d = new Proton.Polar2D(this.normalizeVelocity(this.rPan.getValue()), this.thaPan.getValue() * Math.PI / 180);
+				target.v.x = polar2d.getX();
+				target.v.y = polar2d.getY();
+			} else {
+				target.v.x = this.normalizeVelocity(this.rPan.getValue());
+				target.v.y = this.normalizeVelocity(this.thaPan.getValue());
+			}
+		};
+
+		Proton.Velocity = Velocity;
+		Proton.V = Velocity;
+
+
+
+		function Mass(a, b, c) {
+			Mass._super_.call(this);
+			this.massPan = Proton.Util.setSpanValue(a, b, c);
+		}
+
+
+		Proton.Util.inherits(Mass, Proton.Initialize);
+		Mass.prototype.initialize = function(target) {
+			target.mass = this.massPan.getValue();
+		};
+
+		Proton.Mass = Mass;
+
+
+
+		function Radius(a, b, c) {
+			Radius._super_.call(this);
+			this.radius = Proton.Util.setSpanValue(a, b, c);
+		}
+
+
+		Proton.Util.inherits(Radius, Proton.Initialize);
+		Radius.prototype.reset = function(a, b, c) {
+			this.radius = Proton.Util.setSpanValue(a, b, c);
+		};
+
+		Radius.prototype.initialize = function(particle) {
+			particle.radius = this.radius.getValue();
+			particle.transform.oldRadius = particle.radius;
+		};
+
+		Proton.Radius = Radius;
+
+
+
+		function ImageTarget(image, w, h) {
+			ImageTarget._super_.call(this);
+			this.image = this.setSpanValue(image);
+			this.w = Proton.Util.initValue(w, 20);
+			this.h = Proton.Util.initValue(h, this.w);
+		}
+
+
+		Proton.Util.inherits(ImageTarget, Proton.Initialize);
+		ImageTarget.prototype.initialize = function(particle) {
+			var imagetarget = this.image.getValue();
+			if ( typeof (imagetarget) == 'string') {
+				particle.target = {
+					width : this.w,
+					height : this.h,
+					src : imagetarget
+				}
+			} else {
+				particle.target = imagetarget;
+			}
+		};
+
+		ImageTarget.prototype.setSpanValue = function(color) {
+			if ( color instanceof Proton.ColorSpan) {
+				return color;
+			} else {
+				return new Proton.ColorSpan(color);
+			}
+		}
+
+		Proton.ImageTarget = ImageTarget;
+
+
+
+		function Force(fx, fy, life, easing) {
+			Force._super_.call(this, life, easing);
+			this.force = this.normalizeForce(new Proton.Vector2D(fx, fy));
+			this.name = "Force";
+		}
+
+
+		Proton.Util.inherits(Force, Proton.Behaviour);
+		Force.prototype.reset = function(fx, fy, life, easing) {
+			this.force = this.normalizeForce(new Proton.Vector2D(fx, fy));
+			if (life)
+				Force._super_.prototype.reset.call(this, life, easing);
+		}
+
+		Force.prototype.applyBehaviour = function(particle, time, index) {
+			Force._super_.prototype.applyBehaviour.call(this, particle, time, index);
+			particle.a.add(this.force);
+		};
+
+		Proton.Force = Force;
+		Proton.F = Force;
+
+
+
+		function Attraction(targetPosition, force, radius, life, easing) {
+			Attraction._super_.call(this, life, easing);
+			this.targetPosition = Proton.Util.initValue(targetPosition, new Proton.Vector2D);
+			this.radius = Proton.Util.initValue(radius, 1000);
+			this.force = Proton.Util.initValue(this.normalizeValue(force), 100);
+			this.radiusSq = this.radius * this.radius
+			this.attractionForce = new Proton.Vector2D();
+			this.lengthSq = 0;
+			this.name = "Attraction";
+		}
+
+
+		Proton.Util.inherits(Attraction, Proton.Behaviour);
+		Attraction.prototype.reset = function(targetPosition, force, radius, life, easing) {
+			this.targetPosition = Proton.Util.initValue(targetPosition, new Proton.Vector2D);
+			this.radius = Proton.Util.initValue(radius, 1000);
+			this.force = Proton.Util.initValue(this.normalizeValue(force), 100);
+			this.radiusSq = this.radius * this.radius
+			this.attractionForce = new Proton.Vector2D();
+			this.lengthSq = 0;
+			if (life)
+				Attraction._super_.prototype.reset.call(this, life, easing);
+		}
+
+		Attraction.prototype.applyBehaviour = function(particle, time, index) {
+			Attraction._super_.prototype.applyBehaviour.call(this, particle, time, index);
+			this.attractionForce.copy(this.targetPosition);
+			this.attractionForce.sub(particle.p);
+			this.lengthSq = this.attractionForce.lengthSq();
+			if (this.lengthSq > 0.000004 && this.lengthSq < this.radiusSq) {
+				this.attractionForce.normalize();
+				this.attractionForce.multiplyScalar(1 - this.lengthSq / this.radiusSq);
+				this.attractionForce.multiplyScalar(this.force);
+				particle.a.add(this.attractionForce);
+			}
+		};
+
+		Proton.Attraction = Attraction;
+
+
+
+
+		function RandomDrift(driftX, driftY, delay, life, easing) {
+			RandomDrift._super_.call(this, life, easing);
+			this.reset(driftX, driftY, delay);
+			this.time = 0;
+			this.name = "RandomDrift";
+		}
+
+
+		Proton.Util.inherits(RandomDrift, Proton.Behaviour);
+		RandomDrift.prototype.reset = function(driftX, driftY, delay, life, easing) {
+			this.panFoce = new Proton.Vector2D(driftX, driftY);
+			this.panFoce = this.normalizeForce(this.panFoce);
+			this.delay = delay;
+			if (life)
+				RandomDrift._super_.prototype.reset.call(this, life, easing);
+		}
+
+		RandomDrift.prototype.applyBehaviour = function(particle, time, index) {
+			RandomDrift._super_.prototype.applyBehaviour.call(this, particle, time, index);
+			this.time += time;
+			if (this.time >= this.delay) {
+				
+				particle.a.addXY(Proton.MathUtils.randomAToB(-this.panFoce.x, this.panFoce.x), Proton.MathUtils.randomAToB(-this.panFoce.y, this.panFoce.y));
+				this.time = 0;
+			};
+		};
+
+		Proton.RandomDrift = RandomDrift;
+
+
+
+		function Repulsion(targetPosition, force, radius, life, easing) {
+			Repulsion._super_.call(this, targetPosition, force, radius, life, easing);
+			this.force *= -1;
+			this.name = "Repulsion";
+		}
+
+
+		Proton.Util.inherits(Repulsion, Proton.Attraction);
+		Repulsion.prototype.reset = function(targetPosition, force, radius, life, easing) {
+			Repulsion._super_.prototype.reset.call(this, targetPosition, force, radius, life, easing);
+			this.force *= -1;
+		}
+		Proton.Repulsion = Repulsion;
+
+
+
+
+		function Gravity(g, life, easing) {
+			Gravity._super_.call(this, 0, g, life, easing);
+			this.name = "Gravity";
+		}
+
+
+		Proton.Util.inherits(Gravity, Proton.Force);
+		Gravity.prototype.reset = function(g, life, easing) {
+			Gravity._super_.prototype.reset.call(this, 0, g, life, easing);
+		}
+		Proton.Gravity = Gravity;
+		Proton.G = Gravity;
+
+
+
+		//can use Collision(emitter,true,function(){}) or Collision();
+		function Collision(emitter, mass, callback, life, easing) {
+			Collision._super_.call(this, life, easing);
+			this.reset(emitter, mass, callback);
+			this.name = "Collision";
+		}
+
+
+		Proton.Util.inherits(Collision, Proton.Behaviour);
+		Collision.prototype.reset = function(emitter, mass, callback, life, easing) {
+			this.emitter = Proton.Util.initValue(emitter, null);
+			this.mass = Proton.Util.initValue(mass, true);
+			this.callback = Proton.Util.initValue(callback, null);
+			this.collisionPool = [];
+			this.delta = new Proton.Vector2D();
+			if (life)
+				Collision._super_.prototype.reset.call(this, life, easing);
+		}
+
+		Collision.prototype.applyBehaviour = function(particle, time, index) {
+			var newPool = this.emitter ? this.emitter.particles.slice(index) : this.pool.slice(index);
+			var otherParticle;
+			var lengthSq;
+			var overlap;
+			var averageMass1, averageMass2;
+			var length = newPool.length;
+			for (var i = 0; i < length; i++) {
+				otherParticle = newPool[i];
+				if (otherParticle !== particle) {
+					this.delta.copy(otherParticle.p);
+					this.delta.sub(particle.p);
+					lengthSq = this.delta.lengthSq();
+					distance = particle.radius + otherParticle.radius;
+
+					if (lengthSq <= distance * distance) {
+						overlap = distance - Math.sqrt(lengthSq);
+						overlap += 0.5;
+						totalMass = particle.mass + otherParticle.mass;
+						averageMass1 = this.mass ? otherParticle.mass / totalMass : 0.5;
+						averageMass2 = this.mass ? particle.mass / totalMass : 0.5;
+						particle.p.add(this.delta.clone().normalize().multiplyScalar(overlap * -averageMass1));
+						otherParticle.p.add(this.delta.normalize().multiplyScalar(overlap * averageMass2));
+						if (this.callback)
+							this.callback(particle, otherParticle);
+					}
+				}
+			}
+		};
+
+		Proton.Collision = Collision;
+
+
+
+
+		function CrossZone(zone, crossType, life, easing) {
+			CrossZone._super_.call(this, life, easing);
+			this.reset(zone, crossType);
+			///dead /bound /cross
+			this.name = "CrossZone";
+		}
+
+
+		Proton.Util.inherits(CrossZone, Proton.Behaviour);
+		CrossZone.prototype.reset = function(zone, crossType, life, easing) {
+			this.zone = zone;
+			this.zone.crossType = Proton.Util.initValue(crossType, "dead");
+			if (life)
+				CrossZone._super_.prototype.reset.call(this, life, easing);
+		}
+
+		CrossZone.prototype.applyBehaviour = function(particle, time, index) {
+			CrossZone._super_.prototype.applyBehaviour.call(this, particle, time, index);
+			this.zone.crossing(particle);
+		};
+
+		Proton.CrossZone = CrossZone;
+
+
+
+		function Alpha(a, b, life, easing) {
+			Alpha._super_.call(this, life, easing);
+			this.reset(a, b);
+			/**
+			 * The Behaviour name;
+			 * @property name
+			 * @type {string}
+			 */
+			this.name = "Alpha";
+		}
+
+
+		Proton.Util.inherits(Alpha, Proton.Behaviour);
+		Alpha.prototype.reset = function(a, b, life, easing) {
+			if (b == null || b == undefined)
+				this.same = true;
+			else
+				this.same = false;
+			this.a = Proton.Util.setSpanValue(Proton.Util.initValue(a, 1));
+			this.b = Proton.Util.setSpanValue(b);
+			if (life)
+				Alpha._super_.prototype.reset.call(this, life, easing);
+		}
+
+		Alpha.prototype.initialize = function(particle) {
+			particle.transform.alphaA = this.a.getValue();
+			if (this.same)
+				particle.transform.alphaB = particle.transform.alphaA;
+			else
+				particle.transform.alphaB = this.b.getValue();
+		};
+
+		Alpha.prototype.applyBehaviour = function(particle, time, index) {
+			Alpha._super_.prototype.applyBehaviour.call(this, particle, time, index);
+			particle.alpha = particle.transform.alphaB + (particle.transform.alphaA - particle.transform.alphaB) * this.energy;
+			if (particle.alpha < 0.001)
+				particle.alpha = 0;
+		};
+
+		Proton.Alpha = Alpha;
+
+
+
+		function Scale(a, b, life, easing) {
+			Scale._super_.call(this, life, easing);
+			this.reset(a, b);
+			this.name = "Scale";
+		}
+
+
+		Proton.Util.inherits(Scale, Proton.Behaviour);
+		Scale.prototype.reset = function(a, b, life, easing) {
+			if (b == null || b == undefined)
+				this.same = true;
+			else
+				this.same = false;
+			this.a = Proton.Util.setSpanValue(Proton.Util.initValue(a, 1));
+			this.b = Proton.Util.setSpanValue(b);
+			if (life)
+				Scale._super_.prototype.reset.call(this, life, easing);
+		}
+
+		Scale.prototype.initialize = function(particle) {
+			particle.transform.scaleA = this.a.getValue();
+			particle.transform.oldRadius = particle.radius;
+			if (this.same)
+				particle.transform.scaleB = particle.transform.scaleA;
+			else
+				particle.transform.scaleB = this.b.getValue();
+
+		};
+
+		Scale.prototype.applyBehaviour = function(particle, time, index) {
+			Scale._super_.prototype.applyBehaviour.call(this, particle, time, index);
+			particle.scale = particle.transform.scaleB + (particle.transform.scaleA - particle.transform.scaleB) * this.energy;
+			if (particle.scale < 0.0001)
+				particle.scale = 0;
+			particle.radius = particle.transform.oldRadius * particle.scale;
+		};
+
+		Proton.Scale = Scale;
+
+
+
+		function Rotate(a, b, style, life, easing) {
+			Rotate._super_.call(this, life, easing);
+			this.reset(a, b, style);
+			this.name = "Rotate";
+		}
+
+
+		Proton.Util.inherits(Rotate, Proton.Behaviour);
+		Rotate.prototype.reset = function(a, b, style, life, easing) {
+			if (b == null || b == undefined)
+				this.same = true;
+			else
+				this.same = false;
+			this.a = Proton.Util.setSpanValue(Proton.Util.initValue(a, "Velocity"));
+			this.b = Proton.Util.setSpanValue(Proton.Util.initValue(b, 0));
+			this.style = Proton.Util.initValue(style, 'to');
+			if (life)
+				Rotate._super_.prototype.reset.call(this, life, easing);
+		}
+
+		Rotate.prototype.initialize = function(particle) {
+			particle.rotation = this.a.getValue();
+			particle.transform.rotationA = this.a.getValue();
+			if (!this.same)
+				particle.transform.rotationB = this.b.getValue();
+		};
+
+		Rotate.prototype.applyBehaviour = function(particle, time, index) {
+			Rotate._super_.prototype.applyBehaviour.call(this, particle, time, index);
+			if (!this.same) {
+				if (this.style == 'to' || this.style == 'TO' || this.style == '_') {
+					particle.rotation += particle.transform.rotationB + (particle.transform.rotationA - particle.transform.rotationB) * this.energy
+				} else {
+					particle.rotation += particle.transform.rotationB;
+				}
+			} else if (this.a.a == "V" || this.a.a == "Velocity" || this.a.a == "v") {
+				//beta...
+				particle.rotation = particle.getDirection();
+			}
+		};
+
+		Proton.Rotate = Rotate;
+
+
+
+		function Color(color1, color2, life, easing) {
+			Color._super_.call(this, life, easing);
+			this.reset(color1, color2);
+			this.name = "Color";
+		}
+
+
+		Proton.Util.inherits(Color, Proton.Behaviour);
+		Color.prototype.reset = function(color1, color2, life, easing) {
+			this.color1 = this.setSpanValue(color1);
+			this.color2 = this.setSpanValue(color2);
+			if (life)
+				Color._super_.prototype.reset.call(this, life, easing);
+		}
+
+		Color.prototype.initialize = function(particle) {
+			particle.color = this.color1.getValue();
+			particle.transform.beginRGB = Proton.Util.hexToRGB(particle.color);
+
+			if (this.color2)
+				particle.transform.endRGB = Proton.Util.hexToRGB(this.color2.getValue());
+		};
+
+		Color.prototype.applyBehaviour = function(particle, time, index) {
+			if (this.color2) {
+				Color._super_.prototype.applyBehaviour.call(this, particle, time, index);
+				particle.transform.rgb.r = particle.transform.endRGB.r + (particle.transform.beginRGB.r - particle.transform.endRGB.r) * this.energy;
+				particle.transform.rgb.g = particle.transform.endRGB.g + (particle.transform.beginRGB.g - particle.transform.endRGB.g) * this.energy;
+				particle.transform.rgb.b = particle.transform.endRGB.b + (particle.transform.beginRGB.b - particle.transform.endRGB.b) * this.energy;
+				particle.transform.rgb.r = parseInt(particle.transform.rgb.r, 10);
+				particle.transform.rgb.g = parseInt(particle.transform.rgb.g, 10);
+				particle.transform.rgb.b = parseInt(particle.transform.rgb.b, 10);
+			} else {
+				particle.transform.rgb.r = particle.transform.beginRGB.r;
+				particle.transform.rgb.g = particle.transform.beginRGB.g;
+				particle.transform.rgb.b = particle.transform.beginRGB.b;
+
+			}
+		};
+
+		Color.prototype.setSpanValue = function(color) {
+			if (color) {
+				if ( color instanceof Proton.ColorSpan) {
+					return color;
+				} else {
+					return new Proton.ColorSpan(color);
+				}
+			} else {
+				return null;
+			}
+		}
+
+		Proton.Color = Color;
+
+
+
+		function GravityWell(centerPoint, force, life, easing) {
+			GravityWell._super_.call(this, life, easing);
+			this.distanceVec = new Proton.Vector2D();
+			this.centerPoint = Proton.Util.initValue(centerPoint, new Proton.Vector2D);
+			this.force = Proton.Util.initValue(this.normalizeValue(force), 100);
+			this.name = "GravityWell";
+		}
+
+
+		Proton.Util.inherits(GravityWell, Proton.Behaviour);
+		GravityWell.prototype.reset = function(centerPoint, force, life, easing) {
+			this.distanceVec = new Proton.Vector2D();
+			this.centerPoint = Proton.Util.initValue(centerPoint, new Proton.Vector2D);
+			this.force = Proton.Util.initValue(this.normalizeValue(force), 100);
+			if (life)
+				GravityWell._super_.prototype.reset.call(this, life, easing);
+		};
+		GravityWell.prototype.initialize = function(particle) {
+
+		};
+
+		GravityWell.prototype.applyBehaviour = function(particle, time, index) {
+			this.distanceVec.set(this.centerPoint.x - particle.p.x, this.centerPoint.y - particle.p.y);
+			var distanceSq = this.distanceVec.lengthSq();
+			if (distanceSq != 0) {
+				var distance = this.distanceVec.length();
+				var factor = (this.force * time ) / (distanceSq * distance );
+				particle.v.x += factor * this.distanceVec.x;
+				particle.v.y += factor * this.distanceVec.y;
+			}
+		}
+
+		Proton.GravityWell = GravityWell;
+
+
+
+		Emitter.ID = 0;
+		/**
+		 * You can use this emit particles.
+		 *
+		 * It will dispatch follow events:
+		 * Proton.PARTICLE_CREATED
+		 * Proton.PARTICLE_UPDATA
+		 * Proton.PARTICLE_DEAD
+		 *
+		 * @class Proton.Emitter
+		 * @constructor
+		 * @param {Object} pObj the parameters object;
+		 * for example {damping:0.01,bindEmitter:false}
+		 */
+		function Emitter(pObj) {
+			this.initializes = [];
+			this.particles = [];
+			this.behaviours = [];
+			this.emitTime = 0;
+			this.emitTotalTimes = -1;
+			/**
+			 * The friction coefficient for all particle emit by This;
+			 * @property damping
+			 * @type {Number}
+			 * @default 0.006
+			 */
+			this.damping = .006;
+			/**
+			 * If bindEmitter the particles can bind this emitter's property;
+			 * @property bindEmitter
+			 * @type {Boolean}
+			 * @default true
+			 */
+			this.bindEmitter = true;
+			/**
+			 * The number of particles per second emit (a [particle]/b [s]);
+			 * @property rate
+			 * @type {Proton.Rate}
+			 * @default Proton.Rate(1, .1)
+			 */
+			this.rate = new Proton.Rate(1, .1);
+			Emitter._super_.call(this, pObj);
+			/**
+			 * The emitter's id;
+			 * @property id
+			 * @type {String} id
+			 */
+			this.id = 'emitter_' + Emitter.ID++;
+		};
+
+		Proton.Util.inherits(Emitter, Proton.Particle);
+		Proton.EventDispatcher.initialize(Emitter.prototype);
+		/**
+		 * start emit particle
+		 * @method emit
+		 * @param {Number} emitTime begin emit time;
+		 * @param {String} life the life of this emitter
+		 */
+		Emitter.prototype.emit = function(emitTime, life) {
+			this.emitTime = 0;
+			this.emitTotalTimes = Proton.Util.initValue(emitTime, Infinity);
+
+			if (life == true || life == 'life' || life == 'destroy') {
+				if (emitTime == 'once')
+					this.life = 1;
+				else
+					this.life = this.emitTotalTimes;
+
+			} else if (!isNaN(life)) {
+				this.life = life;
+			}
+
+			this.rate.init();
+		};
+
+		/**
+		 * stop emiting
+		 * @method stopEmit
+		 */
+		Emitter.prototype.stopEmit = function() {
+			this.emitTotalTimes = -1;
+			this.emitTime = 0;
+		};
+
+		/**
+		 * remove current all particles
+		 * @method removeAllParticles
+		 */
+		Emitter.prototype.removeAllParticles = function() {
+			for (var i = 0; i < this.particles.length; i++)
+				this.particles[i].dead = true;
+		};
+		/**
+		 * create single particle;
+		 * 
+		 * can use emit({x:10},new Gravity(10),{'particleUpdate',fun}) or emit([{x:10},new Initialize],new Gravity(10),{'particleUpdate',fun})
+		 * @method removeAllParticles
+		 */
+		Emitter.prototype.createParticle = function(initialize, behaviour) {
+			var particle = Proton.pool.get(Proton.Particle);
+			this.setupParticle(particle, initialize, behaviour);
+			this.dispatchEvent(Proton.PARTICLE_CREATED, particle);
+
+			return particle;
+		};
+		/**
+		 * add initialize to this emitter
+		 * @method addSelfInitialize
+		 */
+		Emitter.prototype.addSelfInitialize = function(pObj) {
+			if (pObj['init']) {
+				pObj.init(this);
+			} else {
+				this.initAll();
+			}
+		};
+		/**
+		 * add the Initialize to particles;
+		 * 
+		 * you can use initializes array:for example emitter.addInitialize(initialize1,initialize2,initialize3);
+		 * @method addInitialize
+		 * @param {Proton.Initialize} initialize like this new Proton.Radius(1, 12)
+		 */
+		Emitter.prototype.addInitialize = function() {
+			var length = arguments.length, i;
+			for ( i = 0; i < length; i++) {
+				this.initializes.push(arguments[i]);
+			}
+		};
+		/**
+		 * remove the Initialize
+		 * @method removeInitialize
+		 * @param {Proton.Initialize} initialize a initialize
+		 */
+		Emitter.prototype.removeInitialize = function(initializer) {
+			var index = this.initializes.indexOf(initializer);
+			if (index > -1) {
+				this.initializes.splice(index, 1);
+			}
+		};
+
+		/**
+		 * remove all Initializes
+		 * @method removeInitializers
+		 */
+		Emitter.prototype.removeInitializers = function() {
+			Proton.Util.destroyArray(this.initializes);
+		};
+		/**
+		 * add the Behaviour to particles;
+		 * 
+		 * you can use Behaviours array:emitter.addBehaviour(Behaviour1,Behaviour2,Behaviour3);
+		 * @method addBehaviour
+		 * @param {Proton.Behaviour} behaviour like this new Proton.Color('random')
+		 */
+		Emitter.prototype.addBehaviour = function() {
+			var length = arguments.length, i;
+			for ( i = 0; i < length; i++) {
+				this.behaviours.push(arguments[i]);
+				if (arguments[i].hasOwnProperty("parents"))
+					arguments[i].parents.push(this);
+			}
+		};
+		/**
+		 * remove the Behaviour
+		 * @method removeBehaviour
+		 * @param {Proton.Behaviour} behaviour a behaviour
+		 */
+		Emitter.prototype.removeBehaviour = function(behaviour) {
+			var index = this.behaviours.indexOf(behaviour);
+			if (index > -1)
+				this.behaviours.splice(index, 1);
+		};
+		/**
+		 * remove all behaviours
+		 * @method removeAllBehaviours
+		 */
+		Emitter.prototype.removeAllBehaviours = function() {
+			Proton.Util.destroyArray(this.behaviours);
+		};
+
+		Emitter.prototype.integrate = function(time) {
+			var damping = 1 - this.damping;
+			Proton.integrator.integrate(this, time, damping);
+			var length = this.particles.length, i;
+			for ( i = 0; i < length; i++) {
+				var particle = this.particles[i];
+				particle.update(time, i);
+				Proton.integrator.integrate(particle, time, damping);
+
+				this.dispatchEvent(Proton.PARTICLE_UPDATE, particle);
+			}
+		};
+
+		Emitter.prototype.emitting = function(time) {
+			if (this.emitTotalTimes == 'once') {
+				var length = this.rate.getValue(99999), i;
+				for ( i = 0; i < length; i++) {
+					this.createParticle();
+				}
+
+				this.emitTotalTimes = 'none';
+			} else if (!isNaN(this.emitTotalTimes)) {
+				this.emitTime += time;
+				if (this.emitTime < this.emitTotalTimes) {
+					var length = this.rate.getValue(time), i;
+					for ( i = 0; i < length; i++) {
+						this.createParticle();
+					}
+				}
+			}
+		}
+
+		Emitter.prototype.update = function(time) {
+			this.age += time;
+			if (this.age >= this.life || this.dead) {
+				this.destroy();
+			}
+
+			this.emitting(time);
+			this.integrate(time);
+			var particle;
+			var length = this.particles.length, k;
+			for ( k = length - 1; k >= 0; k--) {
+				particle = this.particles[k];
+				if (particle.dead) {
+					this.dispatchEvent(Proton.PARTICLE_DEAD , particle);
+
+					Proton.pool.set(particle);
+					this.particles.splice(k, 1);
+				}
+			}
+		};
+
+		Emitter.prototype.setupParticle = function(particle, initialize, behaviour) {
+			var initializes = this.initializes;
+			var behaviours = this.behaviours;
+
+			if (initialize) {
+				if ( initialize instanceof Array)
+					initializes = initialize;
+				else
+					initializes = [initialize];
+			}
+
+			if (behaviour) {
+				if ( behaviour instanceof Array)
+					behaviours = behaviour;
+				else
+					behaviours = [behaviour];
+			}
+
+			particle.reset();
+			Proton.InitializeUtil.initialize(this, particle, initializes);
+			particle.addBehaviours(behaviours);
+			particle.parent = this;
+			this.particles.push(particle);
+		};
+
+		/**
+		 * Destory this Emitter
+		 * @method destroy
+		 */
+		Emitter.prototype.destroy = function() {
+			this.dead = true;
+			this.emitTotalTimes = -1;
+			if (this.particles.length == 0) {
+				this.removeInitializers();
+				this.removeAllBehaviours();
+
+				if (this.parent)
+					this.parent.removeEmitter(this);
+			}
+		}
+
+		Proton.Emitter = Emitter;
+
+
+
+		/**
+		 * The BehaviourEmitter class inherits from Proton.Emitter
+		 *
+		 * use the BehaviourEmitter you can add behaviours to self;
+		 * @class Proton.BehaviourEmitter
+		 * @constructor
+		 * @param {Object} pObj the parameters object;
+		 */
+		function BehaviourEmitter(pObj) {
+			this.selfBehaviours = [];
+			BehaviourEmitter._super_.call(this, pObj);
+		};
+
+		Proton.Util.inherits(BehaviourEmitter, Proton.Emitter);
+		/**
+		 * add the Behaviour to emitter;
+		 *
+		 * you can use Behaviours array:emitter.addSelfBehaviour(Behaviour1,Behaviour2,Behaviour3);
+		 * @method addSelfBehaviour
+		 * @param {Proton.Behaviour} behaviour like this new Proton.Color('random')
+		 */
+		BehaviourEmitter.prototype.addSelfBehaviour = function() {
+			var length = arguments.length, i;
+			for ( i = 0; i < length; i++) {
+				this.selfBehaviours.push(arguments[i]);
+			}
+		};
+		/**
+		 * remove the Behaviour for self
+		 * @method removeSelfBehaviour
+		 * @param {Proton.Behaviour} behaviour a behaviour
+		 */
+		BehaviourEmitter.prototype.removeSelfBehaviour = function(behaviour) {
+			var index = this.selfBehaviours.indexOf(behaviour);
+			if (index > -1)
+				this.selfBehaviours.splice(index, 1);
+		};
+
+		BehaviourEmitter.prototype.update = function(time) {
+			BehaviourEmitter._super_.prototype.update.call(this, time);
+
+			if (!this.sleep) {
+				var length = this.selfBehaviours.length, i;
+				for ( i = 0; i < length; i++) {
+					this.selfBehaviours[i].applyBehaviour(this, time, i)
+				}
+			}
+		}
+
+		Proton.BehaviourEmitter = BehaviourEmitter;
+
+
+
+		/**
+		 * The FollowEmitter class inherits from Proton.Emitter
+		 *
+		 * use the FollowEmitter will emit particle when mousemoving
+		 *
+		 * @class Proton.FollowEmitter
+		 * @constructor
+		 * @param {Element} mouseTarget mouseevent's target;
+		 * @param {Number} ease the easing of following speed;
+		 * @default 0.7
+		 * @param {Object} pObj the parameters object;
+		 */
+		function FollowEmitter(mouseTarget, ease, pObj) {
+			this.mouseTarget = Proton.Util.initValue(mouseTarget, window);
+			this.ease = Proton.Util.initValue(ease, .7);
+			this._allowEmitting = false;
+			this.initEventHandler();
+			FollowEmitter._super_.call(this, pObj);
+		};
+
+		Proton.Util.inherits(FollowEmitter, Proton.Emitter);
+		FollowEmitter.prototype.initEventHandler = function() {
+			var self = this;
+			this.mousemoveHandler = function(e) {
+				self.mousemove.call(self, e);
+			};
+
+			this.mousedownHandler = function(e) {
+				self.mousedown.call(self, e);
+			};
+
+			this.mouseupHandler = function(e) {
+				self.mouseup.call(self, e);
+			};
+			this.mouseTarget.addEventListener('mousemove', this.mousemoveHandler, false);
+		}
+		/**
+		 * start emit particle
+		 * @method emit
+		 */
+		FollowEmitter.prototype.emit = function() {
+			this._allowEmitting = true;
+		}
+		/**
+		 * stop emiting
+		 * @method stopEmit
+		 */
+		FollowEmitter.prototype.stopEmit = function() {
+			this._allowEmitting = false;
+		}
+
+		FollowEmitter.prototype.mousemove = function(e) {
+			if (e.layerX || e.layerX == 0) {
+				this.p.x += (e.layerX - this.p.x) * this.ease;
+				this.p.y += (e.layerY - this.p.y) * this.ease;
+			} else if (e.offsetX || e.offsetX == 0) {
+				this.p.x += (e.offsetX - this.p.x) * this.ease;
+				this.p.y += (e.offsetY - this.p.y) * this.ease;
+			}
+			if (this._allowEmitting)
+				FollowEmitter._super_.prototype.emit.call(this, 'once');
+		};
+		/**
+		 * Destory this Emitter
+		 * @method destroy
+		 */
+		FollowEmitter.prototype.destroy = function() {
+			FollowEmitter._super_.prototype.destroy.call(this);
+			this.mouseTarget.removeEventListener('mousemove', this.mousemoveHandler, false);
+		}
+
+		Proton.FollowEmitter = FollowEmitter;
+
+
+
+		var ease = ease || {
+			easeLinear : function(value) {
+				return value;
+			},
+
+			easeInQuad : function(value) {
+				return Math.pow(value, 2);
+			},
+
+			easeOutQuad : function(value) {
+				return -(Math.pow((value - 1), 2) - 1);
+			},
+
+			easeInOutQuad : function(value) {
+				if ((value /= 0.5) < 1)
+					return 0.5 * Math.pow(value, 2);
+				return -0.5 * ((value -= 2) * value - 2);
+			},
+
+			easeInCubic : function(value) {
+				return Math.pow(value, 3);
+			},
+
+			easeOutCubic : function(value) {
+				return (Math.pow((value - 1), 3) + 1);
+			},
+
+			easeInOutCubic : function(value) {
+				if ((value /= 0.5) < 1)
+					return 0.5 * Math.pow(value, 3);
+				return 0.5 * (Math.pow((value - 2), 3) + 2);
+			},
+
+			easeInQuart : function(value) {
+				return Math.pow(value, 4);
+			},
+
+			easeOutQuart : function(value) {
+				return -(Math.pow((value - 1), 4) - 1);
+			},
+
+			easeInOutQuart : function(value) {
+				if ((value /= 0.5) < 1)
+					return 0.5 * Math.pow(value, 4);
+				return -0.5 * ((value -= 2) * Math.pow(value, 3) - 2);
+			},
+		
+			easeInSine : function(value) {
+				return -Math.cos(value * (Math.PI / 2)) + 1;
+			},
+
+			easeOutSine : function(value) {
+				return Math.sin(value * (Math.PI / 2));
+			},
+
+			easeInOutSine : function(value) {
+				return (-0.5 * (Math.cos(Math.PI * value) - 1));
+			},
+
+			easeInExpo : function(value) {
+				return (value === 0) ? 0 : Math.pow(2, 10 * (value - 1));
+			},
+
+			easeOutExpo : function(value) {
+				return (value === 1) ? 1 : -Math.pow(2, -10 * value) + 1;
+			},
+
+			easeInOutExpo : function(value) {
+				if (value === 0)
+					return 0;
+				if (value === 1)
+					return 1;
+				if ((value /= 0.5) < 1)
+					return 0.5 * Math.pow(2, 10 * (value - 1));
+				return 0.5 * (-Math.pow(2, -10 * --value) + 2);
+			},
+
+			easeInCirc : function(value) {
+				return -(Math.sqrt(1 - (value * value)) - 1);
+			},
+
+			easeOutCirc : function(value) {
+				return Math.sqrt(1 - Math.pow((value - 1), 2));
+			},
+
+			easeInOutCirc : function(value) {
+				if ((value /= 0.5) < 1)
+					return -0.5 * (Math.sqrt(1 - value * value) - 1);
+				return 0.5 * (Math.sqrt(1 - (value -= 2) * value) + 1);
+			},
+			
+			easeInBack : function(value) {
+				var s = 1.70158;
+				return (value) * value * ((s + 1) * value - s);
+			},
+
+			easeOutBack : function(value) {
+				var s = 1.70158;
+				return ( value = value - 1) * value * ((s + 1) * value + s) + 1;
+			},
+
+			easeInOutBack : function(value) {
+				var s = 1.70158;
+				if ((value /= 0.5) < 1)
+					return 0.5 * (value * value * (((s *= (1.525)) + 1) * value - s));
+				return 0.5 * ((value -= 2) * value * (((s *= (1.525)) + 1) * value + s) + 2);
+			},
+
+			setEasingByName : function(name) {
+				switch (name) {
+					case 'easeLinear':
+						return Proton.ease.easeLinear;
+						break;
+
+					case 'easeInQuad':
+						return Proton.ease.easeInQuad;
+						break;
+
+					case 'easeOutQuad':
+						return Proton.ease.easeOutQuad;
+						break;
+
+					case 'easeInOutQuad':
+						return Proton.ease.easeInOutQuad;
+						break;
+
+					case 'easeInCubic':
+						return Proton.ease.easeInCubic;
+						break;
+
+					case 'easeOutCubic':
+						return Proton.ease.easeOutCubic;
+						break;
+
+					case 'easeInOutCubic':
+						return Proton.ease.easeInOutCubic;
+						break;
+
+					case 'easeInQuart':
+						return Proton.ease.easeInQuart;
+						break;
+
+					case 'easeOutQuart':
+						return Proton.ease.easeOutQuart;
+						break;
+
+					case 'easeInOutQuart':
+						return Proton.ease.easeInOutQuart;
+						break;
+
+					case 'easeInSine':
+						return Proton.ease.easeInSine;
+						break;
+
+					case 'easeOutSine':
+						return Proton.ease.easeOutSine;
+						break;
+
+					case 'easeInOutSine':
+						return Proton.ease.easeInOutSine;
+						break;
+
+					case 'easeInExpo':
+						return Proton.ease.easeInExpo;
+						break;
+
+					case 'easeOutExpo':
+						return Proton.ease.easeOutExpo;
+						break;
+
+					case 'easeInOutExpo':
+						return Proton.ease.easeInOutExpo;
+						break;
+
+					case 'easeInCirc':
+						return Proton.ease.easeInCirc;
+						break;
+
+					case 'easeOutCirc':
+						return Proton.ease.easeOutCirc;
+						break;
+
+					case 'easeInOutCirc':
+						return Proton.ease.easeInOutCirc;
+						break;
+
+					case 'easeInBack':
+						return Proton.ease.easeInBack;
+						break;
+
+					case 'easeOutBack':
+						return Proton.ease.easeOutBack;
+						break;
+
+					case 'easeInOutBack':
+						return Proton.ease.easeInOutBack;
+						break;
+					
+					default:
+						return Proton.ease.easeLinear;
+						break;
+				}
+			}
+		}
+
+		Proton.ease = ease;
+		Proton.easeLinear = 'easeLinear';
+
+		Proton.easeInQuad = 'easeInQuad';
+		Proton.easeOutQuad = 'easeOutQuad';
+		Proton.easeInOutQuad = 'easeInOutQuad';
+
+		Proton.easeInCubic = 'easeInCubic';
+		Proton.easeOutCubic = 'easeOutCubic';
+		Proton.easeInOutCubic = 'easeInOutCubic';
+
+		Proton.easeInQuart = 'easeInQuart';
+		Proton.easeOutQuart = 'easeOutQuart';
+		Proton.easeInOutQuart = 'easeInOutQuart';
+
+		Proton.easeInSine = 'easeInSine';
+		Proton.easeOutSine = 'easeOutSine';
+		Proton.easeInOutSine = 'easeInOutSine';
+
+		Proton.easeInExpo = 'easeInExpo';
+		Proton.easeOutExpo = 'easeOutExpo';
+		Proton.easeInOutExpo = 'easeInOutExpo';
+
+		Proton.easeInCirc = 'easeInCirc';
+		Proton.easeOutCirc = 'easeOutCirc';
+		Proton.easeInOutCirc = 'easeInOutCirc';
+
+		Proton.easeInBack = 'easeInBack';
+		Proton.easeOutBack = 'easeOutBack';
+		Proton.easeInOutBack = 'easeInOutBack';
+		
+
+
+	//the own renderer
+
+		function Renderer(type, proton, element) {
+			///element dom/div canvas/canvas easeljs/cantainer(or stage)
+			this.element = element;
+			this.type = Proton.Util.initValue(type, 'canvas');
+			this.proton = proton;
+			this.renderer = this.getRenderer();
+		}
+
+
+		Renderer.prototype = {
+			start : function() {
+				this.addEventHandler();
+				this.renderer.start();
+			},
+			stop : function() {
+				this.renderer.stop();
+			},
+
+			resize : function(width, height) {
+				this.renderer.resize(width, height);
+			},
+			setStroke : function(color, thinkness) {
+				if (this.renderer.hasOwnProperty('stroke'))
+					this.renderer.setStroke(color, thinkness);
+				else
+					alert('Sorry this renderer do not suppest stroke method!');
+			},
+			createImageData : function(data) {
+				if (this.renderer instanceof Proton.PixelRender)
+					this.renderer.createImageData(data);
+			},
+			setMaxRadius : function(radius) {
+				if (this.renderer instanceof Proton.WebGLRender)
+					this.renderer.setMaxRadius(radius);
+			},
+			blendEquation : function(A) {
+				if (this.renderer instanceof Proton.WebGLRender)
+					this.renderer.blendEquation(A);
+			},
+			blendFunc : function(A, B) {
+				if (this.renderer instanceof Proton.WebGLRender)
+					this.renderer.blendFunc(A, B);
+			},
+			setType : function(type) {
+				this.type = type;
+				this.renderer = this.getRenderer();
+			},
+			getRenderer : function() {
+				switch(this.type) {
+					case 'pixi':
+						return new Proton.PixiRender(this.proton, this.element);
+						break;
+
+					case 'dom':
+						return new Proton.DomRender(this.proton, this.element);
+						break;
+
+					case 'canvas':
+						return new Proton.CanvasRender(this.proton, this.element);
+						break;
+
+					case 'webgl':
+						return new Proton.WebGLRender(this.proton, this.element);
+						break;
+
+					case 'easel':
+						return new Proton.EaselRender(this.proton, this.element);
+						break;
+
+					case 'easeljs':
+						return new Proton.EaselRender(this.proton, this.element);
+						break;
+
+					case 'pixel':
+						return new Proton.PixelRender(this.proton, this.element);
+						break;
+
+					default:
+						return new Proton.BaseRender(this.proton, this.element);
+				}
+			},
+			render : function(callback) {
+				this.renderer.render(callback);
+			},
+			addEventHandler : function() {
+				if (this.onProtonUpdate)
+					this.renderer.onProtonUpdate = this.onProtonUpdate;
+
+				if (this.onParticleCreated)
+					this.renderer.onParticleCreated = this.onParticleCreated;
+
+				if (this.onParticleUpdate)
+					this.renderer.onParticleUpdate = this.onParticleUpdate;
+
+				if (this.onParticleDead)
+					this.renderer.onParticleDead = this.onParticleDead;
+			}
+		}
+
+		Proton.Renderer = Renderer;
+
+
+
+		function BaseRender(proton, element, stroke) {
+			this.proton = proton;
+			this.element = element;
+			this.stroke = stroke;
+			this.pool = new Proton.Pool();
+		}
+
+
+		BaseRender.prototype = {
+			start : function() {
+				var self = this;
+				this.proton.addEventListener(Proton.PROTON_UPDATE, function() {
+					self.onProtonUpdate.call(self);
+				});
+
+				this.proton.addEventListener(Proton.PROTON_UPDATE_AFTER, function() {
+					self.onProtonUpdateAfter.call(self);
+				});
+
+				this.proton.addEventListener(Proton.EMITTER_ADDED, function(emitter) {
+					self.onEmitterAdded.call(self, emitter);
+				});
+
+				this.proton.addEventListener(Proton.EMITTER_REMOVED, function(emitter) {
+					self.onEmitterRemoved.call(self, emitter);
+				});
+
+				var length = this.proton.emitters.length, i;
+				for ( i = 0; i < length; i++) {
+					var emitter = this.proton.emitters[i];
+					this.addEmitterListener(emitter);
+				}
+			},
+
+			resize : function(width, height) {
+			},
+
+			addEmitterListener : function(emitter) {
+				var self = this;
+				emitter.addEventListener(Proton.PARTICLE_CREATED, function(particle) {
+					self.onParticleCreated.call(self, particle);
+				});
+				emitter.addEventListener(Proton.PARTICLE_UPDATE, function(particle) {
+					self.onParticleUpdate.call(self, particle);
+				});
+				emitter.addEventListener(Proton.PARTICLE_DEAD, function(particle) {
+					self.onParticleDead.call(self, particle);
+				});
+			},
+
+			stop : function() {
+				var length = this.proton.emitters.length, i;
+				this.proton.removeAllEventListeners();
+				for ( i = 0; i < length; i++) {
+					var emitter = this.proton.emitters[i];
+					emitter.removeAllEventListeners();
+				}
+			},
+
+			onEmitterAdded : function(emitter) {
+				this.addEmitterListener(emitter);
+			},
+
+			onEmitterRemoved : function(emitter) {
+				emitter.removeAllEventListeners();
+			},
+
+			onProtonUpdate : function() {
+
+			},
+
+			onProtonUpdateAfter : function() {
+
+			},
+
+			onParticleCreated : function(particle) {
+
+			},
+
+			onParticleUpdate : function(particle) {
+
+			},
+
+			onParticleDead : function(particle) {
+
+			}
+		}
+
+		Proton.BaseRender = BaseRender;
+
+
+
+		function DomRender(proton, element) {
+			DomRender._super_.call(this, proton, element);
+			this.stroke = null;
+		}
+
+
+		Proton.Util.inherits(DomRender, Proton.BaseRender);
+
+		DomRender.prototype.start = function() {
+			DomRender._super_.prototype.start.call(this);
+		}
+
+		DomRender.prototype.setStroke = function(color, thinkness) {
+			color = Proton.Util.initValue(color, '#000000');
+			thinkness = Proton.Util.initValue(thinkness, 1);
+			this.stroke = {
+				color : color,
+				thinkness : thinkness
+			};
+		}
+
+		DomRender.prototype.onProtonUpdate = function() {
+		}
+
+		DomRender.prototype.onParticleCreated = function(particle) {
+			if (particle.target) {
+				var self = this;
+				Proton.Util.getImage(particle.target, particle, false, function(particle) {
+					self.setImgInDIV.call(self, particle);
+				});
+			} else {
+				particle.transform.canvas = Proton.DomUtil.createCanvas(particle.id + '_canvas', particle.radius + 1, particle.radius + 1, 'absolute');
+				particle.transform.bakOldRadius = particle.radius;
+
+				if (this.stroke) {
+					particle.transform.canvas.width = 2 * particle.radius + this.stroke.thinkness * 2;
+					particle.transform.canvas.height = 2 * particle.radius + this.stroke.thinkness * 2;
+				} else {
+					particle.transform.canvas.width = 2 * particle.radius + 1;
+					particle.transform.canvas.height = 2 * particle.radius + 1;
+				}
+
+				particle.transform.context = particle.transform.canvas.getContext('2d');
+				particle.transform.context.fillStyle = particle.color;
+				particle.transform.context.beginPath();
+				particle.transform.context.arc(particle.radius, particle.radius, particle.radius, 0, Math.PI * 2, true);
+
+				if (this.stroke) {
+					particle.transform.context.strokeStyle = this.stroke.color;
+					particle.transform.context.lineWidth = this.stroke.thinkness;
+					particle.transform.context.stroke();
+				}
+
+				particle.transform.context.closePath();
+				particle.transform.context.fill();
+				this.element.appendChild(particle.transform.canvas);
+			}
+
+		}
+
+		DomRender.prototype.onParticleUpdate = function(particle) {
+			if (particle.target) {
+				if (particle.target instanceof Image) {
+					particle.transform.canvas.style.opacity = particle.alpha;
+					Proton.DomUtil.transformDom(particle.transform.canvas, particle.p.x - particle.target.width / 2, particle.p.y - particle.target.height / 2, particle.scale, particle.rotation);
+				}
+			} else {
+				particle.transform.canvas.style.opacity = particle.alpha;
+				if (particle.transform['oldRadius'])
+					Proton.DomUtil.transformDom(particle.transform.canvas, particle.p.x - particle.transform.oldRadius, particle.p.y - particle.transform.oldRadius, particle.scale, particle.rotation);
+				else
+					Proton.DomUtil.transformDom(particle.transform.canvas, particle.p.x - particle.transform.bakOldRadius, particle.p.y - particle.transform.bakOldRadius, particle.scale, particle.rotation);
+			}
+		}
+
+		DomRender.prototype.onParticleDead = function(particle) {
+			if (particle.transform.canvas)
+				this.element.removeChild(particle.transform.canvas);
+		}
+
+		DomRender.prototype.setImgInDIV = function(particle) {
+			particle.transform.canvas = Proton.DomUtil.createCanvas(particle.id + '_canvas', particle.target.width + 1, particle.target.height + 1, 'absolute', particle.p.x - particle.radius, particle.p.y - particle.radius);
+			particle.transform.context = particle.transform.canvas.getContext('2d');
+			particle.transform.context.drawImage(particle.target, 0, 0, particle.target.width, particle.target.height);
+			this.element.appendChild(particle.transform.canvas);
+		}
+
+		Proton.DomRender = DomRender;
+
+
+
+	    function EaselRender(proton, element, stroke) {
+	        EaselRender._super_.call(this, proton, element);
+	        this.stroke = stroke;
+	    }
+
+
+	    Proton.Util.inherits(EaselRender, Proton.BaseRender);
+	    EaselRender.prototype.resize = function(width, height) {
+
+	    }
+	    EaselRender.prototype.start = function() {
+	        EaselRender._super_.prototype.start.call(this);
+	    };
+
+	    EaselRender.prototype.onProtonUpdate = function() {
+
+	    }
+
+	    EaselRender.prototype.onParticleCreated = function(particle) {
+	        if (particle.target) {
+	            particle.target = this.pool.get(particle.target);
+	            if (!particle.target.parent) {
+	                if (!!particle.target['image']) {
+	                    particle.target.regX = particle.target.image.width / 2;
+	                    particle.target.regY = particle.target.image.height / 2;
+	                }
+	                this.element.addChild(particle.target);
+	            }
+	        } else {
+	            var graphics = this.pool.get(createjs.Graphics);
+	            if (this.stroke) {
+	                if (this.stroke == true) {
+	                    graphics.beginStroke('#000000');
+	                } else if (this.stroke instanceof String) {
+	                    graphics.beginStroke(this.stroke);
+	                }
+	            }
+
+	            graphics.beginFill(particle.color).drawCircle(0, 0, particle.radius);
+	            var shape = new createjs.Shape(graphics);
+	            particle.target = shape;
+	            this.element.addChild(particle.target);
+	        }
+	    }
+
+	    EaselRender.prototype.onParticleUpdate = function(particle) {
+	        if (particle.target) {
+	            particle.target.x = particle.p.x;
+	            particle.target.y = particle.p.y;
+	            particle.target.alpha = particle.alpha;
+	            particle.target.scaleX = particle.target.scaleY = particle.scale;
+	            particle.target.rotation = particle.rotation;
+	        }
+	    }
+
+	    EaselRender.prototype.onParticleDead = function(particle) {
+	        if (particle.target) {
+	            particle.target.parent && particle.target.parent.removeChild(particle.target);
+	            this.pool.set(particle.target);
+	            particle.target = null;
+	        }
+	    }
+
+	    Proton.EaselRender = EaselRender;
+
+
+
+		function CanvasRender(proton, element) {
+			CanvasRender._super_.call(this, proton, element);
+			this.stroke = null;
+			this.context = this.element.getContext("2d");
+			this.bufferCache = {};
+		}
+
+
+		Proton.Util.inherits(CanvasRender, Proton.BaseRender);
+		CanvasRender.prototype.resize = function(width, height) {
+			this.element.width = width;
+			this.element.height = height;
+		}
+		CanvasRender.prototype.start = function() {
+			CanvasRender._super_.prototype.start.call(this);
+		}
+
+		CanvasRender.prototype.setStroke = function(color, thinkness) {
+			color = Proton.Util.initValue(color, '#000000');
+			thinkness = Proton.Util.initValue(thinkness, 1);
+			this.stroke = {
+				color : color,
+				thinkness : thinkness
+			};
+		}
+
+		CanvasRender.prototype.onProtonUpdate = function() {
+			this.context.clearRect(0, 0, this.element.width, this.element.height);
+		}
+
+		CanvasRender.prototype.onParticleCreated = function(particle) {
+			if (particle.target)
+				Proton.Util.getImage(particle.target, particle, false);
+			else
+				particle.color = particle.color ? particle.color : '#ff0000';
+		}
+
+		CanvasRender.prototype.onParticleUpdate = function(particle) {
+			if (particle.target) {
+				if (particle.target instanceof Image) {
+					var w = particle.target.width * particle.scale | 0;
+					var h = particle.target.height * particle.scale | 0;
+					var x = particle.p.x - w / 2;
+					var y = particle.p.y - h / 2;
+
+					if (!!particle.color) {
+						if (!particle.transform["buffer"])
+							particle.transform.buffer = this.getBuffer(particle.target);
+						var bufferContext = particle.transform.buffer.getContext('2d');
+						bufferContext.clearRect(0, 0, particle.transform.buffer.width, particle.transform.buffer.height);
+						bufferContext.globalAlpha = particle.alpha;
+						bufferContext.drawImage(particle.target, 0, 0);
+						bufferContext.globalCompositeOperation = "source-atop";
+						bufferContext.fillStyle = Proton.Util.rgbToHex(particle.transform.rgb);
+						bufferContext.fillRect(0, 0, particle.transform.buffer.width, particle.transform.buffer.height);
+						bufferContext.globalCompositeOperation = "source-over";
+						bufferContext.globalAlpha = 1;
+						this.context.drawImage(particle.transform.buffer, 0, 0, particle.transform.buffer.width, particle.transform.buffer.height, x, y, w, h);
+					} else {
+						this.context.save();
+						this.context.globalAlpha = particle.alpha;
+						this.context.translate(particle.p.x, particle.p.y);
+						this.context.rotate(Proton.MathUtils.degreeTransform(particle.rotation));
+						this.context.translate(-particle.p.x, -particle.p.y);
+						this.context.drawImage(particle.target, 0, 0, particle.target.width, particle.target.height, x, y, w, h);
+						this.context.globalAlpha = 1;
+						this.context.restore();
+					}
+				}
+			} else {
+				if (particle.transform["rgb"])
+					this.context.fillStyle = 'rgba(' + particle.transform.rgb.r + ',' + particle.transform.rgb.g + ',' + particle.transform.rgb.b + ',' + particle.alpha + ')';
+				else
+					this.context.fillStyle = particle.color;
+				this.context.beginPath();
+				this.context.arc(particle.p.x, particle.p.y, particle.radius, 0, Math.PI * 2, true);
+				if (this.stroke) {
+					this.context.strokeStyle = this.stroke.color;
+					this.context.lineWidth = this.stroke.thinkness;
+					this.context.stroke();
+				}
+
+				this.context.closePath();
+				this.context.fill();
+			}
+		}
+
+		CanvasRender.prototype.onParticleDead = function(particle) {
+
+		}
+
+		CanvasRender.prototype.getBuffer = function(image) {
+			if ( image instanceof Image) {
+				var size = image.width + '_' + image.height;
+				var canvas = this.bufferCache[size];
+				if (!canvas) {
+					canvas = document.createElement('canvas');
+					canvas.width = image.width;
+					canvas.height = image.height;
+					this.bufferCache[size] = canvas;
+				}
+				return canvas;
+			}
+		}
+
+		Proton.CanvasRender = CanvasRender;
+
+
+
+		function PixelRender(proton, element, rectangle) {
+			PixelRender._super_.call(this, proton, element);
+			this.context = this.element.getContext('2d');
+			this.imageData = null;
+			this.rectangle = null;
+			this.rectangle = rectangle;
+			this.createImageData(rectangle);
+		}
+
+
+		Proton.Util.inherits(PixelRender, Proton.BaseRender);
+		PixelRender.prototype.resize = function(width, height) {
+			this.element.width = width;
+			this.element.height = height;
+		}
+		PixelRender.prototype.createImageData = function(rectangle) {
+			if (!rectangle)
+				this.rectangle = new Proton.Rectangle(0, 0, this.element.width, this.element.height);
+			else
+				this.rectangle = rectangle;
+			this.imageData = this.context.createImageData(this.rectangle.width, this.rectangle.height);
+			this.context.putImageData(this.imageData, this.rectangle.x, this.rectangle.y);
+		}
+
+		PixelRender.prototype.start = function() {
+			PixelRender._super_.prototype.start.call(this);
+		};
+
+		PixelRender.prototype.onProtonUpdate = function() {
+			this.context.clearRect(this.rectangle.x, this.rectangle.y, this.rectangle.width, this.rectangle.height);
+			this.imageData = this.context.getImageData(this.rectangle.x, this.rectangle.y, this.rectangle.width, this.rectangle.height);
+		}
+
+		PixelRender.prototype.onProtonUpdateAfter = function() {
+			this.context.putImageData(this.imageData, this.rectangle.x, this.rectangle.y);
+		}
+
+		PixelRender.prototype.onParticleCreated = function(particle) {
+
+		}
+
+		PixelRender.prototype.onParticleUpdate = function(particle) {
+			if (this.imageData) {
+				this.setPixel(this.imageData, Math.floor(particle.p.x - this.rectangle.x), Math.floor(particle.p.y - this.rectangle.y), particle);
+			}
+		}
+
+		PixelRender.prototype.setPixel = function(imagedata, x, y, particle) {
+			var rgb = particle.transform.rgb;
+			if ((x < 0) || (x > this.element.width) || (y < 0) || (y > this.elementwidth))
+				return;
+
+			var i = ((y >> 0) * imagedata.width + (x >> 0)) * 4;
+
+			imagedata.data[i] = rgb.r;
+			imagedata.data[i + 1] = rgb.g;
+			imagedata.data[i + 2] = rgb.b;
+			imagedata.data[i + 3] = particle.alpha * 255;
+		}
+
+		PixelRender.prototype.onParticleDead = function(particle) {
+
+		}
+
+		Proton.PixelRender = PixelRender;
+
+
+
+		function WebGLRender(proton, element) {
+			WebGLRender._super_.call(this, proton, element);
+			this.gl = this.element.getContext('experimental-webgl', {
+				antialias : true,
+				stencil : false,
+				depth : false
+			});
+			if (!this.gl)
+				alert("Sorry your browser do not suppest WebGL!");
+			this.initVar();
+			this.setMaxRadius();
+			this.initShaders();
+			this.initBuffers();
+			this.gl.blendEquation(this.gl.FUNC_ADD);
+			this.gl.blendFunc(this.gl.SRC_ALPHA, this.gl.ONE_MINUS_SRC_ALPHA);
+			this.gl.enable(this.gl.BLEND);
+		}
+
+
+		Proton.Util.inherits(WebGLRender, Proton.BaseRender);
+		WebGLRender.prototype.resize = function(width, height) {
+			this.umat[4] = -2;
+			this.umat[7] = 1;
+			this.smat[0] = 1 / width;
+			this.smat[4] = 1 / height;
+			this.mstack.set(this.umat, 0);
+			this.mstack.set(this.smat, 1);
+			this.gl.viewport(0, 0, width, height);
+			this.element.width = width;
+			this.element.height = height;
+		}
+
+		WebGLRender.prototype.setMaxRadius = function(radius) {
+			this.circleCanvasURL = this.createCircle(radius);
+		}
+
+		WebGLRender.prototype.getVertexShader = function() {
+			var vsSource = ["uniform vec2 viewport;", "attribute vec2 aVertexPosition;", "attribute vec2 aTextureCoord;", "uniform mat3 tMat;", "varying vec2 vTextureCoord;", "varying float alpha;", "void main() {", "vec3 v = tMat * vec3(aVertexPosition, 1.0);", "gl_Position = vec4(v.x, v.y, 0, 1);", "vTextureCoord = aTextureCoord;", "alpha = tMat[0][2];", "}"].join("\n");
+			return vsSource;
+		}
+
+		WebGLRender.prototype.getFragmentShader = function() {
+			var fsSource = ["precision mediump float;", "varying vec2 vTextureCoord;", "varying float alpha;", "uniform sampler2D uSampler;", "uniform vec4 color;", "uniform bool useTexture;", "uniform vec3 uColor;", "void main() {", "vec4 textureColor = texture2D(uSampler, vTextureCoord);", "gl_FragColor = textureColor * vec4(uColor, 1.0);", "gl_FragColor.w *= alpha;", "}"].join("\n");
+			return fsSource;
+		}
+
+		WebGLRender.prototype.initVar = function() {
+			this.mstack = new Proton.MStack();
+			this.umat = Proton.Mat3.create([2, 0, 1, 0, -2, 0, -1, 1, 1]);
+			this.smat = Proton.Mat3.create([1 / 100, 0, 1, 0, 1 / 100, 0, 0, 0, 1]);
+			this.texturebuffers = {};
+		}
+
+		WebGLRender.prototype.start = function() {
+			WebGLRender._super_.prototype.start.call(this);
+			this.resize(this.element.width, this.element.height);
+		}
+
+		WebGLRender.prototype.blendEquation = function(A) {
+			this.gl.blendEquation(this.gl[A]);
+		}
+
+		WebGLRender.prototype.blendFunc = function(A, B) {
+			this.gl.blendFunc(this.gl[A], this.gl[B]);
+		}
+
+		WebGLRender.prototype.getShader = function(gl, str, fs) {
+			var shader;
+			if (fs)
+				shader = gl.createShader(gl.FRAGMENT_SHADER);
+			else
+				shader = gl.createShader(gl.VERTEX_SHADER);
+			gl.shaderSource(shader, str);
+			gl.compileShader(shader);
+
+			if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+				alert(gl.getShaderInfoLog(shader));
+				return null;
+			}
+			return shader;
+		}
+
+		WebGLRender.prototype.initShaders = function() {
+			var fragmentShader = this.getShader(this.gl, this.getFragmentShader(), true);
+			var vertexShader = this.getShader(this.gl, this.getVertexShader(), false);
+
+			this.sprogram = this.gl.createProgram();
+			this.gl.attachShader(this.sprogram, vertexShader);
+			this.gl.attachShader(this.sprogram, fragmentShader);
+			this.gl.linkProgram(this.sprogram);
+			if (!this.gl.getProgramParameter(this.sprogram, this.gl.LINK_STATUS))
+				alert("Could not initialise shaders");
+
+			this.gl.useProgram(this.sprogram);
+			this.sprogram.vpa = this.gl.getAttribLocation(this.sprogram, "aVertexPosition");
+			this.sprogram.tca = this.gl.getAttribLocation(this.sprogram, "aTextureCoord");
+			this.gl.enableVertexAttribArray(this.sprogram.tca);
+			this.gl.enableVertexAttribArray(this.sprogram.vpa);
+
+			this.sprogram.tMatUniform = this.gl.getUniformLocation(this.sprogram, "tMat");
+			this.sprogram.samplerUniform = this.gl.getUniformLocation(this.sprogram, "uSampler");
+			this.sprogram.useTex = this.gl.getUniformLocation(this.sprogram, "useTexture");
+			this.sprogram.color = this.gl.getUniformLocation(this.sprogram, "uColor");
+			this.gl.uniform1i(this.sprogram.useTex, 1);
+		};
+
+		WebGLRender.prototype.initBuffers = function() {
+			this.unitIBuffer = this.gl.createBuffer();
+			this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, this.unitIBuffer);
+			var vs = [0, 3, 1, 0, 2, 3];
+			this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(vs), this.gl.STATIC_DRAW);
+
+			var ids = [];
+			for (var i = 0; i < 100; i++)
+				ids.push(i);
+
+			idx = new Uint16Array(ids);
+			this.unitI33 = this.gl.createBuffer();
+			this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, this.unitI33);
+			this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER, idx, this.gl.STATIC_DRAW);
+
+			ids = [];
+			for ( i = 0; i < 100; i++)
+				ids.push(i, i + 1, i + 2);
+
+			idx = new Uint16Array(ids);
+			this.stripBuffer = this.gl.createBuffer();
+			this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, this.stripBuffer);
+			this.gl.bufferData(this.gl.ELEMENT_ARRAY_BUFFER, idx, this.gl.STATIC_DRAW);
+		};
+
+		WebGLRender.prototype.createCircle = function(raidus) {
+			this.circleCanvasRadius = Proton.WebGLUtil.nhpot(Proton.Util.initValue(raidus, 32));
+			var canvas = Proton.DomUtil.createCanvas('circle_canvas', this.circleCanvasRadius * 2, this.circleCanvasRadius * 2);
+			var context = canvas.getContext('2d');
+			context.beginPath();
+			context.arc(this.circleCanvasRadius, this.circleCanvasRadius, this.circleCanvasRadius, 0, Math.PI * 2, true);
+			context.closePath();
+			context.fillStyle = '#FFF';
+			context.fill();
+			return canvas.toDataURL();
+		};
+
+		WebGLRender.prototype.setImgInCanvas = function(particle) {
+			var _w = particle.target.width;
+			var _h = particle.target.height;
+			var _width = Proton.WebGLUtil.nhpot(particle.target.width);
+			var _height = Proton.WebGLUtil.nhpot(particle.target.height);
+			var _scaleX = particle.target.width / _width;
+			var _scaleY = particle.target.height / _height;
+
+			if (!this.texturebuffers[particle.transform.src])
+				this.texturebuffers[particle.transform.src] = [this.gl.createTexture(), this.gl.createBuffer(), this.gl.createBuffer()];
+			particle.transform.texture = this.texturebuffers[particle.transform.src][0];
+			particle.transform.vcBuffer = this.texturebuffers[particle.transform.src][1];
+			particle.transform.tcBuffer = this.texturebuffers[particle.transform.src][2];
+			this.gl.bindBuffer(this.gl.ARRAY_BUFFER, particle.transform.tcBuffer);
+			this.gl.bufferData(this.gl.ARRAY_BUFFER, new Float32Array([0.0, 0.0, _scaleX, 0.0, 0.0, _scaleY, _scaleY, _scaleY]), this.gl.STATIC_DRAW);
+			this.gl.bindBuffer(this.gl.ARRAY_BUFFER, particle.transform.vcBuffer);
+			this.gl.bufferData(this.gl.ARRAY_BUFFER, new Float32Array([0.0, 0.0, _w, 0.0, 0.0, _h, _w, _h]), this.gl.STATIC_DRAW);
+
+			var context = particle.transform.canvas.getContext('2d');
+			var data = context.getImageData(0, 0, _width, _height);
+
+			this.gl.bindTexture(this.gl.TEXTURE_2D, particle.transform.texture);
+			this.gl.texImage2D(this.gl.TEXTURE_2D, 0, this.gl.RGBA, this.gl.RGBA, this.gl.UNSIGNED_BYTE, data);
+			this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_MAG_FILTER, this.gl.LINEAR);
+			this.gl.texParameteri(this.gl.TEXTURE_2D, this.gl.TEXTURE_MIN_FILTER, this.gl.LINEAR_MIPMAP_NEAREST);
+			this.gl.generateMipmap(this.gl.TEXTURE_2D);
+			particle.transform.textureLoaded = true;
+			particle.transform.textureWidth = _w;
+			particle.transform.textureHeight = _h;
+		}
+
+		WebGLRender.prototype.setStroke = function(color, thinkness) {
+
+		}
+
+		WebGLRender.prototype.onProtonUpdate = function() {
+			//this.gl.clearColor(0, 0, 0, 1);
+			//this.gl.clear(this.gl.COLOR_BUFFER_BIT | this.gl.DEPTH_BUFFER_BIT);
+		}
+
+		WebGLRender.prototype.onParticleCreated = function(particle) {
+			var self = this;
+			particle.transform.textureLoaded = false;
+			particle.transform.tmat = Proton.Mat3.create();
+			particle.transform.tmat[8] = 1;
+			particle.transform.imat = Proton.Mat3.create();
+			particle.transform.imat[8] = 1;
+			if (particle.target) {
+				Proton.Util.getImage(particle.target, particle, true, function(particle) {
+					self.setImgInCanvas.call(self, particle);
+					particle.transform.oldScale = 1;
+				});
+			} else {
+				Proton.Util.getImage(this.circleCanvasURL, particle, true, function(particle) {
+					self.setImgInCanvas.call(self, particle);
+					particle.transform.oldScale = particle.radius / self.circleCanvasRadius;
+				});
+			}
+		}
+
+		WebGLRender.prototype.onParticleUpdate = function(particle) {
+			if (particle.transform.textureLoaded) {
+				this.updateMatrix(particle);
+				this.gl.uniform3f(this.sprogram.color, particle.transform.rgb.r / 255, particle.transform.rgb.g / 255, particle.transform.rgb.b / 255);
+				this.gl.uniformMatrix3fv(this.sprogram.tMatUniform, false, this.mstack.top());
+				this.gl.bindBuffer(this.gl.ARRAY_BUFFER, particle.transform.vcBuffer);
+				this.gl.vertexAttribPointer(this.sprogram.vpa, 2, this.gl.FLOAT, false, 0, 0);
+				this.gl.bindBuffer(this.gl.ARRAY_BUFFER, particle.transform.tcBuffer);
+				this.gl.vertexAttribPointer(this.sprogram.tca, 2, this.gl.FLOAT, false, 0, 0);
+				this.gl.bindTexture(this.gl.TEXTURE_2D, particle.transform.texture);
+				this.gl.uniform1i(this.sprogram.samplerUniform, 0);
+				this.gl.bindBuffer(this.gl.ELEMENT_ARRAY_BUFFER, this.unitIBuffer);
+				this.gl.drawElements(this.gl.TRIANGLES, 6, this.gl.UNSIGNED_SHORT, 0);
+				this.mstack.pop();
+			}
+		}
+
+		WebGLRender.prototype.onParticleDead = function(particle) {
+			
+		}
+
+		WebGLRender.prototype.updateMatrix = function(particle) {
+			var moveOriginMatrix = Proton.WebGLUtil.makeTranslation(-particle.transform.textureWidth / 2, -particle.transform.textureHeight / 2);
+			var translationMatrix = Proton.WebGLUtil.makeTranslation(particle.p.x, particle.p.y);
+			var angel = particle.rotation * (Math.PI / 180);
+			var rotationMatrix = Proton.WebGLUtil.makeRotation(angel);
+			var scale = particle.scale * particle.transform.oldScale;
+			var scaleMatrix = Proton.WebGLUtil.makeScale(scale, scale);
+
+			var matrix = Proton.WebGLUtil.matrixMultiply(moveOriginMatrix, scaleMatrix);
+			matrix = Proton.WebGLUtil.matrixMultiply(matrix, rotationMatrix);
+			matrix = Proton.WebGLUtil.matrixMultiply(matrix, translationMatrix);
+
+			Proton.Mat3.inverse(matrix, particle.transform.imat);
+			matrix[2] = particle.alpha;
+			this.mstack.push(matrix);
+		}
+
+		Proton.WebGLRender = WebGLRender;
+
+
+
+		function Zone() {
+			this.vector = new Proton.Vector2D(0, 0);
+			this.random = 0;
+			this.crossType = "dead";
+			this.alert = true;
+		}
+
+
+		Zone.prototype = {
+			getPosition : function() {
+
+			},
+
+			crossing : function(particle) {
+
+			}
+		};
+
+		Proton.Zone = Zone;
+
+
+
+		function LineZone(x1, y1, x2, y2, direction) {
+			LineZone._super_.call(this);
+			if (x2 - x1 >= 0) {
+				this.x1 = x1;
+				this.y1 = y1;
+				this.x2 = x2;
+				this.y2 = y2;
+			} else {
+				this.x1 = x2;
+				this.y1 = y2;
+				this.x2 = x1;
+				this.y2 = y1;
+			}
+			this.dx = this.x2 - this.x1;
+			this.dy = this.y2 - this.y1;
+			this.minx = Math.min(this.x1, this.x2);
+			this.miny = Math.min(this.y1, this.y2);
+			this.maxx = Math.max(this.x1, this.x2);
+			this.maxy = Math.max(this.y1, this.y2);
+			this.dot = this.x2 * this.y1 - this.x1 * this.y2;
+			this.xxyy = this.dx * this.dx + this.dy * this.dy;
+			this.gradient = this.getGradient();
+			this.length = this.getLength();
+			this.direction = Proton.Util.initValue(direction, '>');
+		}
+
+
+		Proton.Util.inherits(LineZone, Proton.Zone);
+		LineZone.prototype.getPosition = function() {
+			this.random = Math.random();
+			this.vector.x = this.x1 + this.random * this.length * Math.cos(this.gradient);
+			this.vector.y = this.y1 + this.random * this.length * Math.sin(this.gradient);
+			return this.vector;
+		}
+
+		LineZone.prototype.getDirection = function(x, y) {
+			var A = this.dy;
+			var B = -this.dx;
+			var C = this.dot;
+			var D = B == 0 ? 1 : B;
+			if ((A * x + B * y + C) * D > 0)
+				return true
+			else
+				return false;
+		}
+
+		LineZone.prototype.getDistance = function(x, y) {
+			var A = this.dy;
+			var B = -this.dx;
+			var C = this.dot;
+			var D = (A * x + B * y + C);
+			return D / Math.sqrt(this.xxyy);
+		}
+
+		LineZone.prototype.getSymmetric = function(v) {
+			var tha2 = v.getGradient();
+			var tha1 = this.getGradient();
+			var tha = 2 * (tha1 - tha2);
+			var oldx = v.x;
+			var oldy = v.y;
+			v.x = oldx * Math.cos(tha) - oldy * Math.sin(tha);
+			v.y = oldx * Math.sin(tha) + oldy * Math.cos(tha);
+			return v;
+		}
+
+		LineZone.prototype.getGradient = function() {
+			return Math.atan2(this.dy, this.dx);
+		}
+
+		LineZone.prototype.getRange = function(particle, fun) {
+			var angle = Math.abs(this.getGradient());
+			if (angle <= Math.PI / 4) {
+				if (particle.p.x < this.maxx && particle.p.x > this.minx) {
+					fun();
+				}
+			} else {
+				if (particle.p.y < this.maxy && particle.p.y > this.miny) {
+					fun();
+				}
+			}
+		}
+
+		LineZone.prototype.getLength = function() {
+			return Math.sqrt(this.dx * this.dx + this.dy * this.dy)
+		}
+
+		LineZone.prototype.crossing = function(particle) {
+			var self = this;
+			if (this.crossType == "dead") {
+				if (this.direction == ">" || this.direction == "R" || this.direction == "right" || this.direction == "down") {
+					this.getRange(particle, function() {
+						if (self.getDirection(particle.p.x, particle.p.y))
+							particle.dead = true;
+					})
+				} else {
+					this.getRange(particle, function() {
+						if (!self.getDirection(particle.p.x, particle.p.y))
+							particle.dead = true;
+					})
+				}
+			} else if (this.crossType == "bound") {
+				this.getRange(particle, function() {
+					if (self.getDistance(particle.p.x, particle.p.y) <= particle.radius) {
+						if (self.dx == 0) {
+							particle.v.x *= -1;
+						} else if (self.dy == 0) {
+							particle.v.y *= -1;
+						} else {
+							self.getSymmetric(particle.v);
+						}
+					}
+				});
+			} else if (this.crossType == "cross") {
+				if (this.alert) {
+					alert('Sorry lineZone does not support cross method');
+					this.alert = false;
+				}
+			}
+		}
+
+		Proton.LineZone = LineZone;
+
+
+
+		function CircleZone(x, y, radius) {
+			CircleZone._super_.call(this);
+			this.x = x;
+			this.y = y;
+			this.radius = radius;
+			this.angle = 0;
+			this.center = {
+				x : this.x,
+				y : this.y
+			};
+		}
+
+
+		Proton.Util.inherits(CircleZone, Proton.Zone);
+		CircleZone.prototype.getPosition = function() {
+			this.random = Math.random();
+			this.angle = Math.PI * 2 * Math.random();
+			this.vector.x = this.x + this.random * this.radius * Math.cos(this.angle);
+			this.vector.y = this.y + this.random * this.radius * Math.sin(this.angle);
+			return this.vector;
+		}
+
+		CircleZone.prototype.setCenter = function(x, y) {
+			this.center.x = x;
+			this.center.y = y;
+		}
+
+		CircleZone.prototype.crossing = function(particle) {
+			var d = particle.p.distanceTo(this.center);
+			if (this.crossType == "dead") {
+				if (d - particle.radius > this.radius)
+					particle.dead = true;
+			} else if (this.crossType == "bound") {
+				if (d + particle.radius >= this.radius)
+					this.getSymmetric(particle);
+			} else if (this.crossType == "cross") {
+				if (this.alert) {
+					alert('Sorry CircleZone does not support cross method');
+					this.alert = false;
+				}
+			}
+		}
+
+		CircleZone.prototype.getSymmetric = function(particle) {
+			var tha2 = particle.v.getGradient();
+			var tha1 = this.getGradient(particle);
+			var tha = 2 * (tha1 - tha2);
+			var oldx = particle.v.x;
+			var oldy = particle.v.y;
+			particle.v.x = oldx * Math.cos(tha) - oldy * Math.sin(tha);
+			particle.v.y = oldx * Math.sin(tha) + oldy * Math.cos(tha);
+		}
+
+		CircleZone.prototype.getGradient = function(particle) {
+			return -Math.PI / 2 + Math.atan2(particle.p.y - this.center.y, particle.p.x - this.center.x);
+		}
+
+		Proton.CircleZone = CircleZone;
+
+
+
+		function PointZone(x, y) {
+			PointZone._super_.call(this);
+			this.x = x;
+			this.y = y;
+		}
+
+
+		Proton.Util.inherits(PointZone, Proton.Zone);
+		PointZone.prototype.getPosition = function() {
+			this.vector.x = this.x;
+			this.vector.y = this.y;
+			return this.vector;
+		}
+
+		PointZone.prototype.crossing = function(particle) {
+			if (this.alert) {
+				alert('Sorry PointZone does not support crossing method');
+				this.alert = false;
+			}
+		}
+
+		Proton.PointZone = PointZone;
+
+
+
+		function RectZone(x, y, width, height) {
+			RectZone._super_.call(this);
+			this.x = x;
+			this.y = y;
+			this.width = width;
+			this.height = height;
+		}
+
+
+		Proton.Util.inherits(RectZone, Proton.Zone);
+		RectZone.prototype.getPosition = function() {
+			this.vector.x = this.x + Math.random() * this.width;
+			this.vector.y = this.y + Math.random() * this.height;
+			return this.vector;
+		}
+
+		RectZone.prototype.crossing = function(particle) {
+			if (this.crossType == "dead") {
+				if (particle.p.x + particle.radius < this.x)
+					particle.dead = true;
+				else if (particle.p.x - particle.radius > this.x + this.width)
+					particle.dead = true;
+
+				if (particle.p.y + particle.radius < this.y)
+					particle.dead = true;
+				else if (particle.p.y - particle.radius > this.y + this.height)
+					particle.dead = true;
+			} else if (this.crossType == "bound") {
+				if (particle.p.x - particle.radius < this.x) {
+					particle.p.x = this.x + particle.radius;
+					particle.v.x *= -1;
+				} else if (particle.p.x + particle.radius > this.x + this.width) {
+					particle.p.x = this.x + this.width - particle.radius;
+					particle.v.x *= -1;
+				}
+				
+				if (particle.p.y - particle.radius < this.y) {
+					particle.p.y = this.y + particle.radius;
+					particle.v.y *= -1;
+				} else if (particle.p.y + particle.radius > this.y + this.height) {
+					particle.p.y = this.y + this.height - particle.radius;
+					particle.v.y *= -1;
+				}
+			} else if (this.crossType == "cross") {
+				if (particle.p.x + particle.radius < this.x && particle.v.x <= 0)
+					particle.p.x = this.x + this.width + particle.radius;
+				else if (particle.p.x - particle.radius > this.x + this.width && particle.v.x >= 0)
+					particle.p.x = this.x - particle.radius;
+
+				if (particle.p.y + particle.radius < this.y && particle.v.y <= 0)
+					particle.p.y = this.y + this.height + particle.radius;
+				else if (particle.p.y - particle.radius > this.y + this.height && particle.v.y >= 0)
+					particle.p.y = this.y - particle.radius;
+			}
+		}
+
+		Proton.RectZone = RectZone;
+
+
+
+		function ImageZone(imageData, x, y, d) {
+			ImageZone._super_.call(this);
+			this.reset(imageData, x, y, d);
+		}
+
+
+		Proton.Util.inherits(ImageZone, Proton.Zone);
+		ImageZone.prototype.reset = function(imageData, x, y, d) {
+			this.imageData = imageData;
+			this.x = Proton.Util.initValue(x, 0);
+			this.y = Proton.Util.initValue(y, 0);
+			this.d = Proton.Util.initValue(d, 2);
+			this.vectors = [];
+			this.setVectors();
+		}
+
+		ImageZone.prototype.setVectors = function() {
+			var i, j;
+			var length1 = this.imageData.width;
+			var length2 = this.imageData.height;
+			for ( i = 0; i < length1; i += this.d) {
+				for ( j = 0; j < length2; j += this.d) {
+					var index = ((j >> 0) * length1 + (i >> 0)) * 4;
+					if (this.imageData.data[index + 3] > 0) {
+						this.vectors.push({
+							x : i + this.x,
+							y : j + this.y
+						});
+					}
+				}
+			}
+			return this.vector;
+		}
+
+		ImageZone.prototype.getBound = function(x, y) {
+			var index = ((y >> 0) * this.imageData.width + (x >> 0)) * 4;
+			if (this.imageData.data[index + 3] > 0)
+				return true;
+			else
+				return false;
+		}
+
+		ImageZone.prototype.getPosition = function() {
+			return this.vector.copy(this.vectors[Math.floor(Math.random() * this.vectors.length)]);
+		}
+
+		ImageZone.prototype.getColor = function(x, y) {
+			x -= this.x;
+			y -= this.y;
+			var i = ((y >> 0) * this.imageData.width + (x >> 0)) * 4;
+			return {
+				r : this.imageData.data[i],
+				g : this.imageData.data[i + 1],
+				b : this.imageData.data[i + 2],
+				a : this.imageData.data[i + 3]
+			};
+		}
+
+		ImageZone.prototype.crossing = function(particle) {
+			if (this.crossType == "dead") {
+				if (this.getBound(particle.p.x - this.x, particle.p.y - this.y))
+					particle.dead = true;
+				else
+					particle.dead = false;
+			} else if (this.crossType == "bound") {
+				if (!this.getBound(particle.p.x - this.x, particle.p.y - this.y))
+					particle.v.negate();
+			}
+		}
+
+		Proton.ImageZone = ImageZone;
+
+
+	/**
+	 * You can use this emit particles.
+	 *
+	 * This method will console.log the fixed number of your info  in updata or requestAnimationFrame
+	 * 
+	 * use like this Proton.log('+12',mc); log 12 times
+	 *
+	 * @class Proton.log
+	 * @constructor
+	 * @param {*} logInfo;
+	 */
+
+		var log = function() {
+			if (window.console && window.console.log) {
+				var arg = arguments;
+				if ( typeof arguments[0] == 'string') {
+					if (arguments[0].indexOf('+') == 0) {
+						var n = parseInt(arguments[0]);
+						if (log.once < n) {
+							delete arg[0];
+							console.log(arg);
+							log.once++;
+						}
+					} else {
+						console.log(arg);
+					}
+				} else {
+					console.log(arg);
+				}
+			}
+		}
+
+		log.once = 0;
+		Proton.log = log;
+
+
+
+		var Debug = Debug || {
+			addEventListener : function(proton, fun) {
+				proton.addEventListener(Proton.PROTON_UPDATE, function() {
+					fun();
+				});
+			},
+
+			setStyle : function(c) {
+				var color = c || '#ff0000';
+				var rgb = Proton.Util.hexToRGB(color);
+				var style = 'rgba(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ',' + 0.5 + ')';
+				return style;
+			},
+
+			drawZone : function(proton, canvas, zone, clear) {
+				var context = canvas.getContext('2d');
+				var style = this.setStyle();
+				this.addEventListener(proton, function() {
+					if (clear)
+						context.clearRect(0, 0, canvas.width, canvas.height);
+
+					if ( zone instanceof Proton.PointZone) {
+						context.beginPath();
+						context.fillStyle = style;
+						context.arc(zone.x, zone.y, 10, 0, Math.PI * 2, true);
+						context.fill();
+						context.closePath();
+					} else if ( zone instanceof Proton.LineZone) {
+						context.beginPath();
+						context.strokeStyle = style;
+						context.moveTo(zone.x1, zone.y1);
+						context.lineTo(zone.x2, zone.y2);
+						context.stroke();
+						context.closePath();
+					} else if ( zone instanceof Proton.RectZone) {
+						context.beginPath();
+						context.strokeStyle = style;
+						context.drawRect(zone.x, zone.y, zone.width, zone.height);
+						context.stroke();
+						context.closePath();
+					} else if ( zone instanceof Proton.CircleZone) {
+						context.beginPath();
+						context.strokeStyle = style;
+						context.arc(zone.x, zone.y, zone.radius, 0, Math.PI * 2, true);
+						context.stroke();
+						context.closePath();
+					}
+				});
+			},
+
+			drawEmitter : function(proton, canvas, emitter, clear) {
+				var context = canvas.getContext('2d');
+				var style = this.setStyle();
+				this.addEventListener(proton, function() {
+					if (clear)
+						context.clearRect(0, 0, canvas.width, canvas.height);
+
+					context.beginPath();
+					context.fillStyle = style;
+					context.arc(emitter.p.x, emitter.p.y, 10, 0, Math.PI * 2, true);
+					context.fill();
+					context.closePath();
+				});
+			},
+
+			test : {},
+
+			setTest : function(id, value) {
+				this.test[id] = value;
+			},
+
+			getTest : function(id) {
+				if (this.test.hasOwnProperty(id))
+					return this.test[id];
+				else
+					return false;
+			}
+		}
+
+		Proton.Debug = Debug;
+
+
+	})(window);
+	// http://paulirish.com/2011/requestanimationframe-for-smart-animating/
+	// http://my.opera.com/emoller/blog/2011/12/20/requestanimationframe-for-smart-er-animating
+
+	// requestAnimationFrame polyfill by Erik Möller
+	// fixes from Paul Irish and Tino Zijdel
+	( function() {
+			var lastTime = 0;
+			var vendors = ['ms', 'moz', 'webkit', 'o'];
+			for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+				window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+				window.cancelAnimationFrame = window[vendors[x] + 'CancelAnimationFrame'] || window[vendors[x] + 'CancelRequestAnimationFrame'];
+			}
+
+			if (!window.requestAnimationFrame)
+				window.requestAnimationFrame = function(callback, element) {
+					var currTime = new Date().getTime();
+					var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+					var id = window.setTimeout(function() {
+						callback(currTime + timeToCall);
+					}, timeToCall);
+					lastTime = currTime + timeToCall;
+					return id;
+				};
+
+			if (!window.cancelAnimationFrame)
+				window.cancelAnimationFrame = function(id) {
+					clearTimeout(id);
+				};
+		}()); 
 
 /***/ },
 /* 212 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var default_1 = __webpack_require__(213);
+	var big_fire_1 = __webpack_require__(214);
+	var qtk_particles_editor_1 = __webpack_require__(2);
+	qtk_particles_editor_1.Document.registerTemplate("default", default_1.defaultTemplate);
+	qtk_particles_editor_1.Document.registerTemplate("Big Fire", big_fire_1.bigFireTemplate);
+	//# sourceMappingURL=templates.js.map
+
+/***/ },
+/* 213 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -31482,13 +35923,71 @@ var editor =
 	//# sourceMappingURL=default.js.map
 
 /***/ },
-/* 213 */
+/* 214 */
+/***/ function(module, exports) {
+
+	"use strict";
+	var imageURL = "https://qtoolkit.github.io/qtk-proton-editor/assets/fire.png";
+	exports.bigFireTemplate = [
+	    {
+	        title: "Initialize",
+	        propsDesc: [
+	            { type: "hide", path: "globalCompositeOperation", value: "lighter" },
+	            { type: "text", name: "Background", path: "backGroundColor", value: "Black" },
+	            { type: "line", name: "Rate" },
+	            { type: "range", name: "number", converter: "rate-num", path: "rateNum", value: { first: 5, second: 13 } },
+	            { type: "range", name: "time", converter: "rate-time", path: "rateTime", value: { first: .1, second: .1 } },
+	            { type: "line" },
+	            { type: "range", name: "Mass", converter: "mass", path: "mass", value: { first: 1, second: 1 } },
+	            { type: "text", name: "image", path: "image", value: imageURL },
+	            { type: "vector3", name: "Position", path: "positionCircle", converter: "circle", zTitle: "R",
+	                value: { x: 300, y: 300, z: 10 } },
+	            { type: "range", name: "Life", converter: "life", path: "life", value: { first: 5, second: 7 } },
+	            { type: "line", name: "Velocity" },
+	            { type: "options", name: "Type", converter: "velocity", path: "vType", value: "polar",
+	                options: ["polar", "linear"] },
+	            { type: "range", name: "rpan", converter: "v-rpan", path: "vRpan", value: { first: 2, second: 3 } },
+	            { type: "hide", path: "vRpanCenter", value: false },
+	            { type: "range", name: "thapan", converter: "v-thapath", path: "vThapan", value: { first: 0, second: 30 } },
+	            { type: "hide", path: "vThapanCenter", value: true },
+	            { type: "line" }
+	        ]
+	    },
+	    {
+	        title: "Behaviour",
+	        propsDesc: [
+	            { type: "range", name: "Scale", path: "scale", converter: "scale", value: { first: 1, second: 0.2 } },
+	            { type: "range", name: "Alpha", path: "alpha", converter: "alpha", value: { first: 1, second: 0.2 } }
+	        ]
+	    }
+	];
+	//# sourceMappingURL=big-fire.js.map
+
+/***/ },
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	var proton = __webpack_require__(210);
+	var proton = __webpack_require__(211);
 	function createParticlesEmitter(proton, data) {
 	    var emitter = new Proton.Emitter();
+	    if (data.image) {
+	        var image = new Image();
+	        image.onload = function () {
+	            _createParticlesEmitter(proton, emitter, data, image);
+	        };
+	        image.src = data.image;
+	    }
+	    else {
+	        _createParticlesEmitter(proton, emitter, data, null);
+	    }
+	    return emitter;
+	}
+	exports.createParticlesEmitter = createParticlesEmitter;
+	function _createParticlesEmitter(proton, emitter, data, image) {
+	    if (image) {
+	        emitter.addInitialize(new Proton.ImageTarget(image));
+	    }
 	    if (data.rateNum && data.rateTime) {
 	        emitter.rate = new Proton.Rate(new Proton.Span(data.rateNum.first, data.rateNum.second), new Proton.Span(data.rateTime.first, data.rateTime.second));
 	    }
@@ -31501,8 +36000,12 @@ var editor =
 	    if (data.life) {
 	        emitter.addInitialize(new Proton.Life(data.life.first, data.life.second));
 	    }
+	    if (data.positionCircle) {
+	        var pc = data.positionCircle;
+	        emitter.addInitialize(new Proton.Position(new Proton.CircleZone(pc.x, pc.y, pc.z)));
+	    }
 	    if (data.vRpan && data.vType && data.vThapan) {
-	        var velocity = new Proton.Velocity(new Proton.Span(data.vRpan.first, data.vRpan.second), new Proton.Span(data.vThapan.first, data.vThapan.second), data.vType);
+	        var velocity = new Proton.Velocity(new Proton.Span(data.vRpan.first, data.vRpan.second, data.vRpanCenter), new Proton.Span(data.vThapan.first, data.vThapan.second, data.vThapanCenter), data.vType);
 	        emitter.addInitialize(velocity);
 	    }
 	    if (data.driftPoint) {
@@ -31521,15 +36024,10 @@ var editor =
 	        emitter.p.x = data.position.x;
 	        emitter.p.y = data.position.y;
 	    }
-	    else {
-	        emitter.p.x = 100;
-	        emitter.p.y = 100;
-	    }
 	    emitter.emit();
 	    proton.addEmitter(emitter);
 	    return emitter;
 	}
-	exports.createParticlesEmitter = createParticlesEmitter;
 	//# sourceMappingURL=proton-wrapper.js.map
 
 /***/ }

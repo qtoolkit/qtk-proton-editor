@@ -18,18 +18,18 @@ export class ProtonViewModal extends ParticlesViewModal {
 	protected renderer : any;
 	protected protonEmitter : any;
 	
-	constructor(storage:ItemsStorage) {
-		super(null);
-		
-		this.canvas = document.createElement('canvas');
-		
-		this.storage = storage;
-		this.registerCommands();
-		this.registerConverters();
+	protected onDocReplaced() {	
+		var globalCompositeOperation = this.data.globalCompositeOperation;
+		if(globalCompositeOperation) {
+			var context = this.canvas.getContext('2d');
+			setTimeout(function() {
+				context.globalCompositeOperation = globalCompositeOperation;
+			}, 300);
+		}
+	}
 
-		this.doc = Document.create();
-		this.createDoc("default");
-		this.updateDocList();
+	constructor(storage:ItemsStorage) {
+		super(null, ProtonViewModal.TYPE, storage);
 	}
 
 	protected registerConverters() {
