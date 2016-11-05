@@ -1,7 +1,7 @@
-import "../modals/templates";
+import "../models/templates";
 import { ItemsStorage } from "qtk";
-import { ParticlesViewModal, IParticlesViewModal } from "qtk-particles-editor";
-export declare class ProtonViewModal extends ParticlesViewModal {
+import { ParticlesViewModel, IParticlesViewModel } from "qtk-particles-editor";
+export declare class ProtonViewModel extends ParticlesViewModel {
     canvas: any;
     protected renderer: any;
     protected protonEmitter: any;
@@ -13,5 +13,5 @@ export declare class ProtonViewModal extends ParticlesViewModal {
     static TYPE: string;
     static proton: any;
     static update(): void;
-    static create(options: any): IParticlesViewModal;
+    static create(options: any): IParticlesViewModel;
 }

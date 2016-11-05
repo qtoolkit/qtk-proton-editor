@@ -5,14 +5,14 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var qtk_particles_editor_1 = require("qtk-particles-editor");
-var view_modal_1 = require("./view-modals/view-modal");
+var view_model_1 = require("./view-models/view-model");
 var ProtonEditor = (function (_super) {
     __extends(ProtonEditor, _super);
     function ProtonEditor() {
         _super.apply(this, arguments);
     }
     ProtonEditor.run = function () {
-        return qtk_particles_editor_1.ParticlesEditor.run("proton-editor", view_modal_1.ProtonViewModal.TYPE);
+        return qtk_particles_editor_1.ParticlesEditor.run("proton-editor", view_model_1.ProtonViewModel.TYPE);
     };
     return ProtonEditor;
 }(qtk_particles_editor_1.ParticlesEditor));

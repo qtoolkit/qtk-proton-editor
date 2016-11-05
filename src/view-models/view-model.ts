@@ -1,19 +1,19 @@
 
 var proton = require("proton");
 
-import "../modals/templates";
+import "../models/templates";
 import {PropsDesc, PagePropsDesc, Events} from "qtk";
 import {RangeFixer, Vector2Fixer, NumberFixer} from "qtk"
 import {createParticlesEmitter} from "./proton-wrapper";
-import {ViewModal, IViewModal, ItemsStorage, ValidationResult} from "qtk"
+import {ViewModel, IViewModel, ItemsStorage, ValidationResult} from "qtk"
 
 import {CommandAbout, CommandRemove, CommandContent, Document, IDocument} from "qtk-particles-editor";
 import {CommandDraw, CommandNew, CommandOpen, CommandSave, CommandExport} from "qtk-particles-editor";
-import {ParticlesViewModal, IParticlesViewModal, ParticlesViewModalFactory} from "qtk-particles-editor";
+import {ParticlesViewModel, IParticlesViewModel, ParticlesViewModelFactory} from "qtk-particles-editor";
 
 declare var Proton : any;
 
-export class ProtonViewModal extends ParticlesViewModal {
+export class ProtonViewModel extends ParticlesViewModel {
 	public canvas : any;
 	protected renderer : any;
 	protected protonEmitter : any;
@@ -29,7 +29,7 @@ export class ProtonViewModal extends ParticlesViewModal {
 	}
 
 	constructor(storage:ItemsStorage) {
-		super(null, ProtonViewModal.TYPE, storage);
+		super(null, ProtonViewModel.TYPE, storage);
 	}
 
 	protected registerConverters() {
@@ -60,7 +60,7 @@ export class ProtonViewModal extends ParticlesViewModal {
 
 	protected createEmitter() {
 		var data = this.data;
-		var proton = ProtonViewModal.proton;
+		var proton = ProtonViewModel.proton;
 		
 		if(!this.renderer) {
 			var renderer = new Proton.Renderer('canvas', proton, this.canvas);
@@ -80,19 +80,19 @@ export class ProtonViewModal extends ParticlesViewModal {
 	public static TYPE = "proton";
 	public static proton = null;
 	public static update() {
-		ProtonViewModal.proton.update();
-		requestAnimationFrame(ProtonViewModal.update);
+		ProtonViewModel.proton.update();
+		requestAnimationFrame(ProtonViewModel.update);
 	}
 
-	public static create(options:any) : IParticlesViewModal {
-		if(!ProtonViewModal.proton) {
-			ProtonViewModal.proton = new Proton();			
-			requestAnimationFrame(ProtonViewModal.update);
+	public static create(options:any) : IParticlesViewModel {
+		if(!ProtonViewModel.proton) {
+			ProtonViewModel.proton = new Proton();			
+			requestAnimationFrame(ProtonViewModel.update);
 		}
 
-		return new ProtonViewModal(options.storage);
+		return new ProtonViewModel(options.storage);
 	}
 };
 
-ParticlesViewModalFactory.register(ProtonViewModal.TYPE, ProtonViewModal.create);
+ParticlesViewModelFactory.register(ProtonViewModel.TYPE, ProtonViewModel.create);
 

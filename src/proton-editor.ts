@@ -1,8 +1,8 @@
 import {ParticlesEditor} from "qtk-particles-editor";
-import {ProtonViewModal} from "./view-modals/view-modal";
+import {ProtonViewModel} from "./view-models/view-model";
 
 export class ProtonEditor extends ParticlesEditor {
 	public static run() : ParticlesEditor {
-		return ParticlesEditor.run("proton-editor", ProtonViewModal.TYPE);
+		return ParticlesEditor.run("proton-editor", ProtonViewModel.TYPE);
 	}
 };

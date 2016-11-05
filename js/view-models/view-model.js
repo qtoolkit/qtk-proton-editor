@@ -5,18 +5,18 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var proton = require("proton");
-require("../modals/templates");
+require("../models/templates");
 var qtk_1 = require("qtk");
 var proton_wrapper_1 = require("./proton-wrapper");
 var qtk_particles_editor_1 = require("qtk-particles-editor");
 var qtk_particles_editor_2 = require("qtk-particles-editor");
 var qtk_particles_editor_3 = require("qtk-particles-editor");
-var ProtonViewModal = (function (_super) {
-    __extends(ProtonViewModal, _super);
-    function ProtonViewModal(storage) {
-        _super.call(this, null, ProtonViewModal.TYPE, storage);
+var ProtonViewModel = (function (_super) {
+    __extends(ProtonViewModel, _super);
+    function ProtonViewModel(storage) {
+        _super.call(this, null, ProtonViewModel.TYPE, storage);
     }
-    ProtonViewModal.prototype.onDocReplaced = function () {
+    ProtonViewModel.prototype.onDocReplaced = function () {
         var globalCompositeOperation = this.data.globalCompositeOperation;
         if (globalCompositeOperation) {
             var context = this.canvas.getContext('2d');
@@ -25,7 +25,7 @@ var ProtonViewModal = (function (_super) {
             }, 300);
         }
     };
-    ProtonViewModal.prototype.registerConverters = function () {
+    ProtonViewModel.prototype.registerConverters = function () {
         this.registerValueConverter("radius", qtk_1.RangeFixer.create(0, 1000, 0, 1000, true));
         this.registerValueConverter("life", qtk_1.RangeFixer.create(0, 1000, 0, 1000, true));
         this.registerValueConverter("mass", qtk_1.RangeFixer.create(0, 1000, 0, 1000, true));
@@ -38,7 +38,7 @@ var ProtonViewModal = (function (_super) {
         this.registerValueConverter("v-thapath", qtk_1.RangeFixer.create(-1000, 1000, -1000, 1000, true));
         this.registerValueConverter("delay", qtk_1.NumberFixer.create(0, 10));
     };
-    ProtonViewModal.prototype.registerCommands = function () {
+    ProtonViewModel.prototype.registerCommands = function () {
         this.registerCommand("draw", qtk_particles_editor_2.CommandDraw.create(this.canvas));
         this.registerCommand("about", qtk_particles_editor_1.CommandAbout.create(this, "https://github.com/a-jie/Proton"));
         this.registerCommand("content", qtk_particles_editor_1.CommandContent.create(this, "http://proton.jpeer.at/index.html"));
@@ -49,9 +49,9 @@ var ProtonViewModal = (function (_super) {
         this.registerCommand("save-as", qtk_particles_editor_2.CommandSave.create(this, true));
         this.registerCommand("export", qtk_particles_editor_2.CommandExport.create(this));
     };
-    ProtonViewModal.prototype.createEmitter = function () {
+    ProtonViewModel.prototype.createEmitter = function () {
         var data = this.data;
-        var proton = ProtonViewModal.proton;
+        var proton = ProtonViewModel.proton;
         if (!this.renderer) {
             var renderer = new Proton.Renderer('canvas', proton, this.canvas);
             this.renderer = renderer;
@@ -64,22 +64,22 @@ var ProtonViewModal = (function (_super) {
         }
         this.protonEmitter = proton_wrapper_1.createParticlesEmitter(proton, data);
     };
-    ProtonViewModal.update = function () {
-        ProtonViewModal.proton.update();
-        requestAnimationFrame(ProtonViewModal.update);
+    ProtonViewModel.update = function () {
+        ProtonViewModel.proton.update();
+        requestAnimationFrame(ProtonViewModel.update);
     };
-    ProtonViewModal.create = function (options) {
-        if (!ProtonViewModal.proton) {
-            ProtonViewModal.proton = new Proton();
-            requestAnimationFrame(ProtonViewModal.update);
+    ProtonViewModel.create = function (options) {
+        if (!ProtonViewModel.proton) {
+            ProtonViewModel.proton = new Proton();
+            requestAnimationFrame(ProtonViewModel.update);
         }
-        return new ProtonViewModal(options.storage);
+        return new ProtonViewModel(options.storage);
     };
-    ProtonViewModal.TYPE = "proton";
-    ProtonViewModal.proton = null;
-    return ProtonViewModal;
-}(qtk_particles_editor_3.ParticlesViewModal));
-exports.ProtonViewModal = ProtonViewModal;
+    ProtonViewModel.TYPE = "proton";
+    ProtonViewModel.proton = null;
+    return ProtonViewModel;
+}(qtk_particles_editor_3.ParticlesViewModel));
+exports.ProtonViewModel = ProtonViewModel;
 ;
-qtk_particles_editor_3.ParticlesViewModalFactory.register(ProtonViewModal.TYPE, ProtonViewModal.create);
-//# sourceMappingURL=view-modal.js.map
+qtk_particles_editor_3.ParticlesViewModelFactory.register(ProtonViewModel.TYPE, ProtonViewModel.create);
+//# sourceMappingURL=view-model.js.map
